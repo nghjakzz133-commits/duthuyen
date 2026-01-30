@@ -7,22 +7,23 @@
   <title>EMPIRE Club Quận 1 | Flagship Nightlife Destination</title>
   <meta name="description" content="EMPIRE Club Quận 1 – Biểu tượng nightlife cao cấp tại trung tâm Sài Gòn. VIP Tables, Bottle Service, International DJs." />
 
-  <!-- CORE SYSTEM -->
   <link rel="stylesheet" href="./css/core.css">
   <link rel="stylesheet" href="./css/global.css">
 </head>
 
-<body>
+<body class="lang-vi">
 
 <!-- ================= STICKY CONTACT ================= -->
 <div class="sticky-contact">
   <a href="tel:0919918178" class="sticky-btn sticky-call">
     <span class="icon">📞</span>
-    <span class="text">VIP Hotline</span>
+    <span class="text" data-lang="en">VIP Hotline</span>
+    <span class="text" data-lang="vi">Hotline VIP</span>
   </a>
   <a href="https://zalo.me/0919918178" target="_blank" class="sticky-btn sticky-zalo">
     <span class="icon">💬</span>
-    <span class="text">VIP Zalo</span>
+    <span class="text" data-lang="en">VIP Zalo</span>
+    <span class="text" data-lang="vi">Zalo VIP</span>
   </a>
 </div>
 
@@ -32,12 +33,26 @@
     <div class="logo">EMPIRE</div>
 
     <nav class="main-nav" data-nav>
-      <a href="#home" data-nav-link>Home</a>
-      <a href="#about" data-nav-link>About</a>
-      <a href="#experience" data-nav-link>Experience</a>
-      <a href="#vip" data-nav-link>VIP</a>
-      <a href="#contact" data-nav-link>Contact</a>
+      <a href="#home" data-nav-link data-lang="en">Home</a>
+      <a href="#home" data-nav-link data-lang="vi">Trang chủ</a>
+
+      <a href="#about" data-nav-link data-lang="en">About</a>
+      <a href="#about" data-nav-link data-lang="vi">Giới thiệu</a>
+
+      <a href="#experience" data-nav-link data-lang="en">Experience</a>
+      <a href="#experience" data-nav-link data-lang="vi">Trải nghiệm</a>
+
+      <a href="#vip" data-nav-link data-lang="en">VIP</a>
+      <a href="#vip" data-nav-link data-lang="vi">VIP</a>
+
+      <a href="#contact" data-nav-link data-lang="en">Contact</a>
+      <a href="#contact" data-nav-link data-lang="vi">Liên hệ</a>
     </nav>
+
+    <div class="lang-switch">
+      <button data-lang-switch="en">EN</button>
+      <button data-lang-switch="vi" class="active">VI</button>
+    </div>
 
     <button class="menu-toggle" data-menu-toggle>
       <span></span><span></span><span></span>
@@ -54,12 +69,24 @@
 
   <div class="hero-content" data-animate>
     <h1>EMPIRE</h1>
-    <p class="hero-subtitle">
+
+    <p class="hero-subtitle" data-lang="en">
       The Powerhouse of Saigon Nightlife
     </p>
+    <p class="hero-subtitle" data-lang="vi">
+      Biểu tượng quyền lực của nightlife Sài Gòn
+    </p>
+
     <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary">Book VIP Table</a>
-      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-secondary">Private Reservation</a>
+      <a href="#contact" class="btn btn-primary" data-lang="en">Book VIP Table</a>
+      <a href="#contact" class="btn btn-primary" data-lang="vi">Đặt bàn VIP</a>
+
+      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-secondary" data-lang="en">
+        Private Reservation
+      </a>
+      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-secondary" data-lang="vi">
+        Đặt bàn riêng
+      </a>
     </div>
   </div>
 </section>
@@ -67,24 +94,20 @@
 <!-- ================= ABOUT ================= -->
 <section class="why-choose" id="about" data-section>
   <div class="container">
-    <h2 data-animate>About Empire</h2>
+    <h2 data-animate data-lang="en">About Empire</h2>
+    <h2 data-animate data-lang="vi">Về Empire</h2>
 
     <div class="features">
       <div class="feature-item" data-animate>
-        <h3>EN</h3>
-        <p>
-          Empire is one of Saigon’s most iconic nightlife institutions.
-          Designed for elite guests, Empire represents power, exclusivity
-          and world-class entertainment in the heart of District 1.
+        <p data-lang="en">
+          Empire is one of Saigon’s most iconic nightlife institutions,
+          designed for elite guests seeking world-class entertainment
+          in the heart of District 1.
         </p>
-      </div>
-
-      <div class="feature-item" data-animate>
-        <h3>VI</h3>
-        <p>
-          Empire là biểu tượng nightlife cao cấp tại trung tâm Quận 1.
-          Không gian được thiết kế dành riêng cho giới tinh hoa,
-          nơi hội tụ âm nhạc, quyền lực và trải nghiệm đỉnh cao.
+        <p data-lang="vi">
+          Empire là biểu tượng nightlife cao cấp tại trung tâm Quận 1,
+          nơi dành cho giới tinh hoa tìm kiếm trải nghiệm giải trí
+          đẳng cấp quốc tế.
         </p>
       </div>
     </div>
@@ -94,27 +117,36 @@
 <!-- ================= EXPERIENCE ================= -->
 <section class="services" id="experience" data-section>
   <div class="container">
-    <h2 data-animate>The Empire Experience</h2>
+    <h2 data-animate data-lang="en">The Empire Experience</h2>
+    <h2 data-animate data-lang="vi">Trải nghiệm Empire</h2>
 
     <div class="service-grid">
       <div class="service-card" data-animate>
-        <h3>Music</h3>
-        <p>International DJs & curated sound system.</p>
+        <h3 data-lang="en">Music</h3>
+        <h3 data-lang="vi">Âm nhạc</h3>
+        <p data-lang="en">International DJs & curated sound system.</p>
+        <p data-lang="vi">DJ quốc tế & hệ thống âm thanh tuyển chọn.</p>
       </div>
 
       <div class="service-card" data-animate>
-        <h3>Design</h3>
-        <p>Architectural lighting & immersive atmosphere.</p>
+        <h3 data-lang="en">Design</h3>
+        <h3 data-lang="vi">Thiết kế</h3>
+        <p data-lang="en">Architectural lighting & immersive atmosphere.</p>
+        <p data-lang="vi">Ánh sáng kiến trúc & không gian nhập vai.</p>
       </div>
 
       <div class="service-card" data-animate>
-        <h3>Service</h3>
-        <p>Discreet, professional & premium hospitality.</p>
+        <h3 data-lang="en">Service</h3>
+        <h3 data-lang="vi">Dịch vụ</h3>
+        <p data-lang="en">Discreet, professional & premium hospitality.</p>
+        <p data-lang="vi">Dịch vụ chuyên nghiệp, tinh tế và cao cấp.</p>
       </div>
 
       <div class="service-card" data-animate>
-        <h3>Audience</h3>
-        <p>Elite crowd, tastemakers & decision makers.</p>
+        <h3 data-lang="en">Audience</h3>
+        <h3 data-lang="vi">Khách hàng</h3>
+        <p data-lang="en">Elite crowd, tastemakers & decision makers.</p>
+        <p data-lang="vi">Giới tinh hoa, người tạo xu hướng.</p>
       </div>
     </div>
   </div>
@@ -123,38 +155,31 @@
 <!-- ================= VIP ================= -->
 <section class="packages" id="vip" data-section>
   <div class="container">
-    <h2 data-animate>VIP & Bottle Service</h2>
+    <h2 data-animate data-lang="en">VIP & Bottle Service</h2>
+    <h2 data-animate data-lang="vi">Dịch vụ VIP & Bottle</h2>
 
     <div class="package-grid">
       <div class="package-card" data-animate>
-        <h3>VIP Table</h3>
-        <p>Prime view – Premium bottle service.</p>
+        <h3 data-lang="en">VIP Table</h3>
+        <h3 data-lang="vi">Bàn VIP</h3>
+        <p data-lang="en">Prime view – Premium bottle service.</p>
+        <p data-lang="vi">Vị trí đẹp – Dịch vụ bottle cao cấp.</p>
       </div>
 
       <div class="package-card package-featured" data-animate>
         <div class="package-badge">Flagship</div>
-        <h3>Premium Table</h3>
-        <p>Signature Empire experience for elite guests.</p>
+        <h3 data-lang="en">Premium Table</h3>
+        <h3 data-lang="vi">Bàn Premium</h3>
+        <p data-lang="en">Signature Empire experience.</p>
+        <p data-lang="vi">Trải nghiệm Empire đặc trưng.</p>
       </div>
 
       <div class="package-card" data-animate>
-        <h3>Private Room</h3>
-        <p>Maximum privacy & personalized service.</p>
+        <h3 data-lang="en">Private Room</h3>
+        <h3 data-lang="vi">Phòng riêng</h3>
+        <p data-lang="en">Maximum privacy & personalized service.</p>
+        <p data-lang="vi">Riêng tư tuyệt đối & dịch vụ cá nhân hóa.</p>
       </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= GALLERY ================= -->
-<section class="gallery" data-section>
-  <div class="container">
-    <h2 data-animate>Inside Empire</h2>
-
-    <div class="gallery-slider" data-gallery>
-      <div class="gallery-item"><img src="images/empire-1.jpg"></div>
-      <div class="gallery-item"><img src="images/empire-2.jpg"></div>
-      <div class="gallery-item"><img src="images/empire-3.jpg"></div>
-      <div class="gallery-item"><img src="images/empire-4.jpg"></div>
     </div>
   </div>
 </section>
@@ -162,12 +187,22 @@
 <!-- ================= CONTACT ================= -->
 <section class="final-cta" id="contact" data-section>
   <div class="container" data-animate>
-    <h2>VIP Reservation Only</h2>
-    <p>Tables are limited. Advance booking required.</p>
+    <h2 data-lang="en">VIP Reservation Only</h2>
+    <h2 data-lang="vi">Chỉ nhận đặt chỗ VIP</h2>
+
+    <p data-lang="en">Tables are limited. Advance booking required.</p>
+    <p data-lang="vi">Số lượng bàn giới hạn. Vui lòng đặt trước.</p>
 
     <div class="cta-buttons">
-      <a href="tel:0919918178" class="btn btn-large btn-primary">VIP Hotline</a>
-      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-large btn-secondary">Private Zalo</a>
+      <a href="tel:0919918178" class="btn btn-large btn-primary" data-lang="en">VIP Hotline</a>
+      <a href="tel:0919918178" class="btn btn-large btn-primary" data-lang="vi">Hotline VIP</a>
+
+      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-large btn-secondary" data-lang="en">
+        Private Zalo
+      </a>
+      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-large btn-secondary" data-lang="vi">
+        Zalo riêng
+      </a>
     </div>
   </div>
 </section>
@@ -175,7 +210,8 @@
 <!-- ================= FOOTER ================= -->
 <footer class="footer">
   <div class="container">
-    <p>© 2024 EMPIRE Club District 1. All Rights Reserved.</p>
+    <p data-lang="en">© 2024 EMPIRE Club District 1. All Rights Reserved.</p>
+    <p data-lang="vi">© 2024 EMPIRE Club Quận 1. Bảo lưu mọi quyền.</p>
   </div>
 </footer>
 
