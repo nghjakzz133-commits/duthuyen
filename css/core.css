@@ -1,14 +1,15 @@
-/* ============================================
-   CORE.CSS – EMPIRE CLUB Q1
-   Foundation Styles (Base + Utilities)
-   Must load BEFORE global.css
-   ============================================ */
+/* ==================================================
+   CORE.CSS – EMPIRE CLUB FLAGSHIP
+   System Foundation | Champagne Gold × Soft Black
+   ================================================== */
 
-/* ============================================
-   1. CSS RESET
-   ============================================ */
+/* ==================================================
+   1. RESET
+   ================================================== */
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -20,12 +21,10 @@ html {
 
 body {
   font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
-  font-size: 16px;
+  background: var(--bg-main);
+  color: var(--color-white-soft);
   line-height: 1.6;
-  background: #000;
-  color: #fff;
   -webkit-font-smoothing: antialiased;
-  text-rendering: optimizeLegibility;
 }
 
 img {
@@ -38,10 +37,6 @@ a {
   color: inherit;
 }
 
-ul {
-  list-style: none;
-}
-
 button {
   font-family: inherit;
   border: none;
@@ -49,29 +44,50 @@ button {
   cursor: pointer;
 }
 
-/* ============================================
-   2. DESIGN TOKENS (VARIABLES)
-   ============================================ */
+/* ==================================================
+   2. DESIGN TOKENS
+   ================================================== */
 
 :root {
-  /* Brand Colors */
-  --color-dark: #050505;
-  --color-white: #ffffff;
+  /* Base */
+  --color-black: #0E0E0E;
+  --color-black-soft: #141414;
+
+  /* Champagne Gold */
+  --color-gold: #E6C87A;
+  --color-gold-light: #F5E6B8;
+  --color-gold-dark: #C9AD5B;
+
+  /* Text */
+  --color-white: #FFFFFF;
   --color-white-soft: rgba(255,255,255,0.75);
-  --color-gray-light: rgba(255,255,255,0.15);
+  --color-text-muted: rgba(255,255,255,0.55);
 
-  --color-gold: #d4af37;
-  --color-gold-light: #f5d27a;
+  /* Background */
+  --bg-main: #0E0E0E;
+  --bg-section: #141414;
+  --bg-card: linear-gradient(180deg, #1A1A1A, #0E0E0E);
 
-  /* Typography */
-  --text-xs: 12px;
-  --text-sm: 14px;
-  --text-base: 16px;
-  --text-lg: 18px;
-  --text-xl: 20px;
-  --text-2xl: 24px;
-  --text-3xl: 32px;
-  --text-4xl: 40px;
+  /* Gradient */
+  --gradient-gold: linear-gradient(
+    135deg,
+    #E6C87A 0%,
+    #F5E6B8 50%,
+    #C9AD5B 100%
+  );
+
+  --gradient-overlay: linear-gradient(
+    180deg,
+    rgba(0,0,0,0.7) 0%,
+    rgba(0,0,0,0.35) 100%
+  );
+
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 12px;
+  --radius-lg: 20px;
+  --radius-xl: 28px;
+  --radius-full: 999px;
 
   /* Spacing */
   --space-xs: 6px;
@@ -80,79 +96,67 @@ button {
   --space-lg: 32px;
   --space-xl: 48px;
   --space-2xl: 72px;
-  --space-3xl: 100px;
+  --space-3xl: 120px;
 
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 18px;
-  --radius-xl: 24px;
-  --radius-full: 999px;
-
-  /* Shadow */
-  --shadow-md: 0 10px 30px rgba(0,0,0,0.35);
-  --shadow-lg: 0 20px 60px rgba(0,0,0,0.45);
-  --shadow-xl: 0 30px 80px rgba(0,0,0,0.55);
+  /* Shadows */
+  --shadow-sm: 0 4px 10px rgba(0,0,0,0.3);
+  --shadow-md: 0 12px 30px rgba(0,0,0,0.4);
+  --shadow-lg: 0 30px 60px rgba(0,0,0,0.6);
 
   /* Transition */
-  --transition-fast: 0.25s ease;
-  --transition-base: 0.4s ease;
-  --transition-slow: 0.8s ease;
+  --transition-fast: 0.2s ease;
+  --transition-base: 0.35s ease;
+  --transition-slow: 0.6s ease;
 }
 
-/* ============================================
-   3. LAYOUT UTILITIES
-   ============================================ */
-
-.container {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--space-lg);
-}
-
-.section {
-  padding: var(--space-3xl) 0;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.hidden {
-  display: none !important;
-}
-
-/* ============================================
-   4. TYPOGRAPHY
-   ============================================ */
+/* ==================================================
+   3. TYPOGRAPHY
+   ================================================== */
 
 h1, h2, h3, h4 {
-  font-family: 'Playfair Display', serif;
-  font-weight: 600;
-  line-height: 1.2;
+  font-weight: 700;
+  color: var(--color-white);
 }
 
-h1 { font-size: clamp(2.8rem, 6vw, 4.5rem); }
-h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); }
-h3 { font-size: 1.6rem; }
-h4 { font-size: 1.2rem; }
+h1 {
+  font-size: clamp(3rem, 6vw, 5rem);
+  letter-spacing: 6px;
+}
+
+h2 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  letter-spacing: 2px;
+}
+
+h3 {
+  font-size: 1.25rem;
+  letter-spacing: 1px;
+}
 
 p {
   color: var(--color-white-soft);
+  font-size: 1rem;
 }
 
-.text-gold {
-  color: var(--color-gold);
+/* ==================================================
+   4. LAYOUT
+   ================================================== */
+
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 var(--space-md);
 }
 
-.uppercase {
-  text-transform: uppercase;
-  letter-spacing: 0.2em;
+section {
+  padding: var(--space-3xl) 0;
+  position: relative;
 }
 
-/* ============================================
+/* ==================================================
    5. BUTTON SYSTEM
-   ============================================ */
+   ================================================== */
 
 .btn {
   display: inline-flex;
@@ -163,91 +167,99 @@ p {
   padding: 14px 36px;
   border-radius: var(--radius-full);
 
-  font-size: var(--text-sm);
+  font-size: 14px;
   letter-spacing: 2px;
   text-transform: uppercase;
-  font-weight: 600;
+  font-weight: 700;
 
-  transition: var(--transition-base);
+  transition: transform var(--transition-base),
+              box-shadow var(--transition-base),
+              background var(--transition-base);
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, #c9a14a, #f5d27a);
-  color: #000;
+  background: var(--gradient-gold);
+  color: #0E0E0E;
+  box-shadow: 0 12px 40px rgba(230,200,122,0.35);
 }
 
 .btn-primary:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 40px rgba(212,175,55,0.4);
+  transform: translateY(-3px);
+  box-shadow: 0 20px 60px rgba(230,200,122,0.55);
 }
 
-.btn-outline {
-  border: 1px solid rgba(212,175,55,0.6);
+.btn-secondary {
+  border: 1px solid var(--color-gold);
+  color: var(--color-gold);
+  background: transparent;
+}
+
+.btn-secondary:hover {
+  background: rgba(230,200,122,0.12);
+}
+
+/* ==================================================
+   6. SECTION UTILITIES
+   ================================================== */
+
+.section-dark {
+  background: var(--bg-section);
+}
+
+.section-center {
+  text-align: center;
+}
+
+.text-gold {
   color: var(--color-gold);
 }
 
-.btn-outline:hover {
-  background: var(--color-gold);
-  color: #000;
+/* ==================================================
+   7. COMBO BASE (HOOK FOR GLOBAL.CSS)
+   ================================================== */
+
+.combo-card {
+  background: var(--bg-card);
+  border-radius: var(--radius-xl);
+  border: 1px solid rgba(230,200,122,0.2);
+  overflow: hidden;
 }
 
-.btn-dark {
-  background: #000;
-  color: #fff;
-  border: 1px solid rgba(255,255,255,0.15);
+.combo-badge {
+  background: var(--gradient-gold);
+  color: #0E0E0E;
 }
 
-.btn-dark:hover {
-  border-color: var(--color-gold);
+/* ==================================================
+   8. LANGUAGE SYSTEM
+   ================================================== */
+
+[data-lang="en"] [data-vi],
+[data-lang="vi"] [data-en] {
+  display: none;
 }
 
-/* ============================================
-   6. FORM FOUNDATION
-   ============================================ */
+/* ==================================================
+   9. ACCESSIBILITY
+   ================================================== */
 
-input, textarea, select {
-  width: 100%;
-  background: rgba(255,255,255,0.04);
-  border: 1px solid rgba(255,255,255,0.15);
-  padding: 14px 18px;
-  border-radius: var(--radius-md);
-  color: #fff;
-}
-
-input:focus, textarea:focus, select:focus {
-  outline: none;
-  border-color: var(--color-gold);
-}
-
-/* ============================================
-   7. LANGUAGE SYSTEM
-   ============================================ */
-
-[data-lang] {
-  animation: fadeLang 0.4s ease;
-}
-
-@keyframes fadeLang {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* ============================================
-   8. RESPONSIVE FOUNDATION
-   ============================================ */
-
-@media (max-width: 1024px) {
-  .container {
-    padding: 0 var(--space-md);
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation: none !important;
+    transition: none !important;
   }
 }
+
+/* ==================================================
+   10. RESPONSIVE
+   ================================================== */
 
 @media (max-width: 768px) {
-  .section {
+  section {
     padding: var(--space-2xl) 0;
   }
-}
 
-/* ============================================
-   END CORE.CSS
-   ============================================ */
+  h1 {
+    letter-spacing: 3px;
+  }
+}
