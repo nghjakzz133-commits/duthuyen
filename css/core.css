@@ -1,18 +1,52 @@
-/* ==================================================
-   CORE.CSS – EMPIRE CLUB FLAGSHIP
-   System Foundation | Champagne Gold × Soft Black
-   ================================================== */
+/* =========================================================
+   CORE.CSS – DESIGN SYSTEM (LIGHT)
+   Project: EMPIRE / Flagship Nightlife
+   Rule: GLOBAL • STABLE • SCALE
+   ⚠️ DO NOT OVERRIDE FROM GLOBAL.CSS
+========================================================= */
 
-/* ==================================================
-   1. RESET
-   ================================================== */
+/* =============================
+   1. CSS VARIABLES
+============================= */
+:root {
+  /* Colors */
+  --bg-main: #f7f7f8;
+  --bg-soft: #ffffff;
+  --bg-glass: rgba(255,255,255,.75);
 
+  --text-main: #111111;
+  --text-sub: #555555;
+  --text-muted: #888888;
+
+  --gold: #c9a24d;
+  --gold-soft: rgba(201,162,77,.15);
+
+  --border-light: rgba(0,0,0,.08);
+
+  /* Typography */
+  --font-main: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
+  /* Layout */
+  --container-width: 1200px;
+  --container-padding: 20px;
+
+  /* Radius */
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* Transition */
+  --transition-fast: .2s ease;
+  --transition-base: .35s ease;
+}
+
+/* =============================
+   2. RESET / BASE
+============================= */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
-  margin: 0;
-  padding: 0;
 }
 
 html {
@@ -20,11 +54,11 @@ html {
 }
 
 body {
-  font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+  margin: 0;
+  font-family: var(--font-main);
   background: var(--bg-main);
-  color: var(--color-white-soft);
+  color: var(--text-main);
   line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
 }
 
 img {
@@ -33,233 +67,170 @@ img {
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
 button {
   font-family: inherit;
-  border: none;
-  background: none;
   cursor: pointer;
 }
 
-/* ==================================================
-   2. DESIGN TOKENS
-   ================================================== */
-
-:root {
-  /* Base */
-  --color-black: #0E0E0E;
-  --color-black-soft: #141414;
-
-  /* Champagne Gold */
-  --color-gold: #E6C87A;
-  --color-gold-light: #F5E6B8;
-  --color-gold-dark: #C9AD5B;
-
-  /* Text */
-  --color-white: #FFFFFF;
-  --color-white-soft: rgba(255,255,255,0.75);
-  --color-text-muted: rgba(255,255,255,0.55);
-
-  /* Background */
-  --bg-main: #0E0E0E;
-  --bg-section: #141414;
-  --bg-card: linear-gradient(180deg, #1A1A1A, #0E0E0E);
-
-  /* Gradient */
-  --gradient-gold: linear-gradient(
-    135deg,
-    #E6C87A 0%,
-    #F5E6B8 50%,
-    #C9AD5B 100%
-  );
-
-  --gradient-overlay: linear-gradient(
-    180deg,
-    rgba(0,0,0,0.7) 0%,
-    rgba(0,0,0,0.35) 100%
-  );
-
-  /* Radius */
-  --radius-sm: 6px;
-  --radius-md: 12px;
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --radius-full: 999px;
-
-  /* Spacing */
-  --space-xs: 6px;
-  --space-sm: 12px;
-  --space-md: 20px;
-  --space-lg: 32px;
-  --space-xl: 48px;
-  --space-2xl: 72px;
-  --space-3xl: 120px;
-
-  /* Shadows */
-  --shadow-sm: 0 4px 10px rgba(0,0,0,0.3);
-  --shadow-md: 0 12px 30px rgba(0,0,0,0.4);
-  --shadow-lg: 0 30px 60px rgba(0,0,0,0.6);
-
-  /* Transition */
-  --transition-fast: 0.2s ease;
-  --transition-base: 0.35s ease;
-  --transition-slow: 0.6s ease;
+/* =============================
+   3. CONTAINER
+============================= */
+.container {
+  max-width: var(--container-width);
+  padding-left: var(--container-padding);
+  padding-right: var(--container-padding);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-/* ==================================================
-   3. TYPOGRAPHY
-   ================================================== */
+.container.center {
+  text-align: center;
+}
 
+.container.narrow {
+  max-width: 760px;
+}
+
+/* =============================
+   4. TYPOGRAPHY
+============================= */
 h1, h2, h3, h4 {
+  margin: 0 0 16px;
   font-weight: 700;
-  color: var(--color-white);
+  line-height: 1.2;
 }
 
 h1 {
-  font-size: clamp(3rem, 6vw, 5rem);
-  letter-spacing: 6px;
+  font-size: clamp(48px, 8vw, 88px);
+  letter-spacing: 4px;
 }
 
 h2 {
-  font-size: clamp(2.2rem, 4vw, 3rem);
-  letter-spacing: 2px;
+  font-size: clamp(28px, 5vw, 42px);
 }
 
 h3 {
-  font-size: 1.25rem;
-  letter-spacing: 1px;
+  font-size: 20px;
 }
 
 p {
-  color: var(--color-white-soft);
-  font-size: 1rem;
+  margin: 0 0 16px;
+  color: var(--text-sub);
 }
 
-/* ==================================================
-   4. LAYOUT
-   ================================================== */
-
-.container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 var(--space-md);
-}
-
-section {
-  padding: var(--space-3xl) 0;
-  position: relative;
-}
-
-/* ==================================================
+/* =============================
    5. BUTTON SYSTEM
-   ================================================== */
-
+============================= */
 .btn {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
+  gap: 8px;
 
-  padding: 14px 36px;
-  border-radius: var(--radius-full);
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-weight: 600;
+  border: none;
 
-  font-size: 14px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  font-weight: 700;
-
-  transition: transform var(--transition-base),
-              box-shadow var(--transition-base),
-              background var(--transition-base);
+  transition: var(--transition-base);
 }
 
-.btn-primary {
-  background: var(--gradient-gold);
-  color: #0E0E0E;
-  box-shadow: 0 12px 40px rgba(230,200,122,0.35);
+.btn.primary {
+  background: var(--gold);
+  color: #000;
 }
 
-.btn-primary:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 20px 60px rgba(230,200,122,0.55);
+.btn.primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(0,0,0,.15);
 }
 
-.btn-secondary {
-  border: 1px solid var(--color-gold);
-  color: var(--color-gold);
+.btn.ghost {
   background: transparent;
+  border: 1px solid var(--border-light);
+  color: var(--text-main);
 }
 
-.btn-secondary:hover {
-  background: rgba(230,200,122,0.12);
+.btn.ghost:hover {
+  background: var(--gold-soft);
+  border-color: var(--gold);
 }
 
-/* ==================================================
-   6. SECTION UTILITIES
-   ================================================== */
-
-.section-dark {
-  background: var(--bg-section);
+/* =============================
+   6. GRID SYSTEM
+============================= */
+.grid-2,
+.grid-3,
+.grid-4 {
+  display: grid;
+  gap: 24px;
 }
 
-.section-center {
-  text-align: center;
+.grid-2 {
+  grid-template-columns: repeat(2,1fr);
 }
 
-.text-gold {
-  color: var(--color-gold);
+.grid-3 {
+  grid-template-columns: repeat(3,1fr);
 }
 
-/* ==================================================
-   7. COMBO BASE (HOOK FOR GLOBAL.CSS)
-   ================================================== */
-
-.combo-card {
-  background: var(--bg-card);
-  border-radius: var(--radius-xl);
-  border: 1px solid rgba(230,200,122,0.2);
-  overflow: hidden;
+.grid-4 {
+  grid-template-columns: repeat(4,1fr);
 }
 
-.combo-badge {
-  background: var(--gradient-gold);
-  color: #0E0E0E;
+/* =============================
+   7. CARD SYSTEM
+============================= */
+.card {
+  background: var(--bg-soft);
+  border-radius: var(--radius-md);
+  padding: 32px;
+  border: 1px solid var(--border-light);
+  transition: var(--transition-base);
 }
 
-/* ==================================================
-   8. LANGUAGE SYSTEM
-   ================================================== */
-
-[data-lang="en"] [data-vi],
-[data-lang="vi"] [data-en] {
-  display: none;
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px rgba(0,0,0,.08);
 }
 
-/* ==================================================
-   9. ACCESSIBILITY
-   ================================================== */
-
-@media (prefers-reduced-motion: reduce) {
-  * {
-    animation: none !important;
-    transition: none !important;
-  }
+.card.highlight {
+  border-color: var(--gold);
 }
 
-/* ==================================================
-   10. RESPONSIVE
-   ================================================== */
+/* =============================
+   8. SECTION BASE
+============================= */
+.section {
+  padding: 96px 0;
+}
 
+.section.soft {
+  background: var(--bg-soft);
+}
+
+/* =============================
+   9. UTILITIES
+============================= */
+.text-center { text-align: center; }
+.text-gold { color: var(--gold); }
+.mt-32 { margin-top: 32px; }
+
+/* =============================
+   10. MOBILE
+============================= */
 @media (max-width: 768px) {
-  section {
-    padding: var(--space-2xl) 0;
+  .grid-2,
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
   }
 
-  h1 {
-    letter-spacing: 3px;
+  .section {
+    padding: 72px 0;
   }
 }
