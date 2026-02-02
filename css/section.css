@@ -337,3 +337,54 @@
     height: 180px;
   }
 }
+/* ================= MOBILE MENU FULL OVERLAY ================= */
+
+@media (max-width: 992px) {
+
+  #nav {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+
+    background:
+      linear-gradient(180deg,#05070a 0%, #070b10 100%);
+
+    backdrop-filter: blur(10px);
+
+    padding: 120px 28px 40px;
+
+    display: none;
+  }
+
+  #nav.active {
+    display: block;
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  .nav__link {
+    font-size: 20px;
+    color: #dcdcdc;
+  }
+
+  /* gold active line */
+  .nav__link.active {
+    color: #fff;
+    position: relative;
+  }
+
+  .nav__link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg,#d4af37,#fff1a8);
+  }
+
+}
