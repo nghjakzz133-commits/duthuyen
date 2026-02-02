@@ -644,3 +644,24 @@
     gap: 14px;
   }
 }
+/* ===== MOBILE MENU FULL COVER ===== */
+
+@media (max-width: 992px) {
+
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: #05070a;   /* nền đặc — không trong suốt */
+    opacity: 0;
+    visibility: hidden;
+    z-index: 3000;
+    padding: 110px 28px 40px;
+    transition: opacity .2s ease;
+  }
+
+  .nav.active {
+    opacity: 1;
+    visibility: visible;
+  }
+
+}
