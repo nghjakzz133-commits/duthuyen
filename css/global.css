@@ -1,123 +1,103 @@
-/* ==================================================
-   GLOBAL.CSS – EMPIRE CLUB FLAGSHIP
-   Custom on top of CORE.CSS
-   ================================================== */
+/* =========================================================
+   GLOBAL.CSS – EMPIRE CLUB
+   Rule: Clean • Luxury • Scale • Mobile-first
+   Depend on: core.css (DO NOT OVERRIDE CORE)
+========================================================= */
 
-/* ================= THEME ================= */
-:root {
-  --bg-main: #050505;
-  --bg-section: #0b0b0b;
-  --bg-elevated: #111;
-  --gold-main: #c9a14a;
-  --gold-light: #f2d27a;
-  --text-main: #ffffff;
-  --text-muted: rgba(255,255,255,0.65);
-
-  --gradient-gold: linear-gradient(90deg, #c9a14a, #f2d27a);
-  --gradient-dark: radial-gradient(circle at top, #1a0e0e, #000);
-
-  --radius-lg: 20px;
-  --radius-xl: 28px;
-  --transition: all .35s ease;
-}
-
+/* ===== RESET NHẸ ===== */
 body {
-  background: var(--bg-main);
+  background: var(--bg-dark);
   color: var(--text-main);
-  overflow-x: hidden;
 }
 
-/* ================= HEADER ================= */
+/* ===== STICKY CONTACT ===== */
+.sticky-contact {
+  position: fixed;
+  right: 16px;
+  bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  z-index: 1000;
+}
+
+.sticky-btn {
+  background: var(--gold);
+  color: #000;
+  padding: 10px 14px;
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+}
+
+/* ===== HEADER ===== */
 .site-header {
   position: fixed;
-  inset: 0 0 auto 0;
-  height: 80px;
-  z-index: 1000;
-  background: rgba(5,5,5,0.7);
-  backdrop-filter: blur(14px);
-  transition: transform .4s ease;
-}
-
-.site-header.hide {
-  transform: translateY(-100%);
+  top: 0;
+  width: 100%;
+  z-index: 100;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(10px);
 }
 
 .header-inner {
-  height: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  height: 72px;
 }
 
 .logo {
-  font-size: 22px;
-  letter-spacing: 6px;
-  font-weight: 700;
-  color: #fff;
+  font-weight: 800;
+  letter-spacing: 2px;
 }
 
 .main-nav {
   display: flex;
-  gap: 36px;
+  gap: 24px;
 }
 
 .main-nav a {
-  font-size: 13px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.7);
-  position: relative;
+  color: var(--text-sub);
+  font-weight: 500;
+  text-decoration: none;
 }
 
-.main-nav a:hover,
-.main-nav a.active {
-  color: #fff;
+.lang-switch button {
+  background: none;
+  border: none;
+  color: var(--text-sub);
+  cursor: pointer;
 }
 
-.main-nav a::after {
-  content: '';
-  position: absolute;
-  bottom: -6px;
-  left: 50%;
-  width: 0;
-  height: 1px;
-  background: var(--gradient-gold);
-  transform: translateX(-50%);
-  transition: width .3s ease;
+.lang-switch .active {
+  color: var(--gold);
 }
 
-.main-nav a:hover::after,
-.main-nav a.active::after {
-  width: 100%;
-}
-
+/* ===== MENU TOGGLE ===== */
 .menu-toggle {
   display: none;
   flex-direction: column;
   gap: 6px;
   background: none;
   border: none;
+  cursor: pointer;
 }
 
 .menu-toggle span {
   width: 26px;
   height: 2px;
-  background: #fff;
+  background: var(--text-main);
 }
 
-/* ================= HERO ================= */
+/* ===== HERO ===== */
 .hero {
-  min-height: 100vh;
+  height: 100vh;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
 }
 
-.hero-background,
-.hero-background img {
-  position: absolute;
-  inset: 0;
+.hero-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -126,180 +106,146 @@ body {
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(0,0,0,.75), rgba(0,0,0,.35));
+  background: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2));
 }
 
 .hero-content {
-  position: relative;
-  z-index: 2;
-  text-align: center;
-  max-width: 900px;
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  padding-top: 72px;
 }
 
 .hero h1 {
-  font-size: clamp(3rem, 8vw, 5rem);
-  letter-spacing: 8px;
+  font-size: clamp(48px, 10vw, 96px);
+  letter-spacing: 6px;
 }
 
-.hero-subtitle {
-  color: var(--gold-light);
-  font-size: 1.3rem;
-  margin: 24px 0 48px;
+.subtitle {
+  color: var(--text-sub);
+  max-width: 520px;
 }
 
-/* ================= SECTIONS ================= */
-section {
-  padding: 120px 0;
-  background: var(--bg-section);
+.hero-actions {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
 }
 
-section h2 {
-  text-align: center;
-  font-size: 48px;
-  letter-spacing: 2px;
-  margin-bottom: 16px;
+/* ===== SECTIONS ===== */
+.section {
+  padding: 96px 0;
 }
 
-section p {
-  color: var(--text-muted);
+.section h2 {
+  margin-bottom: 24px;
 }
 
-/* ================= EXPERIENCE ================= */
-.services {
-  background: #000;
+.container.narrow {
+  max-width: 720px;
 }
 
-.service-grid {
+/* ===== GRID ===== */
+.grid-3 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px,1fr));
-  gap: 32px;
-  margin-top: 80px;
+  grid-template-columns: repeat(3,1fr);
+  gap: 24px;
 }
 
-.service-card {
-  background: linear-gradient(180deg, #120909, #000);
-  border-radius: var(--radius-lg);
-  padding: 40px 28px;
-  text-align: center;
-  transition: var(--transition);
-}
-
-.service-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 40px 80px rgba(201,161,74,.15);
-}
-
-.service-card h3 {
-  margin-bottom: 12px;
-  letter-spacing: 1px;
-}
-
-/* ================= COMBO SECTION ================= */
-.combo-section {
-  background: var(--gradient-dark);
-}
-
-.combo-grid {
+.grid-4 {
   display: grid;
   grid-template-columns: repeat(4,1fr);
-  gap: 32px;
-  margin-top: 80px;
+  gap: 24px;
 }
 
+/* ===== CARD ===== */
+.card {
+  background: rgba(255,255,255,.04);
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+}
+
+.card.highlight {
+  border: 1px solid var(--gold);
+}
+
+/* ===== COMBOS ===== */
 .combo-card {
-  background: linear-gradient(180deg,#140909,#000);
-  border-radius: var(--radius-xl);
-  overflow: hidden;
-  transition: var(--transition);
-  position: relative;
-}
-
-.combo-card:hover {
-  transform: translateY(-10px);
-}
-
-.combo-image {
-  height: 300px;
-  background: radial-gradient(circle,#2a1212,#000);
-}
-
-.combo-content {
-  padding: 28px;
-  text-align: center;
-}
-
-.combo-content h3 {
-  font-size: 22px;
-  margin-bottom: 10px;
-}
-
-.combo-desc {
-  font-size: 14px;
-  color: var(--text-muted);
-}
-
-.combo-price {
-  margin-top: 18px;
-  font-size: 20px;
-  color: var(--gold-light);
-}
-
-.combo-badge {
-  position: absolute;
-  top: 18px;
-  right: 18px;
-  background: var(--gradient-gold);
-  color: #000;
-  padding: 6px 14px;
+  background: rgba(255,255,255,.04);
+  padding: 32px;
   border-radius: 20px;
-  font-size: 12px;
-}
-
-/* ================= FINAL CTA ================= */
-.final-cta {
-  background: #000;
   text-align: center;
 }
 
-.final-cta h2 {
-  font-size: 42px;
+.combo-card .price {
+  display: block;
+  margin-top: 16px;
+  color: var(--gold);
+  font-weight: 700;
 }
 
-.final-cta p {
-  margin: 24px auto 48px;
-  max-width: 700px;
+.combo-card.highlight {
+  border: 1px solid var(--gold);
 }
 
-/* ================= FOOTER ================= */
+.combo-card.luxury {
+  background: linear-gradient(135deg, #1a1a1a, #000);
+  border: 1px solid var(--gold);
+}
+
+/* ===== CTA ===== */
+.cta {
+  background: linear-gradient(to top, #000, #111);
+}
+
+.cta-actions {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  margin-top: 32px;
+}
+
+/* ===== FOOTER ===== */
 .footer {
-  background: #000;
-  padding: 60px 0 40px;
-  text-align: center;
+  padding: 32px 0;
+  color: var(--text-sub);
+  border-top: 1px solid rgba(255,255,255,.08);
 }
 
-.footer p {
-  font-size: 13px;
-  color: rgba(255,255,255,.5);
-}
+/* ===== MOBILE ===== */
+@media (max-width: 768px) {
 
-/* ================= RESPONSIVE ================= */
-@media (max-width:1024px){
-  .main-nav{
+  .main-nav {
     position: fixed;
-    top: 80px;
-    inset-inline: 0;
-    height: calc(100vh - 80px);
-    background:#000;
+    inset: 0;
+    background: var(--bg-dark);
     flex-direction: column;
     justify-content: center;
-    transform: translateY(-100%);
+    align-items: center;
+    transform: translateX(100%);
+    transition: transform .4s ease;
   }
-  .main-nav.open{transform:translateY(0)}
-  .menu-toggle{display:flex}
-  .combo-grid{grid-template-columns:repeat(2,1fr)}
-}
 
-@media (max-width:640px){
-  section{padding:80px 0}
-  .combo-grid{grid-template-columns:1fr}
+  .main-nav.open {
+    transform: translateX(0);
+  }
+
+  .menu-toggle {
+    display: flex;
+    z-index: 200;
+  }
+
+  .grid-3,
+  .grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
