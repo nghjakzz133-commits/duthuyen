@@ -610,3 +610,53 @@
     padding: 6px 0; /* giữ header không bị quá cao */
   }
 }
+/* ===== HERO TITLE – LUXURY GOLD UPGRADE ===== */
+
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: .95;
+  margin-bottom: 12px;
+}
+
+/* gold metal text */
+.hero__title-top,
+.hero__title-bottom {
+  display: block;
+
+  background: linear-gradient(
+    180deg,
+    #fff6c9 0%,
+    #f1d27a 25%,
+    #d4af37 50%,
+    #b8962e 75%,
+    #fff1b8 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* depth + glow */
+  text-shadow:
+    0 2px 0 rgba(0,0,0,.6),
+    0 6px 18px rgba(212,175,55,.25),
+    0 0 28px rgba(212,175,55,.18);
+}
+
+/* size chuẩn mobile đẹp */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(56px, 12vw, 84px);
+  }
+}
+.hero__title-top,
+.hero__title-bottom {
+  background-size: 220% 100%;
+  animation: goldShift 7s linear infinite;
+}
+
+@keyframes goldShift {
+  from { background-position: 0% 0; }
+  to { background-position: 220% 0; }
+}
