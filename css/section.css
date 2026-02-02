@@ -672,3 +672,62 @@
   }
 
 }
+/* ================= MOBILE MENU LUXURY BALANCE ================= */
+
+@media (max-width: 992px) {
+
+  #nav {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle at 30% 20%, #111 0%, #05070a 60%);
+    z-index: 9999;
+
+    display: none;
+    padding: 140px 36px 60px;
+
+    /* luxury fade */
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .25s ease, transform .25s ease;
+  }
+
+  #nav.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .nav__link {
+    font-size: 22px;
+    letter-spacing: .5px;
+    color: #d8d8d8;
+    position: relative;
+  }
+
+  /* luxury underline */
+  .nav__link.active::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    width: 64px;
+    height: 2px;
+    background: linear-gradient(90deg,#d4af37,#fff3b0);
+    box-shadow: 0 0 12px rgba(212,175,55,.5);
+  }
+
+  /* hover glow */
+  .nav__link:active {
+    color: #fff;
+    text-shadow: 0 0 12px rgba(212,175,55,.35);
+  }
+
+}
