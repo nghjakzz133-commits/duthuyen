@@ -1,0 +1,144 @@
+[
+  {
+    "id": "event-001",
+    "title": "EDM Night - DJ Alex",
+    "date": "15/02/2024",
+    "time": "21:00 - 02:00",
+    "price": "300.000đ",
+    "description": "Đêm nhạc EDM bùng nổ cùng DJ Alex nổi tiếng. Tận hưởng không gian âm nhạc đỉnh cao với hệ thống âm thanh ánh sáng hiện đại nhất.",
+    "image": "assets/images/events/edm-night.jpg",
+    "category": "music",
+    "featured": true,
+    "dj": "DJ Alex",
+    "venue": "Main Floor",
+    "capacity": 500,
+    "ticketTypes": [
+      {
+        "type": "Early Bird",
+        "price": 250000,
+        "available": true
+      },
+      {
+        "type": "Standard",
+        "price": 300000,
+        "available": true
+      },
+      {
+        "type": "VIP",
+        "price": 500000,
+        "available": true
+      }
+    ]
+  },
+  {
+    "id": "event-002",
+    "title": "Latin Night - Salsa & Bachata",
+    "date": "22/02/2024",
+    "time": "20:00 - 01:00",
+    "price": "200.000đ",
+    "description": "Đêm nhạc Latin sôi động với Salsa và Bachata. Cùng nhau thưởng thức những giai điệu cuốn hút và bước nhảy đầy quyến rũ.",
+    "image": "assets/images/events/latin-night.jpg",
+    "category": "dance",
+    "featured": true,
+    "instructor": "Carlos & Maria",
+    "venue": "Dance Floor",
+    "capacity": 300
+  },
+  {
+    "id": "event-003",
+    "title": "Hip Hop Party - MC Vinh",
+    "date": "01/03/2024",
+    "time": "21:00 - 03:00",
+    "price": "350.000đ",
+    "description": "Bữa tiệc Hip Hop đỉnh cao với MC Vinh và các nghệ sĩ khách mời. Không khí sôi động, năng lượng tràn đầy suốt đêm.",
+    "image": "assets/images/events/hiphop-party.jpg",
+    "category": "music",
+    "featured": false,
+    "mc": "MC Vinh",
+    "venue": "Main Floor",
+    "capacity": 500
+  },
+  {
+    "id": "event-004",
+    "title": "Ladies Night - Free Entry",
+    "date": "08/03/2024",
+    "time": "20:00 - 02:00",
+    "price": "Free (Ladies)",
+    "description": "Đêm dành riêng cho các quý cô. Miễn phí vào cửa và ưu đãi đặc biệt cho cocktail. Âm nhạc, khiêu vũ và niềm vui không giới hạn.",
+    "image": "assets/images/events/ladies-night.jpg",
+    "category": "special",
+    "featured": true,
+    "venue": "Entire Venue",
+    "capacity": 600,
+    "offers": [
+      "Free entry for ladies",
+      "50% off cocktails (20:00-22:00)",
+      "Free welcome drink"
+    ]
+  },
+  {
+    "id": "event-005",
+    "title": "Acoustic Live Session",
+    "date": "15/03/2024",
+    "time": "19:00 - 23:00",
+    "price": "150.000đ",
+    "description": "Buổi biểu diễn acoustic đầm ấm với các ca sĩ tài năng. Không gian nhẹ nhàng, lãng mạn, phù hợp cho những ai yêu thích âm nhạc nhẹ nhàng.",
+    "image": "assets/images/events/acoustic-live.jpg",
+    "category": "live-music",
+    "featured": false,
+    "artists": [
+      "Hương Tràm",
+      "Đen Vâu"
+    ],
+    "venue": "Lounge Area",
+    "capacity": 200
+  },
+  {
+    "id": "event-006",
+    "title": "Techno Underground",
+    "date": "22/03/2024",
+    "time": "22:00 - 04:00",
+    "price": "400.000đ",
+    "description": "Đêm Techno Underground dành cho những tín đồ nhạc điện tử chính hiệu. Âm thanh mạnh mẽ, không gian tối giản, trải nghiệm cực chất.",
+    "image": "assets/images/events/techno-underground.jpg",
+    "category": "music",
+    "featured": true,
+    "dj": "DJ Shadow",
+    "venue": "Underground Floor",
+    "capacity": 400,
+    "ageLimit": "21+"
+  },
+  {
+    "id": "event-007",
+    "title": "R&B Soul Night",
+    "date": "29/03/2024",
+    "time": "21:00 - 02:00",
+    "price": "250.000đ",
+    "description": "Đêm nhạc R&B và Soul đầy cảm xúc. Thưởng thức những giai điệu êm dịu, sâu lắng cùng cocktail đặc biệt.",
+    "image": "assets/images/events/rnb-soul.jpg",
+    "category": "music",
+    "featured": false,
+    "venue": "Main Floor",
+    "capacity": 350
+  },
+  {
+    "id": "event-008",
+    "title": "New Year Countdown 2025",
+    "date": "31/12/2024",
+    "time": "20:00 - 04:00",
+    "price": "1.000.000đ",
+    "description": "Đón năm mới 2025 đầy hoành tráng tại Empire. Pháo hoa, DJ quốc tế, buffet cao cấp và nhiều bất ngờ đặc biệt.",
+    "image": "assets/images/events/new-year.jpg",
+    "category": "special",
+    "featured": true,
+    "venue": "Entire Venue",
+    "capacity": 1000,
+    "includes": [
+      "Buffet cao cấp",
+      "Unlimited drinks",
+      "Fireworks display",
+      "International DJ lineup",
+      "Lucky draw with prizes"
+    ]
+  }
+]
