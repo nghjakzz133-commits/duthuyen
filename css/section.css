@@ -809,3 +809,54 @@ section,
     background: #140006 !important;
   }
 }
+/* ===== HERO TITLE — GOLD LUXURY PRO ===== */
+
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 800;
+  letter-spacing: 2px;
+  line-height: .95;
+  margin-bottom: 18px;
+}
+
+/* gold metal effect */
+.hero__title-top,
+.hero__title-bottom {
+  display: block;
+
+  background: linear-gradient(
+    180deg,
+    #fff6c9 0%,
+    #f4d77a 25%,
+    #d4af37 45%,
+    #b8962e 60%,
+    #f7e3a3 78%,
+    #fff8d6 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* nổi khối */
+  text-shadow:
+    0 2px 0 #7a5a00,
+    0 6px 18px rgba(0,0,0,.85),
+    0 0 22px rgba(212,175,55,.35);
+
+  /* glow nhẹ luxury */
+  filter: drop-shadow(0 0 18px rgba(212,175,55,.25));
+}
+
+/* size đập vào mắt mobile */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(56px, 13vw, 88px);
+  }
+}
+.hero__subtitle {
+  color: #e7dcc0;
+  font-size: 15px;
+  letter-spacing: .5px;
+  opacity: .95;
+  text-shadow: 0 2px 10px rgba(0,0,0,.8);
+}
