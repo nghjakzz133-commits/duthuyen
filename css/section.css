@@ -740,3 +740,72 @@
   }
 
 }
+/* ===== FULL SITE RED DARK OVERRIDE ===== */
+
+html,
+body {
+  background: #0b0004 !important;
+}
+
+/* lớp nền đỏ chìm phủ toàn bộ */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+
+  background:
+    radial-gradient(circle at 20% 10%, #3a000c 0%, #140005 40%, #070102 100%),
+    linear-gradient(180deg, #120004, #050102);
+
+}
+
+/* xoá nền riêng từng section để khỏi loang màu */
+section,
+.hero,
+.about,
+.pricing,
+.events,
+.gallery,
+.menu,
+.booking,
+.contact,
+.footer {
+  background: transparent !important;
+}
+
+/* hero overlay chỉnh lại cho hợp nền đỏ */
+.hero__bg-overlay {
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(30,0,6,.65),
+      rgba(0,0,0,.9)
+    ) !important;
+}
+
+/* card / box đồng bộ tone */
+.card,
+.hero__info-item,
+.about__item,
+.pricing__card,
+.event__content,
+.menu__item,
+.contact__card {
+  background: rgba(30,0,8,.55) !important;
+  border: 1px solid rgba(200,40,60,.25);
+  backdrop-filter: blur(8px);
+}
+
+/* header đỏ chìm đồng bộ */
+.header {
+  background: rgba(35,0,8,.85) !important;
+  border-bottom: 1px solid rgba(200,60,80,.25);
+}
+
+/* mobile menu nền đỏ đậm */
+@media (max-width: 992px) {
+  #nav {
+    background: #140006 !important;
+  }
+}
