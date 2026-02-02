@@ -1152,3 +1152,68 @@ section,
     0 30px 80px rgba(0,0,0,.9),
     0 0 0 1px rgba(212,175,55,.35);
 }
+/* ===== HERO TITLE — FINAL LUXURY FIX ===== */
+
+.hero__title {
+  position: relative;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: .92;
+  margin-bottom: 22px;
+}
+
+/* chữ vàng kim sáng mép + nổi khối */
+
+.hero__title-top,
+.hero__title-bottom {
+  display: block;
+  font-size: clamp(64px, 12vw, 120px);
+
+  background: linear-gradient(
+    180deg,
+    #fff9d6 0%,
+    #ffe27a 18%,
+    #ffd24a 35%,
+    #d4af37 55%,
+    #9f7a12 72%,
+    #ffeaa0 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* viền sáng mỏng */
+  -webkit-text-stroke: 1px rgba(0,0,0,.35);
+
+  /* depth + highlight */
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.25),
+    0 3px 0 rgba(0,0,0,.75),
+    0 8px 22px rgba(0,0,0,.85),
+    0 0 18px rgba(255,215,120,.35);
+}
+
+
+/* halo sáng tập trung phía sau chữ */
+
+.hero__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 48%;
+  transform: translate(-50%,-50%);
+  width: 420px;
+  height: 180px;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(255,210,90,.45),
+    rgba(255,210,90,.18),
+    transparent 70%
+  );
+
+  filter: blur(22px);
+  z-index: -1;
+  pointer-events: none;
+}
