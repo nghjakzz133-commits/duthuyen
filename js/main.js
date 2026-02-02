@@ -76,12 +76,15 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const id = this.getAttribute('href');
-      if (id.length > 1) {
-        const target = document.querySelector(id);
-        if (target) {
-          e.preventDefault();
-          target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
+      if (!id || id.length <= 1) return;
+
+      const target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     });
   });
@@ -120,7 +123,10 @@ document.addEventListener('DOMContentLoaded', () => {
   if (galleryBtns.length) {
     const overlay = document.createElement('div');
     overlay.className = 'lightbox';
-    overlay.innerHTML = `<span class="lightbox__close">&times;</span><img class="lightbox__img">`;
+    overlay.innerHTML =
+      `<span class="lightbox__close">&times;</span>
+       <img class="lightbox__img">`;
+
     document.body.appendChild(overlay);
 
     const overlayImg = overlay.querySelector('img');
@@ -128,16 +134,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
     galleryBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        const img = btn.closest('.gallery__item').querySelector('img');
+        const img = btn.closest('.gallery__item')?.querySelector('img');
         if (!img) return;
         overlayImg.src = img.src;
         overlay.classList.add('show');
       });
     });
 
-    closeBtn.addEventListener('click', () => overlay.classList.remove('show'));
+    closeBtn.addEventListener('click', () =>
+      overlay.classList.remove('show')
+    );
+
     overlay.addEventListener('click', (e) => {
-      if (e.target === overlay) overlay.classList.remove('show');
+      if (e.target === overlay) {
+        overlay.classList.remove('show');
+      }
     });
   }
 
@@ -149,10 +160,10 @@ document.addEventListener('DOMContentLoaded', () => {
   const navLinks = document.querySelectorAll('.nav__link');
 
   function setActiveNav() {
-    let scrollY = window.pageYOffset;
+    const scrollY = window.pageYOffset;
 
     sections.forEach(sec => {
-      const top = sec.offsetTop - 120;
+      const top = sec.offsetTop - 140;
       const height = sec.offsetHeight;
       const id = sec.getAttribute('id');
 
@@ -171,7 +182,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
   /* =============================
-     8. BOOKING FORM (DEMO SUBMIT)
+     8. BOOKING FORM (DEMO)
   ============================= */
   const bookingForm = document.getElementById('booking-form');
 
@@ -201,6 +212,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => {
       btn.classList.add('added');
       btn.innerHTML = '<i class="fas fa-check"></i>';
+
       setTimeout(() => {
         btn.classList.remove('added');
         btn.innerHTML = '<i class="fas fa-plus"></i>';
@@ -210,8 +222,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
-/* ===== CLOSE MENU WHEN CLICK BACKDROP ===== */
 
+/* =============================
+   10. CLOSE MENU WHEN CLICK OUTSIDE
+============================= */
 document.addEventListener('click', (e) => {
   const nav = document.getElementById('nav');
   const toggle = document.getElementById('menu-toggle');
