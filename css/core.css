@@ -342,3 +342,68 @@ body {
   font-size: 40px;
   color: #fff;
 }
+/* =====================================================
+   GLOBAL NO-HORIZONTAL-SCROLL FIX
+   Dán cuối core.css
+===================================================== */
+
+/* khóa ngang toàn site */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden !important;
+}
+
+/* mọi section không được tràn ngang */
+section,
+header,
+footer,
+main {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+/* container không được vượt viewport */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow-x: hidden;
+}
+
+/* grid / flex hay bị đẩy ngang */
+[class*="wrapper"],
+[class*="grid"],
+[class*="row"] {
+  max-width: 100%;
+}
+
+/* ảnh + video không bao giờ vượt khung */
+img,
+video,
+canvas {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* chặn shadow / transform làm tràn layout */
+.card,
+.btn,
+.hero__video-box,
+.pricing__card,
+.event__card,
+.gallery__item {
+  transform: translateZ(0);
+}
+
+/* fix mobile menu overlay */
+#nav {
+  max-width: 100vw;
+}
+
+/* safety: nếu có thằng nào lỡ width > 100% */
+* {
+  box-sizing: border-box;
+}
