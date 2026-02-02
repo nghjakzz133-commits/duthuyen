@@ -388,3 +388,23 @@
   }
 
 }
+/* ===== NAV CLOSE BUTTON ===== */
+
+.nav__close {
+  display: none;
+}
+
+@media (max-width: 992px) {
+
+  .nav__close {
+    display: block;
+    position: absolute;
+    top: 28px;
+    right: 28px;
+    font-size: 22px;
+    color: #fff;
+    background: none;
+    border: 0;
+  }
+
+}
