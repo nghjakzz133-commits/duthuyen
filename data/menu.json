@@ -1,0 +1,269 @@
+{
+  "cocktails": [
+    {
+      "id": "cocktail-001",
+      "name": "Empire Special",
+      "description": "Cocktail đặc trưng của Empire với Vodka, nước chanh tươi, bạc hà và siro vàng",
+      "price": 180000,
+      "image": "assets/images/menu/empire-special.jpg",
+      "category": "signature",
+      "alcohol": true,
+      "ingredients": [
+        "Vodka",
+        "Fresh Lime",
+        "Mint",
+        "Gold Syrup"
+      ],
+      "popular": true
+    },
+    {
+      "id": "cocktail-002",
+      "name": "Gold Mojito",
+      "description": "Mojito truyền thống với lá bạc hà tươi và rum vàng cao cấp",
+      "price": 150000,
+      "image": "assets/images/menu/gold-mojito.jpg",
+      "category": "classic",
+      "alcohol": true,
+      "ingredients": [
+        "Gold Rum",
+        "Fresh Mint",
+        "Lime",
+        "Soda"
+      ],
+      "popular": true
+    },
+    {
+      "id": "cocktail-003",
+      "name": "Passion Martini",
+      "description": "Martini chanh dây thơm ngon với vodka và chanh dây tươi",
+      "price": 160000,
+      "image": "assets/images/menu/passion-martini.jpg",
+      "category": "martini",
+      "alcohol": true,
+      "ingredients": [
+        "Vodka",
+        "Passion Fruit",
+        "Vanilla Syrup",
+        "Lime"
+      ]
+    },
+    {
+      "id": "cocktail-004",
+      "name": "Long Island Iced Tea",
+      "description": "Cocktail mạnh mẽ kết hợp 5 loại rượu với nước cola",
+      "price": 170000,
+      "image": "assets/images/menu/long-island.jpg",
+      "category": "classic",
+      "alcohol": true,
+      "ingredients": [
+        "Vodka",
+        "Rum",
+        "Gin",
+        "Tequila",
+        "Triple Sec",
+        "Cola"
+      ]
+    },
+    {
+      "id": "cocktail-005",
+      "name": "Strawberry Daiquiri",
+      "description": "Daiquiri dâu tây tươi mát lạnh, hoàn hảo cho mùa hè",
+      "price": 140000,
+      "image": "assets/images/menu/strawberry-daiquiri.jpg",
+      "category": "fruity",
+      "alcohol": true,
+      "ingredients": [
+        "White Rum",
+        "Fresh Strawberries",
+        "Lime",
+        "Sugar"
+      ]
+    },
+    {
+      "id": "cocktail-006",
+      "name": "Blue Lagoon",
+      "description": "Cocktail màu xanh biển đầy ấn tượng với Blue Curacao",
+      "price": 155000,
+      "image": "assets/images/menu/blue-lagoon.jpg",
+      "category": "signature",
+      "alcohol": true,
+      "ingredients": [
+        "Vodka",
+        "Blue Curacao",
+        "Lemonade",
+        "Lime"
+      ]
+    }
+  ],
+  "spirits": [
+    {
+      "id": "spirit-001",
+      "name": "Hennessy VSOP",
+      "description": "Cognac cao cấp từ Pháp",
+      "price": 2500000,
+      "image": "assets/images/menu/hennessy.jpg",
+      "category": "cognac",
+      "size": "700ml",
+      "origin": "France"
+    },
+    {
+      "id": "spirit-002",
+      "name": "Chivas Regal 18",
+      "description": "Whisky pha trộn 18 năm từ Scotland",
+      "price": 3200000,
+      "image": "assets/images/menu/chivas.jpg",
+      "category": "whisky",
+      "size": "700ml",
+      "origin": "Scotland",
+      "popular": true
+    },
+    {
+      "id": "spirit-003",
+      "name": "Grey Goose Vodka",
+      "description": "Vodka premium từ Pháp",
+      "price": 1800000,
+      "image": "assets/images/menu/grey-goose.jpg",
+      "category": "vodka",
+      "size": "700ml",
+      "origin": "France"
+    },
+    {
+      "id": "spirit-004",
+      "name": "Don Julio 1942",
+      "description": "Tequila cao cấp ủ 2.5 năm",
+      "price": 4500000,
+      "image": "assets/images/menu/don-julio.jpg",
+      "category": "tequila",
+      "size": "750ml",
+      "origin": "Mexico"
+    }
+  ],
+  "beers": [
+    {
+      "id": "beer-001",
+      "name": "Heineken",
+      "description": "Bia Heineken chai",
+      "price": 80000,
+      "image": "assets/images/menu/heineken.jpg",
+      "category": "international",
+      "size": "330ml",
+      "origin": "Netherlands"
+    },
+    {
+      "id": "beer-002",
+      "name": "Tiger Crystal",
+      "description": "Bia Tiger tinh thể",
+      "price": 70000,
+      "image": "assets/images/menu/tiger.jpg",
+      "category": "local",
+      "size": "330ml",
+      "origin": "Singapore"
+    },
+    {
+      "id": "beer-003",
+      "name": "Corona Extra",
+      "description": "Bia Corona Mexico",
+      "price": 90000,
+      "image": "assets/images/menu/corona.jpg",
+      "category": "international",
+      "size": "355ml",
+      "origin": "Mexico"
+    }
+  ],
+  "wines": [
+    {
+      "id": "wine-001",
+      "name": "Moët & Chandon",
+      "description": "Champagne sang trọng từ Pháp",
+      "price": 4000000,
+      "image": "assets/images/menu/moet.jpg",
+      "category": "champagne",
+      "size": "750ml",
+      "origin": "France",
+      "popular": true
+    },
+    {
+      "id": "wine-002",
+      "name": "Château Margaux",
+      "description": "Rượu vang đỏ cao cấp",
+      "price": 8000000,
+      "image": "assets/images/menu/margaux.jpg",
+      "category": "red-wine",
+      "size": "750ml",
+      "origin": "France"
+    }
+  ],
+  "softDrinks": [
+    {
+      "id": "soft-001",
+      "name": "Virgin Mojito",
+      "description": "Mojito không cồn với bạc hà tươi",
+      "price": 80000,
+      "image": "assets/images/menu/virgin-mojito.jpg",
+      "category": "mocktail",
+      "alcohol": false
+    },
+    {
+      "id": "soft-002",
+      "name": "Fresh Juice",
+      "description": "Nước ép trái cây tươi (Cam/Dứa/Dâu)",
+      "price": 70000,
+      "image": "assets/images/menu/fresh-juice.jpg",
+      "category": "juice",
+      "alcohol": false
+    },
+    {
+      "id": "soft-003",
+      "name": "Soft Drinks",
+      "description": "Coca Cola, Sprite, Pepsi",
+      "price": 40000,
+      "image": "assets/images/menu/soft-drinks.jpg",
+      "category": "soda",
+      "alcohol": false
+    }
+  ],
+  "packages": [
+    {
+      "id": "package-001",
+      "name": "VIP Table Package",
+      "description": "1 chai Hennessy VSOP + 4 lon bia + Mix cơ bản",
+      "price": 3500000,
+      "items": [
+        "Hennessy VSOP",
+        "4x Beer",
+        "Mixers",
+        "Ice",
+        "Fruits"
+      ],
+      "suitable": "4-6 người",
+      "popular": true
+    },
+    {
+      "id": "package-002",
+      "name": "Party Package",
+      "description": "1 chai Vodka + 1 chai Rượu + 6 lon bia + Mix đầy đủ",
+      "price": 2800000,
+      "items": [
+        "Grey Goose Vodka",
+        "Wine",
+        "6x Beer",
+        "Full Mixers",
+        "Snacks"
+      ],
+      "suitable": "6-8 người"
+    },
+    {
+      "id": "package-003",
+      "name": "Premium Package",
+      "description": "2 chai Champagne + Premium Mixers + VIP Service",
+      "price": 9000000,
+      "items": [
+        "2x Moët Champagne",
+        "Premium Mixers",
+        "Fruits",
+        "VIP Service"
+      ],
+      "suitable": "8-10 người"
+    }
+  ]
+}
