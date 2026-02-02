@@ -1,8 +1,8 @@
 /* =====================================================
-   SECTION.CSS — EMPIRE CLUB — STABLE BUILD
-   Clean • No Override Clash • Layout Safe
-   Works with core.css
+   SECTION.CSS — EMPIRE CLUB — CLEAN & STABLE
+   Use with core.css
 ===================================================== */
+
 :root {
   --header-height: 72px;
 }
@@ -10,97 +10,119 @@
 /* ================= HERO ================= */
 
 .hero {
-  min-height: 100vh;
   position: relative;
-  padding-top: 140px;
-}
-
-.hero__bg { display: none; }
-
-.hero__content {
+  min-height: 100vh;
+  padding-top: calc(var(--header-height) + 40px);
+  overflow: hidden;
+  background: radial-gradient(ellipse at top, #141414 0%, #060606 70%);
   text-align: center;
 }
 
-/* ----- HERO TITLE ----- */
+/* Luxury overlay */
+.hero__bg-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(120deg, rgba(212,175,55,0.08), transparent 40%),
+    radial-gradient(circle at 30% 20%, rgba(255,215,120,0.12), transparent 55%);
+  pointer-events: none;
+}
+
+/* ================= HERO TITLE ================= */
 
 .hero__title {
   position: relative;
   font-family: "Playfair Display", serif;
   font-weight: 700;
-  letter-spacing: 1.5px;
+  letter-spacing: .18em;
   line-height: .95;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
 }
 
 .hero__title-top,
 .hero__title-bottom {
   display: block;
-  font-size: clamp(58px, 11vw, 110px);
-
+  font-size: clamp(60px, 11vw, 120px);
   background: linear-gradient(
     180deg,
-    #fff8d8 0%,
-    #ffe89a 30%,
-    #e2bf55 55%,
-    #cfa63a 75%,
-    #fff1c2 100%
+    #fffbe6 0%,
+    #ffe9a3 18%,
+    #ffd45e 32%,
+    #d4af37 50%,
+    #9c740f 70%,
+    #f6d77a 88%,
+    #fff4c8 100%
   );
-
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-
-  text-shadow: 0 2px 6px rgba(0,0,0,.55);
+  -webkit-text-stroke: .6px rgba(0,0,0,.35);
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.25),
+    0 3px 0 rgba(0,0,0,.7),
+    0 8px 18px rgba(0,0,0,.85);
 }
 
-/* halo nhẹ */
+/* halo */
 .hero__title::after {
   content: "";
   position: absolute;
   left: 50%;
-  top: 48%;
+  top: 46%;
   transform: translate(-50%,-50%);
-  width: 320px;
-  height: 120px;
+  width: 420px;
+  height: 160px;
   background: radial-gradient(
     ellipse,
-    rgba(255,210,120,.22),
+    rgba(255,210,90,.35),
     transparent 70%
   );
-  filter: blur(18px);
+  filter: blur(20px);
   z-index: -1;
 }
 
-/* ----- HERO VIDEO ----- */
+/* ================= HERO VIDEO (NO CROP) ================= */
 
 .hero__video-box {
-  width: min(920px, 92%);
-  height: 260px;
-  margin: 26px auto 30px;
-  border-radius: 22px;
+  position: relative;
+  width: 100%;
+  max-width: 520px;
+  margin: 28px auto;
+  aspect-ratio: 16 / 9;
+  border-radius: 18px;
   overflow: hidden;
   background: #000;
   box-shadow:
-    0 30px 80px rgba(0,0,0,.9),
-    0 0 0 1px rgba(212,175,55,.35);
+    0 0 0 1px rgba(212,175,55,.35),
+    0 20px 60px rgba(0,0,0,.75);
+}
+
+.hero__video-box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(145deg, rgba(255,215,120,.25), transparent 40%);
+  pointer-events: none;
 }
 
 .hero__video-box video {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain; /* xem full */
+  display: block;
 }
 
-/* ----- HERO TEXT ----- */
+/* ================= HERO TEXT ================= */
 
 .hero__subtitle {
   max-width: 720px;
   margin: 0 auto 22px;
-  color: #f0e6c9;
   font-size: 15px;
-  letter-spacing: .4px;
+  color: #cfc6a8;
+  letter-spacing: .06em;
+  opacity: .9;
 }
 
-/* ----- HERO CTA ----- */
+/* ================= HERO CTA ================= */
 
 .hero__cta {
   display: flex;
@@ -109,7 +131,7 @@
   flex-wrap: wrap;
 }
 
-/* ----- HERO INFO ----- */
+/* ================= HERO INFO ================= */
 
 .hero__info {
   display: flex;
@@ -123,695 +145,38 @@
   display: flex;
   gap: 12px;
   align-items: center;
-  background: rgba(30,0,8,.55);
-  border: 1px solid rgba(200,40,60,.25);
   padding: 14px 18px;
-  border-radius: 14px;
-  backdrop-filter: blur(8px);
-}
-
-
-/* ================= HEADER ================= */
-
-.header {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(35,0,8,.85);
-  backdrop-filter: blur(14px);
-  border-bottom: 1px solid rgba(200,60,80,.25);
-}
-
-.header__wrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 10px 0;
-}
-
-.header__logo img {
-  height: 44px;
-}
-
-.header__actions {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
-
-.header__hotline {
-  display: flex;
-  gap: 8px;
-  padding: 8px 12px;
-  border-radius: 999px;
-  background: #11161b;
-  font-size: 13px;
-}
-
-/* ----- NAV DESKTOP ----- */
-
-.nav__list {
-  display: flex;
-  gap: 22px;
-}
-
-.nav__link {
-  font-size: 14px;
-  color: #c9c9c9;
-}
-
-.nav__link:hover,
-.nav__link.active {
-  color: #fff;
-}
-
-/* ----- TOGGLE ----- */
-
-.header__toggle {
-  display: none;
-  flex-direction: column;
-  gap: 4px;
-}
-
-.header__toggle span {
-  width: 22px;
-  height: 2px;
-  background: #fff;
-}
-
-
-/* ================= MOBILE NAV ================= */
-
-@media (max-width: 992px) {
-
-  .header__toggle { display: flex; }
-
-  #nav {
-    position: fixed;
-    inset: 0;
-    z-index: 9999;
-    background: rgba(5,7,10,.95);
-    backdrop-filter: blur(16px);
-    padding: 120px 28px 40px;
-    display: none;
-  }
-
-  #nav.active { display: block; }
-
-  .nav__list {
-    flex-direction: column;
-    gap: 22px;
-    background: rgba(20,24,30,.88);
-    border: 1px solid rgba(212,175,55,.25);
-    border-radius: 22px;
-    padding: 26px;
-  }
-
-  .nav__link {
-    font-size: 18px;
-    padding: 12px;
-    border-radius: 12px;
-  }
-
-  .nav__link:hover {
-    background: rgba(212,175,55,.08);
-  }
-
-  .header__hotline span { display: none; }
-}
-
-
-/* ================= GRID SECTIONS ================= */
-
-.about__wrapper,
-.booking__wrapper,
-.contact__wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 40px;
-}
-
-.pricing__wrapper,
-.events__wrapper,
-.menu__grid,
-.gallery__wrapper {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 28px;
-}
-
-.gallery__wrapper { grid-template-columns: repeat(4,1fr); }
-
-
-/* ================= CARDS ================= */
-
-.card,
-.about__item,
-.menu__item,
-.pricing__card,
-.event__content,
-.contact__card {
-  background: rgba(30,0,8,.55);
-  border: 1px solid rgba(200,40,60,.25);
   border-radius: 18px;
-  backdrop-filter: blur(8px);
-}
-
-
-/* ================= EXPERIENCE ================= */
-
-.experience__grid {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 28px;
-}
-
-.experience__card {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(212,175,55,.18);
-  border-radius: 18px;
-  padding: 28px;
-  text-align: center;
-  transition: .3s;
-}
-
-.experience__card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 20px 60px rgba(0,0,0,.6);
-}
-
-
-/* ================= RESPONSIVE ================= */
-
-@media (max-width: 1000px) {
-
-  .pricing__wrapper,
-  .events__wrapper,
-  .menu__grid,
-  .gallery__wrapper {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .about__wrapper,
-  .booking__wrapper,
-  .contact__wrapper {
-    grid-template-columns: 1fr;
-  }
-}
-
-@media (max-width: 600px) {
-
-  .pricing__wrapper,
-  .events__wrapper,
-  .gallery__wrapper,
-  .menu__grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero__video-box {
-    height: 180px;
-  }
-
-  .hero__title-top,
-  .hero__title-bottom {
-    font-size: 64px;
-  }
-
-  .header__logo img {
-    height: 60px;
-  }
-}
-/* ===== HERO TITLE — TRUE LUXURY METAL ===== */
-
-.hero__title {
-  font-family: "Playfair Display", serif;
-  font-weight: 600;
-  letter-spacing: 2px;
-  line-height: .95;
-  margin-bottom: 22px;
-  position: relative;
-}
-
-/* hiệu ứng kim loại nhiều lớp */
-
-.hero__title-top,
-.hero__title-bottom {
-  display: block;
-  font-size: clamp(60px, 11vw, 120px);
-
-  background: linear-gradient(
-    180deg,
-    #fffbe6 0%,
-    #ffe9a3 18%,
-    #ffd45e 32%,
-    #d4af37 50%,
-    #9c740f 70%,
-    #f6d77a 88%,
-    #fff4c8 100%
-  );
-
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  /* viền mỏng sắc */
-  -webkit-text-stroke: .6px rgba(0,0,0,.35);
-
-  /* depth shadow */
-  text-shadow:
-    0 1px 0 rgba(255,255,255,.25),
-    0 3px 0 rgba(0,0,0,.7),
-    0 8px 18px rgba(0,0,0,.85);
-}
-
-/* highlight sáng phía trên chữ */
-
-.hero__title-top::before,
-.hero__title-bottom::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.35),
-    transparent 40%
-  );
-  mix-blend-mode: overlay;
-  pointer-events: none;
-}
-
-/* halo nền vàng tập trung */
-
-.hero__title::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 46%;
-  transform: translate(-50%,-50%);
-  width: 420px;
-  height: 160px;
-
-  background: radial-gradient(
-    ellipse,
-    rgba(255,210,90,.35),
-    rgba(255,210,90,.12),
-    transparent 70%
-  );
-
-  filter: blur(20px);
-  z-index: -1;
-}
-/* ===== FOOTER CTA — LUXURY PANEL ===== */
-
-.footer__cta {
-  margin-top: 40px;
-  padding: 28px 26px;
-  border-radius: 22px;
-
-  background: linear-gradient(
-    180deg,
-    rgba(255,255,255,.06),
-    rgba(255,255,255,.015)
-  );
-
-  border: 1px solid rgba(212,175,55,.28);
-
-  box-shadow:
-    0 20px 60px rgba(0,0,0,.65),
-    0 0 0 1px rgba(212,175,55,.12);
-
-  display: flex;
-  gap: 22px;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-/* ===== TEXT FORM ===== */
-
-.footer__cta-title {
-  font-family: "Playfair Display", serif;
-  font-size: 24px;
-  letter-spacing: .5px;
-
-  background: linear-gradient(90deg,#fff,#f3d98a,#fff);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  text-shadow: 0 4px 14px rgba(0,0,0,.7);
-  margin-bottom: 6px;
-}
-
-.footer__cta-text {
-  color: #e6dcc0;
-  font-size: 14px;
-  letter-spacing: .3px;
-  opacity: .95;
-}
-
-/* ===== BUTTON GLOW ===== */
-
-.footer__cta .btn {
-  box-shadow:
-    0 12px 34px rgba(212,175,55,.35),
-    0 0 0 1px rgba(212,175,55,.25);
-}
-
-.footer__cta .btn:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 18px 46px rgba(212,175,55,.5),
-    0 0 0 1px rgba(255,220,120,.5);
-}
-
-
-/* ===== FOOTER BOTTOM — CLEAN LUXURY ===== */
-
-.footer__bottom {
-  margin-top: 26px;
-  padding-top: 18px;
-  border-top: 1px solid rgba(212,175,55,.18);
-
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  text-align: center;
-}
-
-.footer__copyright {
-  color: #cfc6a8;
-  font-size: 13px;
-  letter-spacing: .4px;
-}
-
-.footer__copyright strong {
-  color: #ffe7a0;
-  font-weight: 600;
-}
-
-.footer__credits {
-  font-size: 12px;
-  color: #9f9780;
-  letter-spacing: .3px;
-}
-
-.footer__credits i {
-  color: #d4af37;
-  margin: 0 4px;
-}
-/* =========================================================
-   HERO LUXURY UPGRADE – EMPIRE CLUB
-   Effect: Gold glitter • Light sweep • Premium depth
-========================================================= */
-
-.hero {
-  position: relative;
-  overflow: hidden;
-  background: radial-gradient(ellipse at top, #141414 0%, #060606 70%);
-}
-
-/* ===== Background overlay luxury ===== */
-.hero__bg-overlay {
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(120deg, rgba(212,175,55,0.08), transparent 40%),
-    radial-gradient(circle at 30% 20%, rgba(255,215,120,0.12), transparent 55%);
-  pointer-events: none;
-}
-
-/* ===== Glitter layer ===== */
-.hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-image:
-    radial-gradient(rgba(255,215,120,.35) 1px, transparent 1px);
-  background-size: 3px 3px;
-  opacity: 0.12;
-  animation: glitterMove 18s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes glitterMove {
-  from { background-position: 0 0; }
-  to   { background-position: 200px 300px; }
-}
-
-/* ===== Light sweep (chiếu ánh vàng) ===== */
-.hero::after {
-  content: "";
-  position: absolute;
-  top: -50%;
-  left: -30%;
-  width: 60%;
-  height: 200%;
-  background: linear-gradient(
-    120deg,
-    transparent 0%,
-    rgba(255,215,120,0.18) 50%,
-    transparent 100%
-  );
-  animation: lightSweep 7s ease-in-out infinite;
-  pointer-events: none;
-}
-
-@keyframes lightSweep {
-  0%   { transform: translateX(-60%) rotate(12deg); opacity: 0; }
-  40%  { opacity: .8; }
-  70%  { opacity: .6; }
-  100% { transform: translateX(180%) rotate(12deg); opacity: 0; }
-}
-
-/* ===== Title luxury gold ===== */
-.hero__title {
-  text-align: center;
-  margin-bottom: 24px;
-}
-
-.hero__title span {
-  display: block;
-  font-weight: 700;
-  letter-spacing: 0.18em;
-  color: #e6c87a;
-  text-shadow:
-    0 0 18px rgba(212,175,55,.35),
-    0 0 40px rgba(212,175,55,.18);
-}
-
-/* ===== Video frame VIP ===== */
-.hero__video-box {
-  position: relative;
-  border-radius: 22px;
-  overflow: hidden;
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.35),
-    0 30px 80px rgba(0,0,0,.85);
-}
-
-.hero__video-box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background:
-    linear-gradient(145deg, rgba(255,215,120,.25), transparent 40%);
-  pointer-events: none;
-}
-
-/* ===== Subtitle ===== */
-.hero__subtitle {
-  color: #cfc6a8;
-  letter-spacing: .06em;
-  text-align: center;
-  opacity: .85;
-}
-
-/* ===== CTA buttons glow ===== */
-.hero__cta .btn--primary {
-  box-shadow:
-    0 0 0 1px rgba(212,175,55,.6),
-    0 10px 40px rgba(212,175,55,.35);
-  transition: all .35s ease;
-}
-
-.hero__cta .btn--primary:hover {
-  transform: translateY(-2px);
-  box-shadow:
-    0 0 0 1px rgba(255,215,120,.9),
-    0 16px 55px rgba(212,175,55,.55);
-}
-
-/* ===== Info cards ===== */
-.hero__info-item {
-  backdrop-filter: blur(10px);
   background: linear-gradient(
     145deg,
     rgba(255,255,255,.06),
     rgba(0,0,0,.4)
   );
   border: 1px solid rgba(212,175,55,.35);
-  border-radius: 18px;
-}
-
-/* ===== Mobile fine tune ===== */
-@media (max-width: 768px) {
-  .hero::after {
-    width: 90%;
-  }
-}
-.hero {
-  padding-top: var(--header-height);
-  margin-top: 0;
-}
-/* =========================================================
-   PRICING – LUXURY CLEAN (NO IMAGE)
-========================================================= */
-
-.pricing {
-  background: radial-gradient(circle at top, #111 0%, #050505 70%);
-}
-
-.pricing__wrapper {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 28px;
-  margin-top: 48px;
-}
-
-/* Card */
-.pricing__card {
-  position: relative;
-  background: linear-gradient(
-    145deg,
-    rgba(255,255,255,.06),
-    rgba(0,0,0,.65)
-  );
-  border: 1px solid rgba(212,175,55,.35);
-  border-radius: 22px;
-  padding: 28px 26px 30px;
   backdrop-filter: blur(10px);
-  transition: all .35s ease;
 }
 
-.pricing__card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 20px 60px rgba(212,175,55,.25);
-}
-
-/* Featured VIP */
-.pricing__card--featured {
-  border-color: rgba(255,215,120,.85);
-  box-shadow: 0 0 0 1px rgba(255,215,120,.6),
-              0 30px 80px rgba(212,175,55,.45);
-}
-
-/* Header */
-.pricing__header {
-  text-align: center;
-  margin-bottom: 18px;
-}
-
-.pricing__title {
-  display: flex;
-  gap: 10px;
-  justify-content: center;
-  align-items: center;
-  font-size: 18px;
-  letter-spacing: .06em;
-  color: #e6c87a;
-}
-
-.pricing__title i {
-  color: #d4af37;
-  font-size: 18px;
-}
-
-.pricing__price {
-  margin-top: 10px;
-  font-size: 26px;
-  font-weight: 600;
-  color: #ffd36a;
-  text-shadow: 0 0 18px rgba(212,175,55,.35);
-}
-
-/* Features */
-.pricing__features {
-  margin: 22px 0;
-  padding: 0;
-  list-style: none;
-}
-
-.pricing__features li {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-  color: #cfc6a8;
-  font-size: 14px;
-  padding: 8px 0;
-  border-bottom: 1px dashed rgba(255,255,255,.08);
-}
-
-.pricing__features li::before {
-  content: "✦";
-  color: #d4af37;
-  font-size: 12px;
-}
-
-/* Footer */
-.pricing__footer {
-  text-align: center;
-  margin-top: 20px;
-}
-/* ===============================
-   HERO VIDEO FIX – NO CROP
-=============================== */
-
-.hero__video-box {
-  position: relative;
-  width: 100%;
-  max-width: 520px;
-  margin: 32px auto;
-  aspect-ratio: 16 / 9; /* giữ đúng tỉ lệ video */
-  border-radius: 16px;
-  overflow: hidden;
-  background: #000;
-  box-shadow: 0 20px 60px rgba(0,0,0,.55);
-}
-
-/* VIDEO */
-.hero__video-box video {
-  width: 100%;
-  height: 100%;
-  object-fit: contain;   /* QUAN TRỌNG: xem full, không cắt */
-  background: #000;
-  display: block;
-}
-
-/* MOBILE TỐI ƯU */
-@media (max-width: 768px) {
-  .hero__video-box {
-    max-width: 100%;
-    aspect-ratio: 16 / 9;
-    margin: 24px auto;
-  }
-}
-/* ===============================
-   EXPERIENCE SECTION
-=============================== */
+/* ================= EXPERIENCE ================= */
 
 .experience__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  gap: 28px;
   margin-top: 48px;
 }
 
 .experience__card {
   background: linear-gradient(180deg, #111 0%, #0b0e11 100%);
+  border: 1px solid rgba(212,175,55,.18);
   border-radius: 18px;
   padding: 32px 28px;
   text-align: center;
-  border: 1px solid rgba(255,215,0,.15);
+  transition: .3s;
+}
+
+.experience__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0,0,0,.6);
 }
 
 .experience__icon {
@@ -822,7 +187,6 @@
 
 .experience__card h3 {
   font-size: 20px;
-  font-weight: 600;
   margin-bottom: 12px;
 }
 
@@ -832,33 +196,40 @@
   color: #b7bdc6;
 }
 
-/* ===============================
-   MOBILE FIX – QUAN TRỌNG
-=============================== */
+/* ================= RESPONSIVE ================= */
+
 @media (max-width: 768px) {
 
+  .hero__title-top,
+  .hero__title-bottom {
+    font-size: 64px;
+  }
+
+  .hero__video-box {
+    max-width: 100%;
+    margin: 24px auto;
+  }
+
   .experience__grid {
-    grid-template-columns: 1fr; /* 1 card / hàng */
+    grid-template-columns: 1fr;
     gap: 16px;
     margin-top: 32px;
   }
 
   .experience__card {
     padding: 22px 18px;
+    backdrop-filter: none;
   }
 
   .experience__icon {
     font-size: 22px;
-    margin-bottom: 12px;
   }
 
   .experience__card h3 {
     font-size: 17px;
-    line-height: 1.3;
   }
 
   .experience__card p {
     font-size: 14px;
-    line-height: 1.6;
   }
 }
