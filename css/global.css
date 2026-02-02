@@ -1,34 +1,11 @@
 /* =========================================================
-   GLOBAL.CSS – EMPIRE CLUB
-   Rule: Clean • Luxury • Scale • Mobile-first
-   Depend on: core.css (DO NOT OVERRIDE CORE)
+   GLOBAL.CSS – HEADER ONLY (STEP 1)
 ========================================================= */
 
-/* ===== RESET NHẸ ===== */
+/* ===== BODY OFFSET ===== */
 body {
-  background: var(--bg-dark);
-  color: var(--text-main);
-}
-
-/* ===== STICKY CONTACT ===== */
-.sticky-contact {
-  position: fixed;
-  right: 16px;
-  bottom: 24px;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  z-index: 1000;
-}
-
-.sticky-btn {
-  background: var(--gold);
-  color: #000;
-  padding: 10px 14px;
-  border-radius: 999px;
-  font-weight: 600;
-  text-decoration: none;
-  box-shadow: 0 10px 30px rgba(0,0,0,.35);
+  margin: 0;
+  padding-top: 64px; /* chừa chỗ cho header fixed */
 }
 
 /* ===== HEADER ===== */
@@ -36,48 +13,47 @@ body {
   position: fixed;
   top: 0;
   width: 100%;
-  z-index: 100;
-  background: rgba(0,0,0,.6);
-  backdrop-filter: blur(10px);
+  height: 64px;
+  background: #6f6f6f; /* xám để dễ debug */
+  z-index: 1000;
 }
 
 .header-inner {
-  display: flex;
+  height: 64px;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
   align-items: center;
-  justify-content: space-between;
-  height: 72px;
 }
 
+/* ===== LOGO ===== */
 .logo {
   font-weight: 800;
   letter-spacing: 2px;
+  color: #000;
 }
 
-.main-nav {
+/* ===== LANG SWITCH ===== */
+.lang-switch {
   display: flex;
-  gap: 24px;
-}
-
-.main-nav a {
-  color: var(--text-sub);
-  font-weight: 500;
-  text-decoration: none;
+  justify-content: center;
+  gap: 12px;
 }
 
 .lang-switch button {
   background: none;
   border: none;
-  color: var(--text-sub);
+  font-weight: 600;
+  opacity: .4;
   cursor: pointer;
 }
 
 .lang-switch .active {
-  color: var(--gold);
+  opacity: 1;
 }
 
-/* ===== MENU TOGGLE ===== */
+/* ===== MENU TOGGLE (3 GẠCH) ===== */
 .menu-toggle {
-  display: none;
+  display: flex;
   flex-direction: column;
   gap: 6px;
   background: none;
@@ -88,223 +64,31 @@ body {
 .menu-toggle span {
   width: 26px;
   height: 2px;
-  background: var(--text-main);
+  background: #000;
 }
 
-/* ===== HERO ===== */
-.hero {
-  height: 100vh;
-  position: relative;
-}
-
-.hero-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-.hero-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0,0,0,.8), rgba(0,0,0,.2));
-}
-
-.hero-content {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 24px;
-  padding-top: 72px;
-}
-
-.hero h1 {
-  font-size: clamp(48px, 10vw, 96px);
-  letter-spacing: 6px;
-}
-
-.subtitle {
-  color: var(--text-sub);
-  max-width: 520px;
-}
-
-.hero-actions {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-/* ===== SECTIONS ===== */
-.section {
-  padding: 96px 0;
-}
-
-.section h2 {
-  margin-bottom: 24px;
-}
-
-.container.narrow {
-  max-width: 720px;
-}
-
-/* ===== GRID ===== */
-.grid-3 {
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  gap: 24px;
-}
-
-.grid-4 {
-  display: grid;
-  grid-template-columns: repeat(4,1fr);
-  gap: 24px;
-}
-
-/* ===== CARD ===== */
-.card {
-  background: rgba(255,255,255,.04);
-  padding: 32px;
-  border-radius: 16px;
-  text-align: center;
-}
-
-.card.highlight {
-  border: 1px solid var(--gold);
-}
-
-/* ===== COMBOS ===== */
-.combo-card {
-  background: rgba(255,255,255,.04);
-  padding: 32px;
-  border-radius: 20px;
-  text-align: center;
-}
-
-.combo-card .price {
-  display: block;
-  margin-top: 16px;
-  color: var(--gold);
-  font-weight: 700;
-}
-
-.combo-card.highlight {
-  border: 1px solid var(--gold);
-}
-
-.combo-card.luxury {
-  background: linear-gradient(135deg, #1a1a1a, #000);
-  border: 1px solid var(--gold);
-}
-
-/* ===== CTA ===== */
-.cta {
-  background: linear-gradient(to top, #000, #111);
-}
-
-.cta-actions {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  margin-top: 32px;
-}
-
-/* ===== FOOTER ===== */
-.footer {
-  padding: 32px 0;
-  color: var(--text-sub);
-  border-top: 1px solid rgba(255,255,255,.08);
-}
-
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-  .main-nav {
-    position: fixed;
-    inset: 0;
-    background: var(--bg-dark);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transform: translateX(100%);
-    transition: transform .4s ease;
-  }
-
-  .main-nav.open {
-    transform: translateX(0);
-  }
-
-  .menu-toggle {
-    display: flex;
-    z-index: 200;
-  }
-
-  .grid-3,
-  .grid-4 {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-actions {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-}
-/* ===== HEADER FIX MOBILE ===== */
-.site-header {
+/* ===== NAV (MOBILE FIRST) ===== */
+.main-nav {
   position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  background: rgba(255,255,255,.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid rgba(0,0,0,.08);
-}
-
-.header-inner {
+  inset: 0;
+  background: #fff;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-
-/* ===== MENU TOGGLE (3 GẠCH) ===== */
-.menu-toggle {
-  display: none;
   flex-direction: column;
-  gap: 6px;
-  background: none;
-  border: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  transform: translateX(100%);
+  transition: transform .35s ease;
+  z-index: 900;
 }
 
-.menu-toggle span {
-  width: 26px;
-  height: 2px;
-  background: #111;
+.main-nav.open {
+  transform: translateX(0);
 }
 
-/* ===== MOBILE ===== */
-@media (max-width: 768px) {
-
-  .main-nav {
-    position: fixed;
-    inset: 0;
-    background: #fff;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-
-    transform: translateX(100%);
-    transition: transform .4s ease;
-    z-index: 900;
-  }
-
-  .main-nav.open {
-    transform: translateX(0);
-  }
-
-  .menu-toggle {
-    display: flex;
-    z-index: 1100;
-  }
+.main-nav a {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000;
+  text-decoration: none;
 }
