@@ -4,8 +4,8 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>EMPIRE Club Quận 1 | Flagship Nightlife Destination</title>
-  <meta name="description" content="EMPIRE Club Quận 1 – Biểu tượng nightlife cao cấp tại trung tâm Sài Gòn. Walk-in, đặt bàn, VIP tables, bottle service, international DJs." />
+  <title>EMPIRE Club Quận 1 | Flagship Nightlife</title>
+  <meta name="description" content="EMPIRE Club Quận 1 – nightlife cao cấp tại trung tâm Sài Gòn. Đặt bàn, VIP tables, bottle service, DJ quốc tế." />
 
   <link rel="stylesheet" href="./css/core.css">
   <link rel="stylesheet" href="./css/global.css">
@@ -13,306 +13,160 @@
 
 <body class="lang-vi">
 
-<!-- ================= STICKY CONTACT ================= -->
+<!-- ========== STICKY CONTACT ========== -->
 <div class="sticky-contact">
-  <a href="tel:0919918178" class="sticky-btn sticky-call">
-    <span class="icon">📞</span>
-    <span class="text" data-lang="en">Hotline</span>
-    <span class="text" data-lang="vi">Hotline</span>
-  </a>
-  <a href="https://zalo.me/0919918178" target="_blank" class="sticky-btn sticky-zalo">
-    <span class="icon">💬</span>
-    <span class="text" data-lang="en">Zalo</span>
-    <span class="text" data-lang="vi">Zalo</span>
-  </a>
+  <a href="tel:0919918178" class="sticky-btn call">📞 Hotline</a>
+  <a href="https://zalo.me/0919918178" target="_blank" class="sticky-btn zalo">💬 Zalo</a>
 </div>
 
-<!-- ================= HEADER ================= -->
-<header class="site-header" data-header>
+<!-- ========== HEADER ========== -->
+<header class="site-header">
   <div class="container header-inner">
     <div class="logo">EMPIRE</div>
 
-    <nav class="main-nav" data-nav>
-      <a href="#home" data-nav-link data-lang="en">Home</a>
-      <a href="#home" data-nav-link data-lang="vi">Trang chủ</a>
+    <nav class="main-nav">
+      <a href="#home" data-lang="vi">Trang chủ</a>
+      <a href="#about" data-lang="vi">Giới thiệu</a>
+      <a href="#experience" data-lang="vi">Trải nghiệm</a>
+      <a href="#combo" data-lang="vi">Combo</a>
+      <a href="#tables" data-lang="vi">Đặt bàn</a>
+      <a href="#contact" data-lang="vi">Liên hệ</a>
 
-      <a href="#about" data-nav-link data-lang="en">About</a>
-      <a href="#about" data-nav-link data-lang="vi">Giới thiệu</a>
-
-      <a href="#experience" data-nav-link data-lang="en">Experience</a>
-      <a href="#experience" data-nav-link data-lang="vi">Trải nghiệm</a>
-
-      <a href="#tables" data-nav-link data-lang="en">Tables</a>
-      <a href="#tables" data-nav-link data-lang="vi">Đặt bàn</a>
-
-      <a href="#contact" data-nav-link data-lang="en">Contact</a>
-      <a href="#contact" data-nav-link data-lang="vi">Liên hệ</a>
+      <a href="#home" data-lang="en">Home</a>
+      <a href="#about" data-lang="en">About</a>
+      <a href="#experience" data-lang="en">Experience</a>
+      <a href="#combo" data-lang="en">Combos</a>
+      <a href="#tables" data-lang="en">Tables</a>
+      <a href="#contact" data-lang="en">Contact</a>
     </nav>
 
     <div class="lang-switch">
-      <button data-lang-switch="en">EN</button>
       <button data-lang-switch="vi" class="active">VI</button>
+      <button data-lang-switch="en">EN</button>
     </div>
 
-    <button class="menu-toggle" data-menu-toggle>
-      <span></span><span></span><span></span>
-    </button>
+    <button class="menu-toggle"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-<section class="hero" id="home" data-section>
-  <div class="hero-overlay"></div>
-  <div class="hero-background">
+<!-- ========== HERO ========== -->
+<section class="hero" id="home">
+  <div class="hero-bg">
     <img src="images/empire-hero.jpg" alt="Empire Club Saigon">
   </div>
+  <div class="hero-overlay"></div>
 
-  <div class="hero-content" data-animate>
+  <div class="container hero-content">
     <h1>EMPIRE</h1>
 
-    <p class="hero-subtitle" data-lang="en">
-      Where Saigon Comes to Life at Night
-    </p>
-    <p class="hero-subtitle" data-lang="vi">
-      Nơi nightlife Sài Gòn bùng nổ về đêm
-    </p>
+    <p class="subtitle" data-lang="vi">Biểu tượng nightlife cao cấp tại Sài Gòn</p>
+    <p class="subtitle" data-lang="en">Saigon’s Flagship Nightlife Destination</p>
 
-    <div class="hero-cta">
-      <a href="#contact" class="btn btn-primary" data-lang="en">Reserve a Table</a>
-      <a href="#contact" class="btn btn-primary" data-lang="vi">Đặt bàn</a>
+    <div class="hero-actions">
+      <a href="#contact" class="btn primary" data-lang="vi">Đặt bàn ngay</a>
+      <a href="#contact" class="btn primary" data-lang="en">Reserve Table</a>
 
-      <a href="#experience" class="btn btn-secondary" data-lang="en">Explore the Club</a>
-      <a href="#experience" class="btn btn-secondary" data-lang="vi">Khám phá không gian</a>
+      <a href="#experience" class="btn ghost" data-lang="vi">Khám phá</a>
+      <a href="#experience" class="btn ghost" data-lang="en">Explore</a>
     </div>
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
-<section class="why-choose" id="about" data-section>
-  <div class="container">
-    <h2 data-animate data-lang="en">About Empire</h2>
-    <h2 data-animate data-lang="vi">Về Empire</h2>
+<!-- ========== ABOUT ========== -->
+<section class="section about" id="about">
+  <div class="container narrow">
+    <h2 data-lang="vi">Về EMPIRE</h2>
+    <h2 data-lang="en">About EMPIRE</h2>
 
-    <div class="features">
-      <div class="feature-item" data-animate>
-        <p data-lang="en">
-          Empire is one of Saigon’s most established nightlife destinations.
-          Open to everyone who loves music, energy and unforgettable nights,
-          with premium options available for those seeking more.
-        </p>
-        <p data-lang="vi">
-          Empire là một trong những điểm đến nightlife hàng đầu Sài Gòn.
-          Chào đón tất cả những ai yêu âm nhạc, không khí sôi động và
-          những đêm đáng nhớ, cùng các lựa chọn cao cấp dành cho khách có nhu cầu.
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= EXPERIENCE ================= -->
-<section class="services" id="experience" data-section>
-  <div class="container">
-    <h2 data-animate data-lang="en">The Empire Experience</h2>
-    <h2 data-animate data-lang="vi">Trải nghiệm tại Empire</h2>
-
-    <div class="service-grid">
-      <div class="service-card" data-animate>
-        <h3 data-lang="en">Music</h3>
-        <h3 data-lang="vi">Âm nhạc</h3>
-        <p data-lang="en">International & local DJs every night.</p>
-        <p data-lang="vi">DJ quốc tế và Việt Nam biểu diễn mỗi đêm.</p>
-      </div>
-
-      <div class="service-card" data-animate>
-        <h3 data-lang="en">Atmosphere</h3>
-        <h3 data-lang="vi">Không gian</h3>
-        <p data-lang="en">High-energy crowd with immersive lighting.</p>
-        <p data-lang="vi">Không khí sôi động cùng hệ thống ánh sáng hiện đại.</p>
-      </div>
-
-      <div class="service-card" data-animate>
-        <h3 data-lang="en">Service</h3>
-        <h3 data-lang="vi">Dịch vụ</h3>
-        <p data-lang="en">Friendly staff and professional hospitality.</p>
-        <p data-lang="vi">Đội ngũ thân thiện, phục vụ chuyên nghiệp.</p>
-      </div>
-
-      <div class="service-card" data-animate>
-        <h3 data-lang="en">Crowd</h3>
-        <h3 data-lang="vi">Khách hàng</h3>
-        <p data-lang="en">Locals, expats and visitors from around the world.</p>
-        <p data-lang="vi">Khách Việt, khách nước ngoài và du khách quốc tế.</p>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- ================= COMBO PACKAGES ================= -->
-<section class="combo-section" id="combo" data-section>
-  <div class="container">
-
-    <div class="section-header">
-      <h2 data-lang="en">Special Combos</h2>
-      <h2 data-lang="vi">Gói combo đặc biệt</h2>
-
-      <p data-lang="en">
-        Curated bottle packages for every kind of night at Empire.
-      </p>
-      <p data-lang="vi">
-        Các gói combo được chọn lọc, phù hợp cho mọi cuộc vui tại Empire.
-      </p>
-    </div>
-
-    <div class="combo-grid">
-
-      <!-- COMBO 09 -->
-      <div class="combo-card">
-        <div class="combo-image">
-          <!-- IMAGE HERE -->
-        </div>
-
-        <div class="combo-content">
-          <h3>Combo 09</h3>
-
-          <p class="combo-desc" data-lang="en">
-            Chivas 18 Blue · Fruit · SS VIP · 2 Water · 2 Pepsi
-          </p>
-          <p class="combo-desc" data-lang="vi">
-            Chivas 18 Blue · Trái cây · SS VIP · 2 Suối · 2 Pepsi
-          </p>
-
-          <div class="combo-price">5.900.000 VND</div>
-        </div>
-      </div>
-
-      <!-- COMBO 05 -->
-      <div class="combo-card">
-        <div class="combo-image"></div>
-
-        <div class="combo-content">
-          <h3>Combo 05</h3>
-
-          <p class="combo-desc" data-lang="en">
-            3 G.H Mumm Brut · Fruit · SS VIP · 2 Water · 2 Pepsi
-          </p>
-          <p class="combo-desc" data-lang="vi">
-            3 G.H Mumm Brut · Trái cây · SS VIP · 2 Suối · 2 Pepsi
-          </p>
-
-          <div class="combo-price">13.700.000 VND</div>
-        </div>
-      </div>
-
-      <!-- COMBO 02 -->
-      <div class="combo-card featured">
-        <div class="combo-badge" data-lang="en">Popular</div>
-        <div class="combo-badge" data-lang="vi">Bán chạy</div>
-
-        <div class="combo-image"></div>
-
-        <div class="combo-content">
-          <h3>Combo 02</h3>
-
-          <p class="combo-desc" data-lang="en">
-            6 Jacob’s Creek Rosé · Fruit · SS VIP · 2 Water · 2 Pepsi
-          </p>
-          <p class="combo-desc" data-lang="vi">
-            6 Jacob’s Creek Rosé · Trái cây · SS VIP · 2 Suối · 2 Pepsi
-          </p>
-
-          <div class="combo-price">14.900.000 VND</div>
-        </div>
-      </div>
-
-      <!-- COMBO 07 -->
-      <div class="combo-card luxury">
-        <div class="combo-badge" data-lang="en">Luxury</div>
-        <div class="combo-badge" data-lang="vi">Cao cấp</div>
-
-        <div class="combo-image"></div>
-
-        <div class="combo-content">
-          <h3>Combo 07</h3>
-
-          <p class="combo-desc" data-lang="en">
-            3 Dom Pérignon Luminous · Fruit · SS VIP · 2 Water · 2 Pepsi
-          </p>
-          <p class="combo-desc" data-lang="vi">
-            3 Dom Pérignon Luminous · Trái cây · SS VIP · 2 Suối · 2 Pepsi
-          </p>
-
-          <div class="combo-price">34.900.000 VND</div>
-        </div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ================= TABLES ================= -->
-<section class="packages" id="tables" data-section>
-  <div class="container">
-    <h2 data-animate data-lang="en">Tables & VIP Options</h2>
-    <h2 data-animate data-lang="vi">Các loại bàn & tùy chọn VIP</h2>
-
-    <div class="package-grid">
-      <div class="package-card" data-animate>
-        <h3 data-lang="en">Standard Table</h3>
-        <h3 data-lang="vi">Bàn thường</h3>
-        <p data-lang="en">Comfortable seating for enjoying the night.</p>
-        <p data-lang="vi">Chỗ ngồi thoải mái để tận hưởng buổi tối.</p>
-      </div>
-
-      <div class="package-card package-featured" data-animate>
-        <div class="package-badge">Popular</div>
-        <h3 data-lang="en">VIP Table</h3>
-        <h3 data-lang="vi">Bàn VIP</h3>
-        <p data-lang="en">Better view, bottle service & priority support.</p>
-        <p data-lang="vi">Vị trí đẹp, bottle service & hỗ trợ ưu tiên.</p>
-      </div>
-
-      <div class="package-card" data-animate>
-        <h3 data-lang="en">Private Area</h3>
-        <h3 data-lang="vi">Khu riêng</h3>
-        <p data-lang="en">Ideal for groups and special occasions.</p>
-        <p data-lang="vi">Phù hợp cho nhóm bạn và dịp đặc biệt.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ================= CONTACT ================= -->
-<section class="final-cta" id="contact" data-section>
-  <div class="container" data-animate>
-    <h2 data-lang="en">Reservations & Walk-ins Welcome</h2>
-    <h2 data-lang="vi">Nhận đặt bàn & chào đón khách walk-in</h2>
-
-    <p data-lang="en">
-      Walk in anytime or reserve a table in advance for a smoother experience.
-    </p>
     <p data-lang="vi">
-      Có thể đến trực tiếp hoặc đặt bàn trước để trải nghiệm trọn vẹn hơn.
+      EMPIRE là club hàng đầu Quận 1, nơi hội tụ âm nhạc, ánh sáng và năng lượng đỉnh cao.
     </p>
+    <p data-lang="en">
+      EMPIRE is a premier nightlife destination in District 1, combining music, energy and luxury.
+    </p>
+  </div>
+</section>
 
-    <div class="cta-buttons">
-      <a href="tel:0919918178" class="btn btn-large btn-primary" data-lang="en">Call Hotline</a>
-      <a href="tel:0919918178" class="btn btn-large btn-primary" data-lang="vi">Gọi hotline</a>
+<!-- ========== EXPERIENCE ========== -->
+<section class="section experience" id="experience">
+  <div class="container">
+    <h2 data-lang="vi">Trải nghiệm tại EMPIRE</h2>
+    <h2 data-lang="en">The EMPIRE Experience</h2>
 
-      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-large btn-secondary" data-lang="en">
-        Chat via Zalo
-      </a>
-      <a href="https://zalo.me/0919918178" target="_blank" class="btn btn-large btn-secondary" data-lang="vi">
-        Chat Zalo
-      </a>
+    <div class="grid-4">
+      <div class="card">🎧 DJ quốc tế mỗi đêm</div>
+      <div class="card">💡 Ánh sáng – âm thanh đỉnh cao</div>
+      <div class="card">🥂 Bottle service chuyên nghiệp</div>
+      <div class="card">🌍 Khách Việt & quốc tế</div>
     </div>
   </div>
 </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
+<!-- ========== COMBOS ========== -->
+<section class="section combos" id="combo">
   <div class="container">
-    <p data-lang="en">© 2024 EMPIRE Club District 1. All Rights Reserved.</p>
-    <p data-lang="vi">© 2024 EMPIRE Club Quận 1. Bảo lưu mọi quyền.</p>
+    <h2 data-lang="vi">Gói Combo</h2>
+    <h2 data-lang="en">Special Combos</h2>
+
+    <div class="grid-4">
+      <div class="combo-card">
+        <h3>Combo 09</h3>
+        <p>Chivas 18 Blue · VIP</p>
+        <span class="price">5.900.000 VND</span>
+      </div>
+
+      <div class="combo-card">
+        <h3>Combo 05</h3>
+        <p>3 G.H Mumm Brut · VIP</p>
+        <span class="price">13.700.000 VND</span>
+      </div>
+
+      <div class="combo-card highlight">
+        <h3>Combo 02</h3>
+        <p>6 Jacob’s Creek Rosé · VIP</p>
+        <span class="price">14.900.000 VND</span>
+      </div>
+
+      <div class="combo-card luxury">
+        <h3>Combo 07</h3>
+        <p>3 Dom Pérignon Luminous</p>
+        <span class="price">34.900.000 VND</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TABLES ========== -->
+<section class="section tables" id="tables">
+  <div class="container">
+    <h2 data-lang="vi">Các loại bàn</h2>
+    <h2 data-lang="en">Tables & VIP</h2>
+
+    <div class="grid-3">
+      <div class="card">Standard Table</div>
+      <div class="card highlight">VIP Table</div>
+      <div class="card">Private Area</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACT ========== -->
+<section class="section cta" id="contact">
+  <div class="container center">
+    <h2 data-lang="vi">Đặt bàn & Walk-in</h2>
+    <h2 data-lang="en">Reservations & Walk-ins</h2>
+
+    <div class="cta-actions">
+      <a href="tel:0919918178" class="btn primary">📞 Hotline</a>
+      <a href="https://zalo.me/0919918178" target="_blank" class="btn ghost">💬 Zalo</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+  <div class="container center">
+    © 2024 EMPIRE Club District 1
   </div>
 </footer>
 
