@@ -268,3 +268,21 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
 }
+/* ===== CLOSE MENU WHEN CLICK BACKDROP ===== */
+
+document.addEventListener('click', (e) => {
+  const nav = document.getElementById('nav');
+  const toggle = document.getElementById('menu-toggle');
+
+  if (!nav || !toggle) return;
+
+  if (
+    nav.classList.contains('active') &&
+    !nav.contains(e.target) &&
+    !toggle.contains(e.target)
+  ) {
+    nav.classList.remove('active');
+    toggle.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  }
+});
