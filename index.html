@@ -13,55 +13,42 @@
 
 <body class="lang-vi">
 
-<!-- ================= HEADER ================= -->
-<header class="site-header">
-  <div class="container header-inner">
+<!-- ========== FIXED TOP STACK (LOGO + HEADER) ========== -->
+<div class="top-stack">
 
+  <!-- HEADER -->
+  <header class="site-header">
     <button class="menu-toggle" aria-label="Open menu">
-      <span></span><span></span><span></span>
+      <span></span>
+      <span></span>
+      <span></span>
     </button>
 
     <div class="lang-switch">
       <button data-lang-switch="vi" class="active">VI</button>
       <button data-lang-switch="en">EN</button>
     </div>
+  </header>
 
+  <!-- LOGO STAGE -->
+  <div class="logo-stage" id="home">
+    <img
+      src="./assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png"
+      alt="EMPIRE Logo"
+    />
   </div>
 
-  <nav class="main-nav">
-    <a href="#home" data-lang="vi">Trang chủ</a>
-    <a href="#about" data-lang="vi">Giới thiệu</a>
-    <a href="#experience" data-lang="vi">Trải nghiệm</a>
-    <a href="#combo" data-lang="vi">Combo</a>
-    <a href="#tables" data-lang="vi">Đặt bàn</a>
-    <a href="#contact" data-lang="vi">Liên hệ</a>
+</div>
 
-    <a href="#home" data-lang="en">Home</a>
-    <a href="#about" data-lang="en">About</a>
-    <a href="#experience" data-lang="en">Experience</a>
-    <a href="#combo" data-lang="en">Combos</a>
-    <a href="#tables" data-lang="en">Tables</a>
-    <a href="#contact" data-lang="en">Contact</a>
-  </nav>
-</header>
-
-<!-- ================= LOGO FULLSCREEN ================= -->
-<section class="brand-hero" id="home">
-  <img
-    src="./assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png"
-    alt="EMPIRE Logo"
-  />
-
-  <div class="brand-divider"></div>
-
-  <p class="brand-tagline">
-    Biểu tượng nightlife cao cấp tại Sài Gòn
-  </p>
-</section>
-
-<!-- ================= HERO VIDEO ================= -->
+<!-- ========== HERO VIDEO ========== -->
 <section class="hero hero-video">
-  <video class="hero-bg" autoplay muted loop playsinline>
+  <video
+    class="hero-bg"
+    autoplay
+    muted
+    loop
+    playsinline
+  >
     <source src="./assets/video/empire-hero.mp4" type="video/mp4">
   </video>
 
@@ -69,7 +56,7 @@
 
   <div class="hero-content">
     <p class="hero-subtitle">
-      Nơi nightlife Sài Gòn bùng nổ mỗi đêm
+      Biểu tượng nightlife cao cấp tại Sài Gòn
     </p>
 
     <div class="hero-actions">
@@ -77,6 +64,15 @@
       <a href="#experience" class="btn btn-secondary">Khám phá</a>
     </div>
   </div>
+</section>
+
+<!-- ========== ABOUT (TEST CONTENT) ========== -->
+<section id="about" style="padding:120px 8%; background:#000; color:#fff;">
+  <h2>Về EMPIRE</h2>
+  <p>
+    EMPIRE là club hàng đầu Quận 1, nơi hội tụ âm nhạc, ánh sáng
+    và năng lượng nightlife đỉnh cao.
+  </p>
 </section>
 
 <script src="./js/main.js"></script>
