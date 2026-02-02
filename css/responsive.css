@@ -1,0 +1,374 @@
+/* ===========================
+   Responsive Design
+   =========================== */
+
+/* Tablet Landscape (1024px and below) */
+@media (max-width: 1024px) {
+    :root {
+        --spacing-lg: 3rem;
+        --spacing-xl: 4rem;
+    }
+
+    h1 { font-size: 3rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.75rem; }
+
+    .container {
+        padding: 0 var(--spacing-sm);
+    }
+
+    /* About Section */
+    .about-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .about-images .image-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .features-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Events */
+    .events-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablet Portrait (768px and below) */
+@media (max-width: 768px) {
+    :root {
+        --spacing-md: 1.5rem;
+        --spacing-lg: 2.5rem;
+        --spacing-xl: 3rem;
+    }
+
+    html {
+        font-size: 15px;
+    }
+
+    h1 { font-size: 2.5rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.25rem; }
+
+    .section {
+        padding: var(--spacing-lg) 0;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+
+    .btn-large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+
+    /* Section Headers */
+    .section-header {
+        margin-bottom: var(--spacing-md);
+    }
+
+    /* About Section */
+    .about-text {
+        max-width: 100%;
+    }
+
+    .features-grid {
+        gap: var(--spacing-sm);
+    }
+
+    .feature-item {
+        padding: var(--spacing-sm);
+    }
+
+    .feature-item i {
+        font-size: 2rem;
+    }
+
+    .feature-item h3 {
+        font-size: 1rem;
+    }
+
+    /* Events */
+    .events-grid {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-sm);
+    }
+
+    .event-card {
+        max-width: 500px;
+        margin: 0 auto;
+    }
+
+    .event-image {
+        height: 200px;
+    }
+
+    /* Gallery */
+    .gallery-slider .swiper-slide {
+        height: 350px;
+    }
+
+    /* CTA Section */
+    .cta-content h2 {
+        font-size: 2rem;
+    }
+
+    .cta-content p {
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--spacing-md);
+    }
+
+    .footer {
+        padding: var(--spacing-md) 0;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    :root {
+        --spacing-sm: 0.75rem;
+        --spacing-md: 1.25rem;
+        --spacing-lg: 2rem;
+        --spacing-xl: 2.5rem;
+    }
+
+    html {
+        font-size: 14px;
+    }
+
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.5rem; }
+    h3 { font-size: 1.25rem; }
+    h4 { font-size: 1.125rem; }
+
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Buttons */
+    .btn {
+        padding: 0.625rem 1.25rem;
+        font-size: 0.875rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-large {
+        padding: 0.875rem 1.75rem;
+    }
+
+    /* Typography */
+    .lead {
+        font-size: 1.125rem;
+    }
+
+    .section-label {
+        font-size: 0.8rem;
+    }
+
+    /* About Section */
+    .about-images .image-grid {
+        gap: var(--spacing-xs);
+    }
+
+    .about-images img {
+        height: 200px;
+    }
+
+    /* Events */
+    .event-image {
+        height: 180px;
+    }
+
+    .event-content {
+        padding: var(--spacing-sm);
+    }
+
+    .event-title {
+        font-size: 1.25rem;
+    }
+
+    .event-info {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+    }
+
+    /* Gallery */
+    .gallery-slider .swiper-slide {
+        height: 250px;
+    }
+
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 30px;
+        height: 30px;
+    }
+
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 1.25rem;
+    }
+
+    /* CTA Section */
+    .cta-content h2 {
+        font-size: 1.75rem;
+    }
+
+    .cta-content p {
+        font-size: 0.95rem;
+    }
+
+    /* Footer */
+    .social-links a {
+        width: 35px;
+        height: 35px;
+        font-size: 0.875rem;
+    }
+
+    .contact-info li,
+    .opening-hours li {
+        font-size: 0.8rem;
+    }
+}
+
+/* Landscape Phone (568px and below in landscape) */
+@media (max-width: 568px) and (orientation: landscape) {
+    .hero {
+        min-height: 400px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 0.95rem;
+    }
+
+    .hero-description {
+        font-size: 0.875rem;
+    }
+
+    .section {
+        padding: var(--spacing-md) 0;
+    }
+}
+
+/* Very Small Devices (360px and below) */
+@media (max-width: 360px) {
+    html {
+        font-size: 13px;
+    }
+
+    .hero-title {
+        font-size: 1.75rem;
+        letter-spacing: 2px;
+    }
+
+    .feature-item i {
+        font-size: 1.75rem;
+    }
+
+    .gallery-slider .swiper-slide {
+        height: 200px;
+    }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+    /* Increase touch target sizes */
+    .btn {
+        min-height: 44px;
+        min-width: 44px;
+    }
+
+    .nav-link {
+        padding: 1rem;
+    }
+
+    .social-links a {
+        min-width: 44px;
+        min-height: 44px;
+    }
+
+    /* Remove hover effects on touch devices */
+    .btn:hover::before,
+    .nav-link:hover::after {
+        display: none;
+    }
+
+    /* Disable transitions on touch for better performance */
+    .feature-item:hover,
+    .event-card:hover,
+    .about-images img:hover {
+        transform: none;
+    }
+}
+
+/* High DPI Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .logo img {
+        image-rendering: -webkit-optimize-contrast;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .header,
+    .hero-scroll,
+    .footer,
+    .cta-section,
+    .btn {
+        display: none;
+    }
+
+    body {
+        background: white;
+        color: black;
+    }
+
+    .section {
+        page-break-inside: avoid;
+    }
+}
+
+/* Accessibility - Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    .hero-scroll i {
+        animation: none;
+    }
+
+    .hero-title {
+        animation: none;
+    }
+}
+
+/* Dark Mode Support (if needed) */
+@media (prefers-color-scheme: light) {
+    /* Add light mode styles if needed */
+}
