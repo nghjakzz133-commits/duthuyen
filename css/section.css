@@ -1039,3 +1039,17 @@ section,
   }
 
 }
+/* ===== HERO SPACING FIX ===== */
+.hero {
+  padding-top: 32px;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    padding-top: 48px;
+  }
+
+  .hero-title {
+    margin-top: 16px;
+  }
+}
