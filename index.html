@@ -801,191 +801,132 @@
 
 <!-- ========== BOOKING SECTION ========== -->
 <section class="booking section" id="booking">
-    <div class="container">
-        
-        <!-- Section Header -->
-        <div class="section__header" data-aos="fade-up">
-            <span class="section__subtitle">Đặt bàn VIP</span>
-            <h2 class="section__title">Đặt Bàn Nhanh</h2>
-            <p class="section__description">
-                Liên hệ ngay để nhận ưu đãi tốt nhất
-            </p>
-        </div>
+  <div class="container">
 
-        <!-- Booking Wrapper -->
-        <div class="booking__wrapper">
-            
-            <!-- Booking Form -->
-            <div class="booking__form" data-aos="fade-right">
-                <form id="booking-form" class="form">
-                    
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label for="name" class="form__label">
-                                <i class="fas fa-user"></i>
-                                Họ và tên *
-                            </label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                class="form__input" 
-                                placeholder="Nhập họ tên của bạn"
-                                required
-                            >
-                        </div>
+    <div class="section__header">
+      <span class="section__subtitle">Đặt bàn</span>
+      <h2 class="section__title">Giữ Bàn Nhanh</h2>
+      <p class="section__description">
+        Điền nhanh — chúng tôi sẽ gọi lại xác nhận ngay
+      </p>
+    </div>
 
-                        <div class="form__group">
-                            <label for="phone" class="form__label">
-                                <i class="fas fa-phone"></i>
-                                Số điện thoại *
-                            </label>
-                            <input 
-                                type="tel" 
-                                id="phone" 
-                                name="phone" 
-                                class="form__input" 
-                                placeholder="Nhập số điện thoại"
-                                required
-                            >
-                        </div>
-                    </div>
+    <div class="booking__wrapper">
 
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label for="date" class="form__label">
-                                <i class="fas fa-calendar"></i>
-                                Ngày đặt bàn *
-                            </label>
-                            <input 
-                                type="date" 
-                                id="date" 
-                                name="date" 
-                                class="form__input"
-                                required
-                            >
-                        </div>
+      <!-- ===== FORM ===== -->
+      <div class="booking__form">
+        <form class="form">
 
-                        <div class="form__group">
-                            <label for="time" class="form__label">
-                                <i class="fas fa-clock"></i>
-                                Thời gian
-                            </label>
-                            <select id="time" name="time" class="form__select">
-                                <option value="20:00">20:00</option>
-                                <option value="21:00">21:00</option>
-                                <option value="22:00">22:00</option>
-                                <option value="23:00">23:00</option>
-                                <option value="00:00">00:00</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form__row">
-                        <div class="form__group">
-                            <label for="guests" class="form__label">
-                                <i class="fas fa-users"></i>
-                                Số lượng khách
-                            </label>
-                            <select id="guests" name="guests" class="form__select">
-                                <option value="2-4">2-4 người</option>
-                                <option value="5-8">5-8 người</option>
-                                <option value="9-12">9-12 người</option>
-                                <option value="12+">Trên 12 người</option>
-                            </select>
-                        </div>
-
-                        <div class="form__group">
-                            <label for="package" class="form__label">
-                                <i class="fas fa-gift"></i>
-                                Gói dịch vụ
-                            </label>
-                            <select id="package" name="package" class="form__select">
-                                <option value="standard">Standard - 5.000.000₫</option>
-                                <option value="vip">VIP - 10.000.000₫</option>
-                                <option value="vvip">VVIP - 20.000.000₫</option>
-                                <option value="custom">Tùy chỉnh</option>
-                            </select>
-                        </div>
-                    </div>
-
-                    <div class="form__group">
-                        <label for="message" class="form__label">
-                            <i class="fas fa-comment"></i>
-                            Ghi chú đặc biệt
-                        </label>
-                        <textarea 
-                            id="message" 
-                            name="message" 
-                            class="form__textarea" 
-                            rows="4"
-                            placeholder="Yêu cầu đặc biệt của bạn..."
-                        ></textarea>
-                    </div>
-
-                    <button type="submit" class="btn btn--primary btn--large btn--block">
-                        <i class="fas fa-paper-plane"></i>
-                        Gửi yêu cầu đặt bàn
-                    </button>
-
-                </form>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label">Họ và tên *</label>
+              <input class="form__input" placeholder="Tên khách đặt bàn" required>
             </div>
 
-            <!-- Booking Info -->
-            <div class="booking__info" data-aos="fade-left">
-                
-                <div class="booking__info-card">
-                    <div class="booking__info-icon">
-                        <i class="fas fa-headset"></i>
-                    </div>
-                    <h3 class="booking__info-title">Hỗ trợ 24/7</h3>
-                    <p class="booking__info-text">
-                        Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng phục vụ bạn mọi lúc
-                    </p>
-                </div>
+            <div class="form__group">
+              <label class="form__label">Số điện thoại *</label>
+              <input class="form__input" placeholder="SĐT liên hệ" required>
+            </div>
+          </div>
 
-                <div class="booking__info-card">
-                    <div class="booking__info-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3 class="booking__info-title">Bảo mật thông tin</h3>
-                    <p class="booking__info-text">
-                        Thông tin của bạn được bảo mật tuyệt đối và an toàn
-                    </p>
-                </div>
-
-                <div class="booking__info-card">
-                    <div class="booking__info-icon">
-                        <i class="fas fa-tags"></i>
-                    </div>
-                    <h3 class="booking__info-title">Ưu đãi độc quyền</h3>
-                    <p class="booking__info-text">
-                        Đặt bàn trực tuyến để nhận các ưu đãi đặc biệt
-                    </p>
-                </div>
-
-                <!-- Quick Contact -->
-                <div class="booking__quick">
-                    <h4 class="booking__quick-title">Hoặc liên hệ trực tiếp</h4>
-                    <div class="booking__quick-buttons">
-                        <a href="https://zalo.me/0919918178" target="_blank" class="btn btn--zalo">
-                            <i class="fas fa-comment-dots"></i>
-                            Chat Zalo
-                        </a>
-                        <a href="tel:0919918178" class="btn btn--phone">
-                            <i class="fas fa-phone-alt"></i>
-                            Gọi ngay
-                        </a>
-                    </div>
-                </div>
-
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label">Ngày đến *</label>
+              <input type="date" class="form__input" required>
             </div>
 
+            <div class="form__group">
+              <label class="form__label">Giờ đến</label>
+              <select class="form__select">
+                <option>20:00</option>
+                <option>21:00</option>
+                <option>22:00</option>
+                <option>23:00</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label">Số khách</label>
+              <select class="form__select">
+                <option>2–4</option>
+                <option>5–8</option>
+                <option>9–12</option>
+                <option>12+</option>
+              </select>
+            </div>
+
+            <div class="form__group">
+              <label class="form__label">Combo dự kiến</label>
+              <select class="form__select">
+                <option>Combo 18 — 3.900.000</option>
+                <option>Combo 09 — 6.300.000</option>
+                <option>Combo 10 — 9.900.000</option>
+                <option>Combo 06 — 27.200.000</option>
+                <option>Combo 08 — 78.900.000</option>
+                <option>Chưa chọn / Tư vấn sau</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form__group">
+            <label class="form__label">Ghi chú</label>
+            <textarea class="form__textarea" rows="3"
+              placeholder="Sinh nhật / VIP / gần sân khấu / DJ ..."></textarea>
+          </div>
+
+          <button class="btn btn--primary btn--large btn--block">
+            Gửi yêu cầu giữ bàn
+          </button>
+
+        </form>
+      </div>
+
+
+      <!-- ===== RIGHT INFO ===== -->
+      <div class="booking__info">
+
+        <div class="booking__info-card">
+          <h3>Xác nhận cực nhanh</h3>
+          <p>Nhân viên gọi lại trong vài phút để giữ bàn cho bạn</p>
         </div>
+
+        <div class="booking__info-card">
+          <h3>Không phí đặt bàn</h3>
+          <p>Chỉ cần xác nhận combo khi đến</p>
+        </div>
+
+        <div class="booking__info-card">
+          <h3>Hỗ trợ chọn combo</h3>
+          <p>Tư vấn theo số khách & ngân sách</p>
+        </div>
+
+
+        <!-- QUICK CONTACT -->
+        <div class="booking__quick">
+          <h4>Đặt nhanh nhất qua</h4>
+
+          <div class="booking__quick-buttons">
+
+            <a href="https://zalo.me/0373453757" target="_blank"
+               class="btn btn--primary">
+              Zalo 0373 453 757
+            </a>
+
+            <a href="tel:0373453757"
+               class="btn btn--outline">
+              Gọi ngay
+            </a>
+
+          </div>
+        </div>
+
+      </div>
 
     </div>
+  </div>
 </section>
-
 <!-- ========== CONTACT SECTION ========== -->
 <section class="contact section section--dark" id="contact">
     <div class="container">
