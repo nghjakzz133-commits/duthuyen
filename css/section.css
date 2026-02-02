@@ -408,3 +408,147 @@
   }
 
 }
+/* ================= ABOUT LUXURY GOLD ================= */
+
+#about {
+  background:
+    radial-gradient(circle at 50% 0%, rgba(212,175,55,.08), transparent 60%),
+    #05070a;
+}
+
+/* ===== SECTION HEADER GOLD ===== */
+
+#about .section__subtitle {
+  color: var(--primary);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+#about .section__title {
+  background: linear-gradient(90deg,#fff,#f6e7b0,#d4af37,#fff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 6px 22px rgba(212,175,55,.25));
+}
+
+#about .section__description {
+  color: #9aa3ad;
+}
+
+
+/* ===== IMAGE FRAME LUXURY ===== */
+
+.about__image-wrapper {
+  border-radius: 18px;
+  overflow: hidden;
+  position: relative;
+  border: 1px solid rgba(212,175,55,.35);
+  box-shadow:
+    0 30px 70px rgba(0,0,0,.7),
+    0 0 0 1px rgba(212,175,55,.15);
+}
+
+.about__image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.about__image-wrapper:hover img {
+  transform: scale(1.06);
+}
+
+.about__image-overlay {
+  background: linear-gradient(#0000,#000c);
+}
+
+.about__image-overlay i {
+  color: var(--primary);
+  text-shadow: 0 0 24px rgba(212,175,55,.5);
+}
+
+
+/* ===== CONTENT CARDS ===== */
+
+.about__item {
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.05),
+    rgba(255,255,255,.015)
+  );
+  border: 1px solid rgba(255,255,255,.08);
+  border-radius: 18px;
+  padding: 22px 22px;
+  transition: .35s;
+  position: relative;
+  overflow: hidden;
+}
+
+/* gold glow line top */
+.about__item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg,#0000,#d4af37,#0000);
+  opacity: .6;
+}
+
+.about__item:hover {
+  transform: translateY(-6px);
+  border-color: rgba(212,175,55,.45);
+  box-shadow:
+    0 18px 50px rgba(0,0,0,.6),
+    0 0 24px rgba(212,175,55,.12);
+}
+
+
+/* ===== ICON GOLD ===== */
+
+.about__item-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(212,175,55,.12);
+  border: 1px solid rgba(212,175,55,.35);
+}
+
+.about__item-icon i {
+  color: var(--primary);
+  font-size: 18px;
+}
+
+
+/* ===== TEXT STYLE ===== */
+
+.about__item-title {
+  color: #f3e6b2;
+  letter-spacing: .4px;
+}
+
+.about__item-text {
+  color: #aeb6c2;
+  line-height: 1.7;
+}
+
+
+/* ===== CTA AREA ===== */
+
+.about__cta {
+  margin-top: 28px;
+}
+
+.about__cta .btn {
+  box-shadow: 0 0 0 rgba(212,175,55,0);
+  transition: .3s;
+}
+
+.about__cta .btn:hover {
+  box-shadow: 0 0 26px rgba(212,175,55,.4);
+  transform: translateY(-2px);
+}
