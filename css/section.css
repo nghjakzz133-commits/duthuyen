@@ -599,3 +599,14 @@
   }
 
 }
+/* ===== MOBILE LOGO BIGGER ===== */
+
+@media (max-width: 768px) {
+  .header__logo img {
+    height: 58px;   /* tăng size mobile */
+  }
+
+  .header__wrapper {
+    padding: 6px 0; /* giữ header không bị quá cao */
+  }
+}
