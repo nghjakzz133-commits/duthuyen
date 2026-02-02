@@ -1,72 +1,1471 @@
 <!DOCTYPE html>
+
 <html lang="vi">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>EMPIRE Club | Flagship Nightlife</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="EMPIRE Club - Đẳng cấp giải trí đỉnh cao, không gian VIP sang trọng">
+    <meta name="keywords" content="empire club, nightclub, club, vip, luxury, entertainment">
+    <title>EMPIRE Club - Đẳng Cấp Giải Trí Đỉnh Cao</title>
 
-  <link rel="stylesheet" href="./css/core.css">
-  <link rel="stylesheet" href="./css/global.css">
+```
+<!-- CSS -->
+<link rel="stylesheet" href="assets/css/main.css">
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+```
+
 </head>
-<body class="lang-vi">
+<body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="header-left">
-    <button class="menu-toggle">
-      <span></span><span></span><span></span>
-    </button>
-  </div>
+```
+<!-- ========== HEADER ========== -->
+<header class="header" id="header">
+    <div class="container">
+        <div class="header__wrapper">
+            
+            <!-- Logo -->
+            <div class="header__logo">
+                <a href="#home">
+                    <img src="assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png" alt="EMPIRE Club Logo">
+                </a>
+            </div>
 
-  <div class="header-center">
-    <img src="./assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png" alt="EMPIRE Logo" class="header-logo">
-  </div>
+            <!-- Navigation -->
+            <nav class="nav" id="nav">
+                <ul class="nav__list">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link">Trang chủ</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link">Giới thiệu</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#pricing" class="nav__link">Gói bàn / Bảng giá</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#events" class="nav__link">Sự kiện</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#gallery" class="nav__link">Gallery</a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link">Liên hệ</a>
+                    </li>
+                </ul>
+            </nav>
 
-  <div class="header-right">
-    <button data-lang-switch="vi" class="active">VI</button>
-<button data-lang-switch="en">EN</button>
-  </div>
-</header>
-<nav class="main-nav">
-  <a href="#home" data-lang="vi">Trang chủ</a>
-  <a href="#experience" data-lang="vi">Trải nghiệm</a>
-  <a href="#contact" data-lang="vi">Liên hệ</a>
+            <!-- Header Actions -->
+            <div class="header__actions">
+                <!-- Hotline -->
+                <a href="tel:0919918178" class="header__hotline">
+                    <i class="fas fa-phone-alt"></i>
+                    <span>0919 918 178</span>
+                </a>
 
-  <a href="#home" data-lang="en">Home</a>
-  <a href="#experience" data-lang="en">Experience</a>
-  <a href="#contact" data-lang="en">Contact</a>
-</nav>
-<!-- HERO VIDEO -->
-<section class="hero">
-  <video autoplay muted loop playsinline class="hero-video">
-    <source src="./assets/video/hero.mp4" type="video/mp4">
-  </video>
-  <div class="hero-overlay"></div>
+                <!-- CTA Button -->
+                <a href="#booking" class="btn btn--primary btn--cta">
+                    <i class="fas fa-fire"></i>
+                    Đặt bàn ngay
+                </a>
 
-  <div class="hero-content">
-    <p class="hero-text" data-lang="vi">
-      Biểu tượng nightlife cao cấp tại Sài Gòn
-    </p>
-    <p class="hero-text" data-lang="en">
-      Saigon’s premium nightlife destination
-    </p>
+                <!-- Mobile Menu Toggle -->
+                <button class="header__toggle" id="menu-toggle" aria-label="Toggle Menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
 
-    <div class="hero-actions">
-      <a href="#contact" class="btn primary">Đặt bàn</a>
-      <a href="#experience" class="btn ghost">Khám phá</a>
+        </div>
     </div>
-  </div>
+</header>
+
+<!-- ========== HERO SECTION ========== -->
+<section class="hero" id="home">
+    <!-- Background Video/Image -->
+    <div class="hero__bg">
+        <div class="hero__bg-overlay"></div>
+        <!-- Video background can be added here -->
+        <video class="hero__video" autoplay muted loop playsinline>
+            <source src="assets/videos/hero-bg.mp4" type="video/mp4">
+        </video>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero__content">
+        <div class="container">
+            <div class="hero__wrapper">
+                
+                <!-- Main Headline -->
+                <h1 class="hero__title" data-aos="fade-up">
+                    <span class="hero__title-top">EMPIRE</span>
+                    <span class="hero__title-bottom">CLUB</span>
+                </h1>
+
+                <!-- Sub Text -->
+                <p class="hero__subtitle" data-aos="fade-up" data-aos-delay="100">
+                    Đẳng cấp giải trí - Trải nghiệm đỉnh cao - Không gian VIP sang trọng
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="hero__cta" data-aos="fade-up" data-aos-delay="200">
+                    <a href="#booking" class="btn btn--primary btn--large">
+                        <i class="fas fa-fire"></i>
+                        Đặt bàn ngay
+                    </a>
+                    <a href="#about" class="btn btn--outline btn--large">
+                        <i class="fas fa-crown"></i>
+                        Khám phá
+                    </a>
+                </div>
+
+                <!-- Quick Info -->
+                <div class="hero__info" data-aos="fade-up" data-aos-delay="300">
+                    <div class="hero__info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div class="hero__info-text">
+                            <span class="hero__info-label">Địa điểm</span>
+                            <span class="hero__info-value">Trung tâm TP</span>
+                        </div>
+                    </div>
+
+                    <div class="hero__info-item">
+                        <i class="fas fa-clock"></i>
+                        <div class="hero__info-text">
+                            <span class="hero__info-label">Giờ mở cửa</span>
+                            <span class="hero__info-value">20:00 - Hết khách</span>
+                        </div>
+                    </div>
+
+                    <div class="hero__info-item">
+                        <i class="fas fa-calendar-star"></i>
+                        <div class="hero__info-text">
+                            <span class="hero__info-label">Event Tonight</span>
+                            <span class="hero__info-value">DJ International Night</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="hero__scroll">
+        <a href="#about" class="hero__scroll-link">
+            <i class="fas fa-chevron-down"></i>
+        </a>
+    </div>
 </section>
 
-<!-- ABOUT -->
-<section class="about" id="experience">
-  <h2>Empire Experience</h2>
-  <p>
-    Âm nhạc – ánh sáng – năng lượng.  
-    Không gian nightlife đỉnh cao mỗi đêm.
-  </p>
+<!-- ========== ABOUT SECTION ========== -->
+<section class="about section" id="about">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Về chúng tôi</span>
+            <h2 class="section__title">Giới thiệu EMPIRE Club</h2>
+            <p class="section__description">
+                Nơi hội tụ đẳng cấp và phong cách
+            </p>
+        </div>
+
+        <!-- About Content -->
+        <div class="about__wrapper">
+            
+            <!-- About Image -->
+            <div class="about__image" data-aos="fade-right">
+                <div class="about__image-wrapper">
+                    <img src="assets/images/about-img.jpg" alt="EMPIRE Club Interior">
+                    <div class="about__image-overlay">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Content -->
+            <div class="about__content" data-aos="fade-left">
+                
+                <div class="about__item">
+                    <div class="about__item-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <div class="about__item-content">
+                        <h3 class="about__item-title">Concept & Đẳng Cấp</h3>
+                        <p class="about__item-text">
+                            EMPIRE Club là điểm đến hàng đầu cho những ai yêu thích sự sang trọng và đẳng cấp. 
+                            Với thiết kế hiện đại, hệ thống âm thanh ánh sáng đỉnh cao, chúng tôi mang đến 
+                            trải nghiệm giải trí không giới hạn.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about__item">
+                    <div class="about__item-icon">
+                        <i class="fas fa-gem"></i>
+                    </div>
+                    <div class="about__item-content">
+                        <h3 class="about__item-title">Vibe & Không Gian</h3>
+                        <p class="about__item-text">
+                            Không gian được thiết kế tinh tế với ánh sáng lung linh, tạo nên bầu không khí 
+                            sôi động nhưng vẫn giữ được sự riêng tư cho từng khu vực VIP. Đội ngũ DJ và 
+                            nghệ sĩ hàng đầu luôn sẵn sàng đốt cháy mọi đêm tiệc.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about__item">
+                    <div class="about__item-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <div class="about__item-content">
+                        <h3 class="about__item-title">Đối Tượng Khách Hàng</h3>
+                        <p class="about__item-text">
+                            EMPIRE Club phục vụ những vị khách thành đạt, yêu thích sự sang trọng và đẳng cấp. 
+                            Chúng tôi cam kết mang đến dịch vụ hoàn hảo nhất cho mỗi trải nghiệm của bạn.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="about__cta">
+                    <a href="#booking" class="btn btn--primary">
+                        <i class="fas fa-calendar-check"></i>
+                        Đặt bàn ngay
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
 </section>
 
-<script src="./js/main.js"></script>
+<!-- ========== PRICING SECTION ========== -->
+<section class="pricing section section--dark" id="pricing">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Bảng giá</span>
+            <h2 class="section__title">Gói Bàn & Dịch Vụ</h2>
+            <p class="section__description">
+                Chọn gói phù hợp với phong cách của bạn
+            </p>
+        </div>
+
+        <!-- Pricing Cards -->
+        <div class="pricing__wrapper">
+            
+            <!-- Standard Package -->
+            <div class="pricing__card" data-aos="fade-up" data-aos-delay="0">
+                <div class="pricing__badge">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="pricing__header">
+                    <h3 class="pricing__title">Standard</h3>
+                    <div class="pricing__price">
+                        <span class="pricing__currency">₫</span>
+                        <span class="pricing__amount">5.000.000</span>
+                    </div>
+                    <p class="pricing__subtitle">Gói cơ bản cho nhóm nhỏ</p>
+                </div>
+                <ul class="pricing__features">
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Bàn cho 6-8 người</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>1 chai rượu cao cấp</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Đồ nhắm miễn phí</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Nước ngọt & đá không giới hạn</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Phục vụ chuyên nghiệp</span>
+                    </li>
+                </ul>
+                <div class="pricing__footer">
+                    <a href="#booking" class="btn btn--outline">
+                        <i class="fas fa-shopping-cart"></i>
+                        Đặt gói này
+                    </a>
+                </div>
+            </div>
+
+            <!-- VIP Package -->
+            <div class="pricing__card pricing__card--featured" data-aos="fade-up" data-aos-delay="100">
+                <div class="pricing__badge pricing__badge--featured">
+                    <i class="fas fa-crown"></i>
+                    <span>Phổ biến</span>
+                </div>
+                <div class="pricing__header">
+                    <h3 class="pricing__title">VIP</h3>
+                    <div class="pricing__price">
+                        <span class="pricing__currency">₫</span>
+                        <span class="pricing__amount">10.000.000</span>
+                    </div>
+                    <p class="pricing__subtitle">Trải nghiệm VIP đẳng cấp</p>
+                </div>
+                <ul class="pricing__features">
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Bàn VIP cho 8-10 người</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>2 chai rượu premium</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Khu vực riêng biệt</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Đồ nhắm cao cấp</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Nước ngọt & đá không giới hạn</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Ưu tiên phục vụ</span>
+                    </li>
+                </ul>
+                <div class="pricing__footer">
+                    <a href="#booking" class="btn btn--primary">
+                        <i class="fas fa-fire"></i>
+                        Đặt gói này
+                    </a>
+                </div>
+            </div>
+
+            <!-- VVIP Package -->
+            <div class="pricing__card" data-aos="fade-up" data-aos-delay="200">
+                <div class="pricing__badge">
+                    <i class="fas fa-gem"></i>
+                </div>
+                <div class="pricing__header">
+                    <h3 class="pricing__title">VVIP</h3>
+                    <div class="pricing__price">
+                        <span class="pricing__currency">₫</span>
+                        <span class="pricing__amount">20.000.000</span>
+                    </div>
+                    <p class="pricing__subtitle">Đỉnh cao sang trọng</p>
+                </div>
+                <ul class="pricing__features">
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Phòng VVIP riêng tư</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>3 chai rượu ultra premium</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Không gian hoàn toàn riêng biệt</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Menu đồ nhắm đặc biệt</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Nước ngọt & đá không giới hạn</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Butler riêng phục vụ 24/7</span>
+                    </li>
+                    <li class="pricing__feature">
+                        <i class="fas fa-check"></i>
+                        <span>Tặng kèm cocktail signature</span>
+                    </li>
+                </ul>
+                <div class="pricing__footer">
+                    <a href="#booking" class="btn btn--outline">
+                        <i class="fas fa-diamond"></i>
+                        Đặt gói này
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== EVENTS SECTION ========== -->
+<section class="events section" id="events">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Sự kiện sắp diễn ra</span>
+            <h2 class="section__title">Lịch Sự Kiện & DJ</h2>
+            <p class="section__description">
+                Những đêm nhạc đỉnh cao tại EMPIRE Club
+            </p>
+        </div>
+
+        <!-- Events Grid -->
+        <div class="events__wrapper">
+            
+            <!-- Event Card 1 -->
+            <article class="event__card" data-aos="fade-up" data-aos-delay="0">
+                <div class="event__image">
+                    <img src="assets/images/event-1.jpg" alt="DJ International Night">
+                    <div class="event__overlay">
+                        <span class="event__label event__label--hot">
+                            <i class="fas fa-fire"></i>
+                            HOT
+                        </span>
+                    </div>
+                </div>
+                <div class="event__content">
+                    <div class="event__date">
+                        <span class="event__day">07</span>
+                        <span class="event__month">Tháng 2</span>
+                    </div>
+                    <div class="event__info">
+                        <span class="event__time">
+                            <i class="fas fa-clock"></i>
+                            20:00 - 04:00
+                        </span>
+                        <h3 class="event__title">DJ International Night</h3>
+                        <p class="event__description">
+                            Đón chào DJ quốc tế hàng đầu châu Á. Trải nghiệm âm nhạc EDM 
+                            đỉnh cao với hệ thống âm thanh cực chất.
+                        </p>
+                        <div class="event__footer">
+                            <div class="event__dj">
+                                <i class="fas fa-headphones"></i>
+                                <span>DJ Alex Martinez</span>
+                            </div>
+                            <a href="#booking" class="event__cta">
+                                Đặt bàn ngay
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event Card 2 -->
+            <article class="event__card" data-aos="fade-up" data-aos-delay="100">
+                <div class="event__image">
+                    <img src="assets/images/event-2.jpg" alt="VIP Members Night">
+                    <div class="event__overlay">
+                        <span class="event__label event__label--vip">
+                            <i class="fas fa-crown"></i>
+                            VIP
+                        </span>
+                    </div>
+                </div>
+                <div class="event__content">
+                    <div class="event__date">
+                        <span class="event__day">08</span>
+                        <span class="event__month">Tháng 2</span>
+                    </div>
+                    <div class="event__info">
+                        <span class="event__time">
+                            <i class="fas fa-clock"></i>
+                            20:00 - 05:00
+                        </span>
+                        <h3 class="event__title">VIP Members Night</h3>
+                        <p class="event__description">
+                            Đêm dành riêng cho hội viên VIP với ưu đãi đặc biệt và guest DJ bí mật. 
+                            Đặt bàn sớm để nhận quà tặng.
+                        </p>
+                        <div class="event__footer">
+                            <div class="event__dj">
+                                <i class="fas fa-headphones"></i>
+                                <span>Mystery Guest DJ</span>
+                            </div>
+                            <a href="#booking" class="event__cta">
+                                Đặt bàn ngay
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Event Card 3 -->
+            <article class="event__card" data-aos="fade-up" data-aos-delay="200">
+                <div class="event__image">
+                    <img src="assets/images/event-3.jpg" alt="Sunday Sunset Party">
+                    <div class="event__overlay">
+                        <span class="event__label event__label--new">
+                            <i class="fas fa-sparkles"></i>
+                            NEW
+                        </span>
+                    </div>
+                </div>
+                <div class="event__content">
+                    <div class="event__date">
+                        <span class="event__day">09</span>
+                        <span class="event__month">Tháng 2</span>
+                    </div>
+                    <div class="event__info">
+                        <span class="event__time">
+                            <i class="fas fa-clock"></i>
+                            20:00 - 02:00
+                        </span>
+                        <h3 class="event__title">Sunday Sunset Party</h3>
+                        <p class="event__description">
+                            Khởi động tuần mới với bữa tiệc chill cùng DJ resident. 
+                            Nhạc House & Deep House cuốn hút từ 20:00.
+                        </p>
+                        <div class="event__footer">
+                            <div class="event__dj">
+                                <i class="fas fa-headphones"></i>
+                                <span>DJ Minh Anh</span>
+                            </div>
+                            <a href="#booking" class="event__cta">
+                                Đặt bàn ngay
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== GALLERY SECTION ========== -->
+<section class="gallery section section--dark" id="gallery">
+    <div class="container-fluid">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Hình ảnh & Video</span>
+            <h2 class="section__title">Gallery EMPIRE</h2>
+            <p class="section__description">
+                Khám phá không gian sang trọng và sự kiện đỉnh cao
+            </p>
+        </div>
+
+        <!-- Gallery Grid -->
+        <div class="gallery__wrapper">
+            
+            <!-- Gallery Item 1 -->
+            <div class="gallery__item gallery__item--large" data-aos="zoom-in" data-aos-delay="0">
+                <img src="assets/images/gallery-1.jpg" alt="EMPIRE Club Interior">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="1">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">Không gian VIP</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 2 -->
+            <div class="gallery__item" data-aos="zoom-in" data-aos-delay="50">
+                <img src="assets/images/gallery-2.jpg" alt="DJ Performance">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="2">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">DJ Performance</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 3 -->
+            <div class="gallery__item" data-aos="zoom-in" data-aos-delay="100">
+                <img src="assets/images/gallery-3.jpg" alt="Crowd Party">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="3">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">Atmosphere</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 4 -->
+            <div class="gallery__item" data-aos="zoom-in" data-aos-delay="150">
+                <img src="assets/images/gallery-4.jpg" alt="VIP Area">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="4">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">VIP Lounge</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 5 -->
+            <div class="gallery__item gallery__item--tall" data-aos="zoom-in" data-aos-delay="200">
+                <img src="assets/images/gallery-5.jpg" alt="Lighting System">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="5">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">Lighting Effects</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 6 -->
+            <div class="gallery__item" data-aos="zoom-in" data-aos-delay="250">
+                <img src="assets/images/gallery-6.jpg" alt="Bar Area">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="6">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">Premium Bar</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 7 -->
+            <div class="gallery__item" data-aos="zoom-in" data-aos-delay="300">
+                <img src="assets/images/gallery-7.jpg" alt="Dance Floor">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="7">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">Dance Floor</span>
+                </div>
+            </div>
+
+            <!-- Gallery Item 8 -->
+            <div class="gallery__item" data-aos="zoom-in" data-aos-delay="350">
+                <img src="assets/images/gallery-8.jpg" alt="Event Night">
+                <div class="gallery__overlay">
+                    <button class="gallery__btn" data-gallery="8">
+                        <i class="fas fa-search-plus"></i>
+                    </button>
+                    <span class="gallery__caption">Event Night</span>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Gallery CTA -->
+        <div class="gallery__cta" data-aos="fade-up">
+            <a href="#" class="btn btn--outline btn--large">
+                <i class="fas fa-images"></i>
+                Xem thêm gallery
+            </a>
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== MENU SECTION ========== -->
+<section class="menu section" id="menu">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Đồ uống cao cấp</span>
+            <h2 class="section__title">Menu & Bảng Giá</h2>
+            <p class="section__description">
+                Bộ sưu tập rượu và cocktail đẳng cấp quốc tế
+            </p>
+        </div>
+
+        <!-- Menu Categories -->
+        <div class="menu__tabs" data-aos="fade-up">
+            <button class="menu__tab menu__tab--active" data-tab="whisky">
+                <i class="fas fa-glass-whiskey"></i>
+                Whisky
+            </button>
+            <button class="menu__tab" data-tab="champagne">
+                <i class="fas fa-champagne-glasses"></i>
+                Champagne
+            </button>
+            <button class="menu__tab" data-tab="cocktail">
+                <i class="fas fa-cocktail"></i>
+                Cocktails
+            </button>
+            <button class="menu__tab" data-tab="combo">
+                <i class="fas fa-gift"></i>
+                Combo
+            </button>
+        </div>
+
+        <!-- Menu Content -->
+        <div class="menu__content">
+            
+            <!-- Whisky Menu -->
+            <div class="menu__category menu__category--active" id="menu-whisky">
+                <div class="menu__grid">
+                    
+                    <div class="menu__item" data-aos="fade-up" data-aos-delay="0">
+                        <div class="menu__item-image">
+                            <img src="assets/images/whisky-1.jpg" alt="Johnnie Walker Blue">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Johnnie Walker Blue Label</h4>
+                            <p class="menu__item-description">Hòa quyện từ các loại whisky hiếm nhất</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">8.500.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item" data-aos="fade-up" data-aos-delay="50">
+                        <div class="menu__item-image">
+                            <img src="assets/images/whisky-2.jpg" alt="Chivas 18">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Chivas Regal 18 Years</h4>
+                            <p class="menu__item-description">Hương vị mượt mà đầy quyến rũ</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">4.200.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu__item-image">
+                            <img src="assets/images/whisky-3.jpg" alt="Royal Salute">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Royal Salute 21 Years</h4>
+                            <p class="menu__item-description">Đẳng cấp hoàng gia Scotland</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">6.800.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item" data-aos="fade-up" data-aos-delay="150">
+                        <div class="menu__item-image">
+                            <img src="assets/images/whisky-4.jpg" alt="Macallan">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Macallan 12 Years</h4>
+                            <p class="menu__item-description">Single Malt Scotch tinh túy</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">5.500.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Champagne Menu -->
+            <div class="menu__category" id="menu-champagne">
+                <div class="menu__grid">
+                    
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/champagne-1.jpg" alt="Moet Chandon">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Moët & Chandon Impérial</h4>
+                            <p class="menu__item-description">Champagne huyền thoại của nước Pháp</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">4.500.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/champagne-2.jpg" alt="Dom Perignon">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Dom Pérignon Vintage</h4>
+                            <p class="menu__item-description">Đỉnh cao của nghệ thuật sâm panh</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">12.000.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/champagne-3.jpg" alt="Veuve Clicquot">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Veuve Clicquot Yellow Label</h4>
+                            <p class="menu__item-description">Biểu tượng màu vàng quyến rũ</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">5.200.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/champagne-4.jpg" alt="Perrier Jouet">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Perrier-Jouët Belle Époque</h4>
+                            <p class="menu__item-description">Nghệ thuật hoa văn trên chai</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">6.000.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Cocktails Menu -->
+            <div class="menu__category" id="menu-cocktail">
+                <div class="menu__grid">
+                    
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/cocktail-1.jpg" alt="Empire Signature">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">EMPIRE Signature</h4>
+                            <p class="menu__item-description">Cocktail đặc trưng của nhà</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">350.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/cocktail-2.jpg" alt="Long Island">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Long Island Iced Tea</h4>
+                            <p class="menu__item-description">Hương vị mạnh mẽ cuốn hút</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">280.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/cocktail-3.jpg" alt="Mojito">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Mojito Classic</h4>
+                            <p class="menu__item-description">Bạc hà tươi mát sảng khoái</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">250.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="menu__item">
+                        <div class="menu__item-image">
+                            <img src="assets/images/cocktail-4.jpg" alt="Margarita">
+                        </div>
+                        <div class="menu__item-content">
+                            <h4 class="menu__item-name">Margarita Premium</h4>
+                            <p class="menu__item-description">Chanh tươi và Tequila cao cấp</p>
+                            <div class="menu__item-footer">
+                                <span class="menu__item-price">260.000₫</span>
+                                <button class="menu__item-btn">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- Combo Menu -->
+            <div class="menu__category" id="menu-combo">
+                <div class="menu__grid menu__grid--combo">
+                    
+                    <div class="menu__combo" data-aos="fade-up">
+                        <div class="menu__combo-badge">
+                            <i class="fas fa-fire"></i>
+                            HOT DEAL
+                        </div>
+                        <h4 class="menu__combo-name">Combo Party Package</h4>
+                        <p class="menu__combo-description">Dành cho nhóm 6-8 người</p>
+                        <ul class="menu__combo-items">
+                            <li><i class="fas fa-check"></i> 2 chai rượu premium</li>
+                            <li><i class="fas fa-check"></i> 1 set đồ nhắm cao cấp</li>
+                            <li><i class="fas fa-check"></i> Nước ngọt & đá không giới hạn</li>
+                            <li><i class="fas fa-check"></i> 4 cocktail signature</li>
+                        </ul>
+                        <div class="menu__combo-price">
+                            <span class="menu__combo-price-old">9.000.000₫</span>
+                            <span class="menu__combo-price-new">7.500.000₫</span>
+                        </div>
+                        <button class="btn btn--primary btn--block">
+                            <i class="fas fa-shopping-cart"></i>
+                            Đặt combo này
+                        </button>
+                    </div>
+
+                    <div class="menu__combo" data-aos="fade-up" data-aos-delay="100">
+                        <div class="menu__combo-badge menu__combo-badge--vip">
+                            <i class="fas fa-crown"></i>
+                            VIP
+                        </div>
+                        <h4 class="menu__combo-name">Combo VIP Exclusive</h4>
+                        <p class="menu__combo-description">Dành cho nhóm 10-12 người</p>
+                        <ul class="menu__combo-items">
+                            <li><i class="fas fa-check"></i> 4 chai rượu ultra premium</li>
+                            <li><i class="fas fa-check"></i> 2 set đồ nhắm đặc biệt</li>
+                            <li><i class="fas fa-check"></i> Nước ngọt & đá không giới hạn</li>
+                            <li><i class="fas fa-check"></i> 8 cocktail signature</li>
+                            <li><i class="fas fa-check"></i> Butler phục vụ riêng</li>
+                        </ul>
+                        <div class="menu__combo-price">
+                            <span class="menu__combo-price-old">18.000.000₫</span>
+                            <span class="menu__combo-price-new">15.000.000₫</span>
+                        </div>
+                        <button class="btn btn--primary btn--block">
+                            <i class="fas fa-shopping-cart"></i>
+                            Đặt combo này
+                        </button>
+                    </div>
+
+                    <div class="menu__combo" data-aos="fade-up" data-aos-delay="200">
+                        <div class="menu__combo-badge menu__combo-badge--special">
+                            <i class="fas fa-gift"></i>
+                            SPECIAL
+                        </div>
+                        <h4 class="menu__combo-name">Combo Birthday Special</h4>
+                        <p class="menu__combo-description">Gói sinh nhật đặc biệt</p>
+                        <ul class="menu__combo-items">
+                            <li><i class="fas fa-check"></i> 3 chai Champagne cao cấp</li>
+                            <li><i class="fas fa-check"></i> Bánh sinh nhật + pháo hoa</li>
+                            <li><i class="fas fa-check"></i> Nước ngọt & đá không giới hạn</li>
+                            <li><i class="fas fa-check"></i> 6 cocktail tùy chọn</li>
+                            <li><i class="fas fa-check"></i> Trang trí bàn sinh nhật</li>
+                            <li><i class="fas fa-check"></i> DJ chúc mừng đặc biệt</li>
+                        </ul>
+                        <div class="menu__combo-price">
+                            <span class="menu__combo-price-old">14.000.000₫</span>
+                            <span class="menu__combo-price-new">12.000.000₫</span>
+                        </div>
+                        <button class="btn btn--primary btn--block">
+                            <i class="fas fa-shopping-cart"></i>
+                            Đặt combo này
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== PARTNERS SECTION ========== -->
+<section class="partners section section--dark">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Đối tác chiến lược</span>
+            <h2 class="section__title">Thương Hiệu Rượu</h2>
+            <p class="section__description">
+                Hợp tác cùng các thương hiệu rượu hàng đầu thế giới
+            </p>
+        </div>
+
+        <!-- Partners Grid -->
+        <div class="partners__wrapper" data-aos="fade-up">
+            
+            <div class="partner__item">
+                <img src="assets/images/partner-jw.png" alt="Johnnie Walker">
+            </div>
+
+            <div class="partner__item">
+                <img src="assets/images/partner-chivas.png" alt="Chivas Regal">
+            </div>
+
+            <div class="partner__item">
+                <img src="assets/images/partner-hennessy.png" alt="Hennessy">
+            </div>
+
+            <div class="partner__item">
+                <img src="assets/images/partner-moet.png" alt="Moët & Chandon">
+            </div>
+
+            <div class="partner__item">
+                <img src="assets/images/partner-macallan.png" alt="Macallan">
+            </div>
+
+            <div class="partner__item">
+                <img src="assets/images/partner-greygoose.png" alt="Grey Goose">
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== BOOKING SECTION ========== -->
+<section class="booking section" id="booking">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Đặt bàn VIP</span>
+            <h2 class="section__title">Đặt Bàn Nhanh</h2>
+            <p class="section__description">
+                Liên hệ ngay để nhận ưu đãi tốt nhất
+            </p>
+        </div>
+
+        <!-- Booking Wrapper -->
+        <div class="booking__wrapper">
+            
+            <!-- Booking Form -->
+            <div class="booking__form" data-aos="fade-right">
+                <form id="booking-form" class="form">
+                    
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="name" class="form__label">
+                                <i class="fas fa-user"></i>
+                                Họ và tên *
+                            </label>
+                            <input 
+                                type="text" 
+                                id="name" 
+                                name="name" 
+                                class="form__input" 
+                                placeholder="Nhập họ tên của bạn"
+                                required
+                            >
+                        </div>
+
+                        <div class="form__group">
+                            <label for="phone" class="form__label">
+                                <i class="fas fa-phone"></i>
+                                Số điện thoại *
+                            </label>
+                            <input 
+                                type="tel" 
+                                id="phone" 
+                                name="phone" 
+                                class="form__input" 
+                                placeholder="Nhập số điện thoại"
+                                required
+                            >
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="date" class="form__label">
+                                <i class="fas fa-calendar"></i>
+                                Ngày đặt bàn *
+                            </label>
+                            <input 
+                                type="date" 
+                                id="date" 
+                                name="date" 
+                                class="form__input"
+                                required
+                            >
+                        </div>
+
+                        <div class="form__group">
+                            <label for="time" class="form__label">
+                                <i class="fas fa-clock"></i>
+                                Thời gian
+                            </label>
+                            <select id="time" name="time" class="form__select">
+                                <option value="20:00">20:00</option>
+                                <option value="21:00">21:00</option>
+                                <option value="22:00">22:00</option>
+                                <option value="23:00">23:00</option>
+                                <option value="00:00">00:00</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form__row">
+                        <div class="form__group">
+                            <label for="guests" class="form__label">
+                                <i class="fas fa-users"></i>
+                                Số lượng khách
+                            </label>
+                            <select id="guests" name="guests" class="form__select">
+                                <option value="2-4">2-4 người</option>
+                                <option value="5-8">5-8 người</option>
+                                <option value="9-12">9-12 người</option>
+                                <option value="12+">Trên 12 người</option>
+                            </select>
+                        </div>
+
+                        <div class="form__group">
+                            <label for="package" class="form__label">
+                                <i class="fas fa-gift"></i>
+                                Gói dịch vụ
+                            </label>
+                            <select id="package" name="package" class="form__select">
+                                <option value="standard">Standard - 5.000.000₫</option>
+                                <option value="vip">VIP - 10.000.000₫</option>
+                                <option value="vvip">VVIP - 20.000.000₫</option>
+                                <option value="custom">Tùy chỉnh</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form__group">
+                        <label for="message" class="form__label">
+                            <i class="fas fa-comment"></i>
+                            Ghi chú đặc biệt
+                        </label>
+                        <textarea 
+                            id="message" 
+                            name="message" 
+                            class="form__textarea" 
+                            rows="4"
+                            placeholder="Yêu cầu đặc biệt của bạn..."
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn--primary btn--large btn--block">
+                        <i class="fas fa-paper-plane"></i>
+                        Gửi yêu cầu đặt bàn
+                    </button>
+
+                </form>
+            </div>
+
+            <!-- Booking Info -->
+            <div class="booking__info" data-aos="fade-left">
+                
+                <div class="booking__info-card">
+                    <div class="booking__info-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3 class="booking__info-title">Hỗ trợ 24/7</h3>
+                    <p class="booking__info-text">
+                        Đội ngũ hỗ trợ của chúng tôi luôn sẵn sàng phục vụ bạn mọi lúc
+                    </p>
+                </div>
+
+                <div class="booking__info-card">
+                    <div class="booking__info-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="booking__info-title">Bảo mật thông tin</h3>
+                    <p class="booking__info-text">
+                        Thông tin của bạn được bảo mật tuyệt đối và an toàn
+                    </p>
+                </div>
+
+                <div class="booking__info-card">
+                    <div class="booking__info-icon">
+                        <i class="fas fa-tags"></i>
+                    </div>
+                    <h3 class="booking__info-title">Ưu đãi độc quyền</h3>
+                    <p class="booking__info-text">
+                        Đặt bàn trực tuyến để nhận các ưu đãi đặc biệt
+                    </p>
+                </div>
+
+                <!-- Quick Contact -->
+                <div class="booking__quick">
+                    <h4 class="booking__quick-title">Hoặc liên hệ trực tiếp</h4>
+                    <div class="booking__quick-buttons">
+                        <a href="https://zalo.me/0919918178" target="_blank" class="btn btn--zalo">
+                            <i class="fas fa-comment-dots"></i>
+                            Chat Zalo
+                        </a>
+                        <a href="tel:0919918178" class="btn btn--phone">
+                            <i class="fas fa-phone-alt"></i>
+                            Gọi ngay
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== CONTACT SECTION ========== -->
+<section class="contact section section--dark" id="contact">
+    <div class="container">
+        
+        <!-- Section Header -->
+        <div class="section__header" data-aos="fade-up">
+            <span class="section__subtitle">Liên hệ</span>
+            <h2 class="section__title">Thông Tin & Địa Chỉ</h2>
+            <p class="section__description">
+                Hãy đến và trải nghiệm EMPIRE Club
+            </p>
+        </div>
+
+        <!-- Contact Wrapper -->
+        <div class="contact__wrapper">
+            
+            <!-- Contact Info -->
+            <div class="contact__info" data-aos="fade-right">
+                
+                <div class="contact__card">
+                    <div class="contact__card-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div class="contact__card-content">
+                        <h3 class="contact__card-title">Địa chỉ</h3>
+                        <p class="contact__card-text">
+                            Trung tâm Thành phố
+                        </p>
+                        <a href="https://maps.app.goo.gl/dCJdczWpyfedvvXg6?g_st=com.google.maps.preview.copy" 
+                           target="_blank" 
+                           class="contact__card-link">
+                            Xem trên Google Maps
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact__card">
+                    <div class="contact__card-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <div class="contact__card-content">
+                        <h3 class="contact__card-title">Giờ mở cửa</h3>
+                        <p class="contact__card-text">
+                            20:00 - Đến hết khách<br>
+                            Mở cửa mọi ngày trong tuần
+                        </p>
+                    </div>
+                </div>
+
+                <div class="contact__card">
+                    <div class="contact__card-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div class="contact__card-content">
+                        <h3 class="contact__card-title">Hotline / Zalo</h3>
+                        <p class="contact__card-text">
+                            <a href="tel:0919918178">0919 918 178</a>
+                        </p>
+                        <a href="https://zalo.me/0919918178" 
+                           target="_blank" 
+                           class="contact__card-link">
+                            Chat qua Zalo
+                            <i class="fas fa-external-link-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact__card">
+                    <div class="contact__card-icon">
+                        <i class="fas fa-share-alt"></i>
+                    </div>
+                    <div class="contact__card-content">
+                        <h3 class="contact__card-title">Mạng xã hội</h3>
+                        <div class="contact__social">
+                            <a href="https://www.facebook.com/share/1AZez4oNFC/?mibextid=wwXIfr" 
+                               target="_blank" 
+                               class="contact__social-link">
+                                <i class="fab fa-facebook-f"></i>
+                            </a>
+                            <a href="#" class="contact__social-link">
+                                <i class="fab fa-instagram"></i>
+                            </a>
+                            <a href="https://zalo.me/0919918178" 
+                               target="_blank" 
+                               class="contact__social-link">
+                                <i class="fas fa-comment-dots"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- Map -->
+            <div class="contact__map" data-aos="fade-left">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.3240469812785!2d106.68424!3d10.786980!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTDCsDQ3JzEzLjEiTiAxMDbCsDQxJzAzLjMiRQ!5e0!3m2!1sen!2s!4v1234567890"
+                    width="100%" 
+                    height="100%" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer">
+    <div class="container">
+        
+        <!-- Footer Top -->
+        <div class="footer__top">
+            
+            <div class="footer__col">
+                <div class="footer__logo">
+                    <img src="assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png" alt="EMPIRE Club Logo">
+                </div>
+                <p class="footer__description">
+                    Đẳng cấp giải trí đỉnh cao.<br>
+                    Trải nghiệm VIP sang trọng.
+                </p>
+                <div class="footer__social">
+                    <a href="https://www.facebook.com/share/1AZez4oNFC/?mibextid=wwXIfr" 
+                       target="_blank" 
+                       class="footer__social-link">
+                        <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="footer__social-link">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://zalo.me/0919918178" 
+                       target="_blank" 
+                       class="footer__social-link">
+                        <i class="fas fa-comment-dots"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Liên kết nhanh</h4>
+                <ul class="footer__links">
+                    <li><a href="#home">Trang chủ</a></li>
+                    <li><a href="#about">Giới thiệu</a></li>
+                    <li><a href="#pricing">Bảng giá</a></li>
+                    <li><a href="#events">Sự kiện</a></li>
+                    <li><a href="#gallery">Gallery</a></li>
+                    <li><a href="#contact">Liên hệ</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Dịch vụ</h4>
+                <ul class="footer__links">
+                    <li><a href="#booking">Đặt bàn VIP</a></li>
+                    <li><a href="#menu">Menu đồ uống</a></li>
+                    <li><a href="#events">Tổ chức sự kiện</a></li>
+                    <li><a href="#pricing">Membership VIP</a></li>
+                </ul>
+            </div>
+
+            <div class="footer__col">
+                <h4 class="footer__title">Liên hệ</h4>
+                <ul class="footer__contact">
+                    <li>
+                        <i class="fas fa-phone-alt"></i>
+                        <a href="tel:0919918178">0919 918 178</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-clock"></i>
+                        <span>20:00 - Hết khách</span>
+                    </li>
+                    <li>
+                        <i class="fas fa-map-marker-alt"></i>
+                        <a href="https://maps.app.goo.gl/dCJdczWpyfedvvXg6?g_st=com.google.maps.preview.copy" target="_blank">
+                            Xem bản đồ
+                        </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- Footer CTA -->
+        <div class="footer__cta">
+            <div class="footer__cta-content">
+                <h3 class="footer__cta-title">Sẵn sàng trải nghiệm?</h3>
+                <p class="footer__cta-text">Đặt bàn ngay để nhận ưu đãi đặc biệt</p>
+            </div>
+            <a href="#booking" class="btn btn--primary btn--large">
+                <i class="fas fa-fire"></i>
+                Đặt bàn ngay
+            </a>
+        </div>
+
+        <!-- Footer Bottom -->
+        <div class="footer__bottom">
+            <p class="footer__copyright">
+                &copy; 2026 <strong>EMPIRE Club</strong>. All rights reserved.
+            </p>
+            <p class="footer__credits">
+                Designed with <i class="fas fa-heart"></i> by EMPIRE Team
+            </p>
+        </div>
+
+    </div>
+</footer>
+
+<!-- Scroll to Top Button -->
+<button class="scroll-top" id="scroll-top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+</button>
+
+<!-- JavaScript -->
+<script src="assets/js/main.js"></script>
+
+<!-- AOS Animation Library -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1000,
+        once: true,
+        offset: 100
+    });
+</script>
+```
+
 </body>
 </html>
