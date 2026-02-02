@@ -117,3 +117,31 @@
   font-size: 28px;
   margin-bottom: 20px;
 }
+/* ===== HEADER LOGO – MAKE IT POP ===== */
+
+.site-header {
+  height: 84px; /* header cao hơn để logo thở */
+}
+
+.header-logo {
+  height: 72px;          /* LOGO TO RÕ */
+  width: auto;
+  display: block;
+  margin: 0 auto;
+  transform: scale(1.15); /* đập mắt ngay khi nhìn */
+  filter:
+    drop-shadow(0 0 12px rgba(255,180,80,.45))
+    drop-shadow(0 0 28px rgba(255,140,40,.35));
+}
+
+/* Mobile nhỏ vẫn giữ lực */
+@media (max-width: 480px) {
+  .site-header {
+    height: 90px;
+  }
+
+  .header-logo {
+    height: 78px;
+    transform: scale(1.2);
+  }
+}
