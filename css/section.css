@@ -1,0 +1,334 @@
+/* =====================================================
+   SECTION.CSS — EMPIRE CLUB SECTIONS
+   Works with core.css
+===================================================== */
+
+
+/* ================= HERO ================= */
+
+.hero__cta {
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero__info {
+  display: flex;
+  gap: 28px;
+  justify-content: center;
+  margin-top: 40px;
+  flex-wrap: wrap;
+}
+
+.hero__info-item {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: #11161b;
+  padding: 14px 18px;
+  border-radius: 12px;
+}
+
+.hero__info-label {
+  font-size: 12px;
+  color: #888;
+}
+
+.hero__scroll {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 22px;
+  opacity: .7;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+}
+
+.about__image-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  position: relative;
+}
+
+.about__image-overlay {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: 42px;
+  background: linear-gradient(#0000,#000a);
+}
+
+.about__item {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+.about__item-icon {
+  font-size: 22px;
+  color: var(--primary);
+}
+
+
+/* ================= PRICING ================= */
+
+.pricing__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+}
+
+.pricing__card {
+  position: relative;
+}
+
+.pricing__card--featured {
+  outline: 2px solid var(--primary);
+  transform: scale(1.04);
+}
+
+.pricing__price {
+  font-size: 28px;
+  font-weight: 700;
+  margin: 14px 0;
+}
+
+.pricing__features {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+  margin: 18px 0;
+}
+
+.pricing__feature {
+  display: flex;
+  gap: 10px;
+  color: #bbb;
+}
+
+
+/* ================= EVENTS ================= */
+
+.events__wrapper {
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  gap: 28px;
+}
+
+.event__image {
+  border-radius: 14px;
+  overflow: hidden;
+}
+
+.event__content {
+  margin-top: 16px;
+}
+
+.event__title {
+  margin: 10px 0;
+}
+
+.event__footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 14px;
+  font-size: 14px;
+}
+
+
+/* ================= GALLERY ================= */
+
+.gallery__wrapper {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 14px;
+}
+
+.gallery__item {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.gallery__overlay {
+  position: absolute;
+  inset: 0;
+  background: #0009;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+  transition: .3s;
+}
+
+.gallery__item:hover .gallery__overlay {
+  opacity: 1;
+}
+
+
+/* ================= MENU ================= */
+
+.menu__tabs {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.menu__tab {
+  padding: 12px 18px;
+  border: 1px solid #333;
+  border-radius: 999px;
+}
+
+.menu__tab--active {
+  background: var(--primary);
+  color: #000;
+}
+
+.menu__grid {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 24px;
+}
+
+.menu__item-image {
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 12px;
+}
+
+.menu__item-footer {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 12px;
+}
+
+.menu__combo {
+  text-align: center;
+}
+
+.menu__combo-price-old {
+  text-decoration: line-through;
+  color: #777;
+}
+
+
+/* ================= PARTNERS ================= */
+
+.partners__wrapper {
+  display: grid;
+  grid-template-columns: repeat(6,1fr);
+  gap: 30px;
+  align-items: center;
+}
+
+.partner__item {
+  opacity: .7;
+  transition: .3s;
+}
+
+.partner__item:hover {
+  opacity: 1;
+}
+
+
+/* ================= BOOKING ================= */
+
+.booking__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.booking__quick-buttons {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.contact__card {
+  display: flex;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.contact__map iframe {
+  border-radius: 16px;
+  min-height: 420px;
+}
+
+
+/* ================= FOOTER ================= */
+
+.footer__top {
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.footer__links {
+  list-style: none;
+  display: grid;
+  gap: 10px;
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #111;
+  padding-top: 20px;
+}
+
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1000px) {
+
+  .pricing__wrapper,
+  .events__wrapper,
+  .menu__grid,
+  .gallery__wrapper {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  .about__wrapper,
+  .booking__wrapper,
+  .contact__wrapper {
+    grid-template-columns: 1fr;
+  }
+
+  .footer__top {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+
+@media (max-width: 600px) {
+
+  .gallery__wrapper,
+  .menu__grid,
+  .pricing__wrapper,
+  .events__wrapper {
+    grid-template-columns: 1fr;
+  }
+}
