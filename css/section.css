@@ -340,3 +340,82 @@
     height: 60px;
   }
 }
+/* ===== HERO TITLE — TRUE LUXURY METAL ===== */
+
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 600;
+  letter-spacing: 2px;
+  line-height: .95;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+/* hiệu ứng kim loại nhiều lớp */
+
+.hero__title-top,
+.hero__title-bottom {
+  display: block;
+  font-size: clamp(60px, 11vw, 120px);
+
+  background: linear-gradient(
+    180deg,
+    #fffbe6 0%,
+    #ffe9a3 18%,
+    #ffd45e 32%,
+    #d4af37 50%,
+    #9c740f 70%,
+    #f6d77a 88%,
+    #fff4c8 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* viền mỏng sắc */
+  -webkit-text-stroke: .6px rgba(0,0,0,.35);
+
+  /* depth shadow */
+  text-shadow:
+    0 1px 0 rgba(255,255,255,.25),
+    0 3px 0 rgba(0,0,0,.7),
+    0 8px 18px rgba(0,0,0,.85);
+}
+
+/* highlight sáng phía trên chữ */
+
+.hero__title-top::before,
+.hero__title-bottom::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,.35),
+    transparent 40%
+  );
+  mix-blend-mode: overlay;
+  pointer-events: none;
+}
+
+/* halo nền vàng tập trung */
+
+.hero__title::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%,-50%);
+  width: 420px;
+  height: 160px;
+
+  background: radial-gradient(
+    ellipse,
+    rgba(255,210,90,.35),
+    rgba(255,210,90,.12),
+    transparent 70%
+  );
+
+  filter: blur(20px);
+  z-index: -1;
+}
