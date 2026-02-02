@@ -663,3 +663,102 @@
   padding-top: var(--header-height);
   margin-top: 0;
 }
+/* =========================================================
+   PRICING – LUXURY CLEAN (NO IMAGE)
+========================================================= */
+
+.pricing {
+  background: radial-gradient(circle at top, #111 0%, #050505 70%);
+}
+
+.pricing__wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+  margin-top: 48px;
+}
+
+/* Card */
+.pricing__card {
+  position: relative;
+  background: linear-gradient(
+    145deg,
+    rgba(255,255,255,.06),
+    rgba(0,0,0,.65)
+  );
+  border: 1px solid rgba(212,175,55,.35);
+  border-radius: 22px;
+  padding: 28px 26px 30px;
+  backdrop-filter: blur(10px);
+  transition: all .35s ease;
+}
+
+.pricing__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(212,175,55,.25);
+}
+
+/* Featured VIP */
+.pricing__card--featured {
+  border-color: rgba(255,215,120,.85);
+  box-shadow: 0 0 0 1px rgba(255,215,120,.6),
+              0 30px 80px rgba(212,175,55,.45);
+}
+
+/* Header */
+.pricing__header {
+  text-align: center;
+  margin-bottom: 18px;
+}
+
+.pricing__title {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  letter-spacing: .06em;
+  color: #e6c87a;
+}
+
+.pricing__title i {
+  color: #d4af37;
+  font-size: 18px;
+}
+
+.pricing__price {
+  margin-top: 10px;
+  font-size: 26px;
+  font-weight: 600;
+  color: #ffd36a;
+  text-shadow: 0 0 18px rgba(212,175,55,.35);
+}
+
+/* Features */
+.pricing__features {
+  margin: 22px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.pricing__features li {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: #cfc6a8;
+  font-size: 14px;
+  padding: 8px 0;
+  border-bottom: 1px dashed rgba(255,255,255,.08);
+}
+
+.pricing__features li::before {
+  content: "✦";
+  color: #d4af37;
+  font-size: 12px;
+}
+
+/* Footer */
+.pricing__footer {
+  text-align: center;
+  margin-top: 20px;
+}
