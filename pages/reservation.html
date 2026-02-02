@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đặt Bàn - Empire Club Bar</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/header.css">
+    <link rel="stylesheet" href="../assets/css/responsive.css">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <a href="../index.html">
+                        <img src="../assets/images/logo/empire-logo.png" alt="Empire Club Bar" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <span class="logo-text" style="display:none;">EMPIRE</span>
+                    </a>
+                </div>
+                
+                <nav class="nav" id="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Trang Chủ</a></li>
+                        <li><a href="about.html" class="nav-link">Giới Thiệu</a></li>
+                        <li><a href="events.html" class="nav-link">Sự Kiện</a></li>
+                        <li><a href="menu.html" class="nav-link">Menu</a></li>
+                        <li><a href="gallery.html" class="nav-link">Thư Viện</a></li>
+                        <li><a href="contact.html" class="nav-link">Liên Hệ</a></li>
+                    </ul>
+                </nav>
+                
+                <div class="header-actions">
+                    <a href="reservation.html" class="btn btn-primary">Đặt Bàn</a>
+                    <button class="menu-toggle" id="menuToggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Đặt Bàn</h1>
+            <p>Đảm bảo chỗ của bạn tại Empire ngay hôm nay</p>
+        </div>
+    </section>
+
+    <!-- Reservation Form -->
+    <section class="reservation-section section">
+        <div class="container">
+            <div class="reservation-content">
+                <!-- Form -->
+                <div class="reservation-form-container">
+                    <h2>Thông Tin Đặt Bàn</h2>
+                    <form id="bookingForm" class="booking-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">
+                                    <i class="fas fa-user"></i> Họ và Tên *
+                                </label>
+                                <input type="text" id="name" name="name" required placeholder="Nguyễn Văn A">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">
+                                    <i class="fas fa-phone"></i> Số Điện Thoại *
+                                </label>
+                                <input type="tel" id="phone" name="phone" required placeholder="0123456789">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">
+                                <i class="fas fa-envelope"></i> Email *
+                            </label>
+                            <input type="email" id="email" name="email" required placeholder="example@email.com">
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="date">
+                                    <i class="fas fa-calendar"></i> Ngày *
+                                </label>
+                                <input type="date" id="date" name="date" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="time">
+                                    <i class="fas fa-clock"></i> Giờ *
+                                </label>
+                                <input type="time" id="time" name="time" required>
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="guests">
+                                    <i class="fas fa-users"></i> Số Khách *
+                                </label>
+                                <input type="number" id="guests" name="guests" min="1" max="20" required placeholder="4">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="tableType">
+                                    <i class="fas fa-chair"></i> Loại Bàn *
+                                </label>
+                                <select id="tableType" name="tableType" required>
+                                    <option value="">Chọn loại bàn</option>
+                                    <!-- Options will be loaded by JS -->
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="specialRequests">
+                                <i class="fas fa-comment"></i> Yêu Cầu Đặc Biệt
+                            </label>
+                            <textarea id="specialRequests" name="specialRequests" rows="4" placeholder="Ví dụ: Sinh nhật, kỷ niệm, yêu cầu đặc biệt..."></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-large">
+                            <i class="fas fa-check"></i> Xác Nhận Đặt Bàn
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Info Sidebar -->
+                <div class="reservation-info">
+                    <div class="info-card">
+                        <h3><i class="fas fa-info-circle"></i> Lưu Ý Quan Trọng</h3>
+                        <ul>
+                            <li>Vui lòng đặt bàn trước ít nhất 24 giờ</li>
+                            <li>Giờ mở cửa: 20:00 - 02:00 (T2-T5), 20:00 - 04:00 (T6-CN)</li>
+                            <li>Dress code: Smart Casual</li>
+                            <li>Độ tuổi tối thiểu: 18+</li>
+                            <li>Đặt cọc: 30% cho bàn VIP trở lên</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-chair"></i> Loại Bàn</h3>
+                        <div class="table-types">
+                            <div class="table-type">
+                                <strong>Bàn Thường</strong>
+                                <p>2-4 người - Miễn phí</p>
+                            </div>
+                            <div class="table-type">
+                                <strong>Bàn VIP</strong>
+                                <p>4-6 người - 500.000đ</p>
+                            </div>
+                            <div class="table-type">
+                                <strong>Bàn Sofa</strong>
+                                <p>6-8 người - 1.000.000đ</p>
+                            </div>
+                            <div class="table-type">
+                                <strong>Phòng Riêng</strong>
+                                <p>8-12 người - 2.000.000đ</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card">
+                        <h3><i class="fas fa-phone-alt"></i> Liên Hệ Trực Tiếp</h3>
+                        <p>Hotline: <a href="tel:0123456789">0123 456 789</a></p>
+                        <p>Email: <a href="mailto:booking@empireclub.vn">booking@empireclub.vn</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Empire Club Bar</h3>
+                    <p>Nơi đẳng cấp hội tụ</p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên Kết</h4>
+                    <ul>
+                        <li><a href="about.html">Giới Thiệu</a></li>
+                        <li><a href="events.html">Sự Kiện</a></li>
+                        <li><a href="menu.html">Menu</a></li>
+                        <li><a href="gallery.html">Thư Viện</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Liên Hệ</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Đường ABC, Quận 1, TP.HCM</li>
+                        <li><i class="fas fa-phone"></i> 0123 456 789</li>
+                        <li><i class="fas fa-envelope"></i> info@empireclub.vn</li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h4>Giờ Mở Cửa</h4>
+                    <ul class="opening-hours">
+                        <li>Thứ 2 - Thứ 5: <span>20:00 - 02:00</span></li>
+                        <li>Thứ 6 - Chủ Nhật: <span>20:00 - 04:00</span></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Empire Club Bar. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../assets/js/main.js"></script>
+    <script src="../assets/js/booking.js"></script>
+    
+    <style>
+        .page-header {
+            padding: 120px 0 60px;
+            background: linear-gradient(135deg, var(--secondary-color), var(--accent-color));
+            text-align: center;
+        }
+        
+        .page-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+        }
+        
+        .reservation-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 3rem;
+        }
+        
+        .reservation-form-container {
+            background: var(--accent-color);
+            padding: 2.5rem;
+            border-radius: var(--radius-lg);
+        }
+        
+        .booking-form .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 1.5rem;
+        }
+        
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+            font-weight: 600;
+        }
+        
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.875rem;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(212, 175, 55, 0.3);
+            border-radius: var(--radius-sm);
+            color: var(--text-light);
+            font-family: var(--font-primary);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+        
+        .form-group input:focus,
+        .form-group select:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-color);
+            background: rgba(255, 255, 255, 0.08);
+        }
+        
+        .form-group textarea {
+            resize: vertical;
+        }
+        
+        .booking-form button[type="submit"] {
+            width: 100%;
+            margin-top: 1rem;
+        }
+        
+        .reservation-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        
+        .info-card {
+            background: var(--accent-color);
+            padding: 1.5rem;
+            border-radius: var(--radius-md);
+        }
+        
+        .info-card h3 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.125rem;
+        }
+        
+        .info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .info-card ul li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+        }
+        
+        .info-card ul li:last-child {
+            border-bottom: none;
+        }
+        
+        .table-types {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+        
+        .table-type {
+            padding: 1rem;
+            background: rgba(212, 175, 55, 0.05);
+            border-radius: var(--radius-sm);
+        }
+        
+        .table-type strong {
+            color: var(--primary-color);
+            display: block;
+            margin-bottom: 0.25rem;
+        }
+        
+        .table-type p {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-gray);
+        }
+        
+        .info-card a {
+            color: var(--primary-color);
+            text-decoration: none;
+        }
+        
+        .info-card a:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 1024px) {
+            .reservation-content {
+                grid-template-columns: 1fr;
+            }
+            
+            .reservation-info {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .booking-form .form-row {
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
+            
+            .reservation-form-container {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</body>
+</html>
