@@ -1,77 +1,57 @@
 <!DOCTYPE html>
 <html lang="vi">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <title>EMPIRE Club Quận 1 | Flagship Nightlife</title>
-  <meta name="description" content="EMPIRE Club Quận 1 – nightlife cao cấp tại trung tâm Sài Gòn." />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>EMPIRE Club | Flagship Nightlife</title>
 
   <link rel="stylesheet" href="./css/core.css">
   <link rel="stylesheet" href="./css/global.css">
 </head>
-
 <body class="lang-vi">
 
-<!-- ========== FIXED TOP STACK (LOGO + HEADER) ========== -->
-<div class="top-stack">
+<!-- HEADER -->
+<header class="site-header">
+  <button class="menu-toggle">
+    <span></span><span></span><span></span>
+  </button>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <button class="menu-toggle" aria-label="Open menu">
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
-
-    <div class="lang-switch">
-      <button data-lang-switch="vi" class="active">VI</button>
-      <button data-lang-switch="en">EN</button>
-    </div>
-  </header>
-
-  <!-- LOGO STAGE -->
-  <div class="logo-stage" id="home">
-    <img
-      src="./assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png"
-      alt="EMPIRE Logo"
-    />
+  <div class="lang-switch">
+    <button class="active" data-lang="vi">VI</button>
+    <button data-lang="en">EN</button>
   </div>
+</header>
 
-</div>
+<!-- LOGO STAGE -->
+<section class="logo-stage" id="home">
+  <img src="./assets/images/D653A195-74D9-4555-B2C9-3D0C6AB2F131.png" alt="EMPIRE Logo">
+  <div class="divider"></div>
+</section>
 
-<!-- ========== HERO VIDEO ========== -->
-<section class="hero hero-video">
-  <video
-    class="hero-bg"
-    autoplay
-    muted
-    loop
-    playsinline
-  >
-    <source src="./assets/video/empire-hero.mp4" type="video/mp4">
+<!-- HERO VIDEO -->
+<section class="hero">
+  <video autoplay muted loop playsinline class="hero-video">
+    <source src="./assets/video/hero.mp4" type="video/mp4">
   </video>
-
   <div class="hero-overlay"></div>
 
   <div class="hero-content">
-    <p class="hero-subtitle">
-      Biểu tượng nightlife cao cấp tại Sài Gòn
-    </p>
+    <p class="hero-text" data-lang="vi">Biểu tượng nightlife cao cấp tại Sài Gòn</p>
+    <p class="hero-text" data-lang="en">Saigon’s premium nightlife destination</p>
 
     <div class="hero-actions">
-      <a href="#contact" class="btn btn-primary">Đặt bàn ngay</a>
-      <a href="#experience" class="btn btn-secondary">Khám phá</a>
+      <a href="#contact" class="btn primary">Đặt bàn</a>
+      <a href="#experience" class="btn ghost">Khám phá</a>
     </div>
   </div>
 </section>
 
-<!-- ========== ABOUT (TEST CONTENT) ========== -->
-<section id="about" style="padding:120px 8%; background:#000; color:#fff;">
-  <h2>Về EMPIRE</h2>
+<!-- ABOUT -->
+<section class="about" id="experience">
+  <h2>Empire Experience</h2>
   <p>
-    EMPIRE là club hàng đầu Quận 1, nơi hội tụ âm nhạc, ánh sáng
-    và năng lượng nightlife đỉnh cao.
+    Âm nhạc – ánh sáng – năng lượng.  
+    Không gian nightlife nơi mọi cảm xúc bùng nổ mỗi đêm.
   </p>
 </section>
 
