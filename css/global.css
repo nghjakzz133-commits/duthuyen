@@ -1,42 +1,41 @@
-/* ===== HEADER LUXURY ===== */
+/* =========================================================
+   HEADER – NIGHTLIFE LUXURY
+========================================================= */
+
+/* ===== RESET OFFSET ===== */
+body {
+  margin: 0;
+  padding-top: 56px; /* đúng chiều cao header */
+  background: #0b0b0b;
+  color: #fff;
+}
+
+/* ===== HEADER ===== */
 .site-header {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 64px;
-  background: #0b0b0b;
+  height: 56px;
+  background: rgba(5,5,5,.85);
+  backdrop-filter: blur(10px);
   z-index: 1000;
 }
 
-body {
-  padding-top: 64px;
-}
-
 .header-inner {
-  height: 64px;
-  display: grid;
-  grid-template-columns: auto 1fr auto;
-  align-items: center;
-}
-
-/* LOGO */
-.logo {
+  height: 56px;
   display: flex;
-  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.logo img {
-  height: 40px;
-  width: auto;
-}
-
-/* MENU TOGGLE */
+/* ===== MENU TOGGLE ===== */
 .menu-toggle {
   background: none;
   border: none;
   display: flex;
   flex-direction: column;
   gap: 6px;
+  cursor: pointer;
 }
 
 .menu-toggle span {
@@ -45,35 +44,36 @@ body {
   background: #fff;
 }
 
-/* LANG */
+/* ===== LANG SWITCH ===== */
 .lang-switch {
   display: flex;
-  gap: 10px;
+  gap: 12px;
 }
 
 .lang-switch button {
   background: none;
   border: none;
-  color: #888;
   font-weight: 600;
+  color: #777;
+  cursor: pointer;
 }
 
 .lang-switch .active {
   color: #c9a24d;
 }
 
-/* MOBILE NAV */
+/* ===== MOBILE NAV ===== */
 .main-nav {
   position: fixed;
   inset: 0;
-  background: #000;
+  background: radial-gradient(circle at top, #111 0%, #000 70%);
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 22px;
   transform: translateX(100%);
-  transition: .35s ease;
+  transition: transform .4s ease;
   z-index: 900;
 }
 
@@ -82,8 +82,36 @@ body {
 }
 
 .main-nav a {
-  color: #fff;
   font-size: 20px;
   font-weight: 600;
+  color: #fff;
   text-decoration: none;
+  letter-spacing: .5px;
+}
+
+/* =========================================================
+   BRAND HERO – LOGO STAGE (ĂN TIỀN)
+========================================================= */
+
+.brand-hero {
+  background: radial-gradient(circle at center, #141414 0%, #000 75%);
+  padding: 56px 0 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.brand-hero img {
+  height: 160px;
+  width: auto;
+  filter:
+    drop-shadow(0 0 20px rgba(201,162,77,.35))
+    drop-shadow(0 0 40px rgba(201,162,77,.15));
+}
+
+/* ===== MOBILE TUNING ===== */
+@media (max-width: 768px) {
+  .brand-hero img {
+    height: 140px;
+  }
 }
