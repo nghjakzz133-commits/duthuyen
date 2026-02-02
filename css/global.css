@@ -1,12 +1,12 @@
 /* =========================================================
-   HEADER + BRAND HERO – FINAL VERSION
+   HEADER + BRAND HERO – FINAL FIX
    Style: Nightlife • Luxury • Clean
 ========================================================= */
 
 /* ===== BASE ===== */
 body {
   margin: 0;
-  padding-top: 56px; /* đúng chiều cao header */
+  padding-top: 56px;
   background: #000;
   color: #fff;
 }
@@ -93,7 +93,7 @@ body {
 /* ================= BRAND HERO ================= */
 .brand-hero {
   background: radial-gradient(circle at center, #111 0%, #000 75%);
-  padding: 100px 0 80px;
+  padding: 120px 0 90px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -101,11 +101,11 @@ body {
 }
 
 .brand-hero img {
-  height: 240px;              /* LOGO LÀ TRÙM */
+  height: 260px; /* LOGO PHẢI TO */
   width: auto;
   filter:
     drop-shadow(0 0 40px rgba(201,162,77,.45))
-    drop-shadow(0 0 80px rgba(201,162,77,.25));
+    drop-shadow(0 0 90px rgba(201,162,77,.25));
 }
 
 .brand-tagline {
@@ -118,6 +118,6 @@ body {
 /* ===== MOBILE TUNE ===== */
 @media (max-width: 768px) {
   .brand-hero img {
-    height: 200px;
+    height: 220px;
   }
 }
