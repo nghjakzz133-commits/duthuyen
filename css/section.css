@@ -552,3 +552,50 @@
   box-shadow: 0 0 26px rgba(212,175,55,.4);
   transform: translateY(-2px);
 }
+/* ===== MOBILE MENU BACK PANEL ===== */
+
+@media (max-width: 992px) {
+
+  #nav {
+    background: rgba(5,7,10,.92);
+    backdrop-filter: blur(18px);
+  }
+
+  /* khung chứa list menu */
+  .nav__list {
+    background: linear-gradient(
+      180deg,
+      rgba(20,24,30,.88),
+      rgba(8,10,14,.92)
+    );
+    border: 1px solid rgba(212,175,55,.25);
+    border-radius: 22px;
+
+    padding: 28px 26px;
+    margin-top: 20px;
+
+    box-shadow:
+      0 30px 80px rgba(0,0,0,.75),
+      0 0 0 1px rgba(212,175,55,.12);
+  }
+
+  /* từng dòng menu */
+  .nav__item {
+    padding: 6px 0;
+  }
+
+  .nav__link {
+    display: block;
+    padding: 12px 6px;
+    border-radius: 12px;
+    transition: .25s;
+  }
+
+  /* hover luxury */
+  .nav__link:active,
+  .nav__link:hover {
+    background: rgba(212,175,55,.08);
+    color: #fff;
+  }
+
+}
