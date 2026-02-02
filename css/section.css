@@ -3,7 +3,9 @@
    Clean • No Override Clash • Layout Safe
    Works with core.css
 ===================================================== */
-
+:root {
+  --header-height: 72px;
+}
 
 /* ================= HERO ================= */
 
@@ -656,4 +658,8 @@
   .hero::after {
     width: 90%;
   }
+}
+.hero {
+  padding-top: var(--header-height);
+  margin-top: 0;
 }
