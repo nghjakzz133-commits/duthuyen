@@ -6,25 +6,37 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* =============================
-     1. MOBILE MENU TOGGLE
+     1. MOBILE MENU TOGGLE (FIXED)
   ============================= */
   const menuToggle = document.querySelector('.menu-toggle');
   const nav = document.querySelector('.main-nav');
 
   if (menuToggle && nav) {
-    menuToggle.addEventListener('click', () => {
+
+    // Toggle open / close
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
       menuToggle.classList.toggle('active');
       nav.classList.toggle('open');
       document.body.classList.toggle('menu-open');
     });
 
-    // Auto close menu when click link (mobile UX)
+    // Close when click menu link
     nav.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         nav.classList.remove('open');
         menuToggle.classList.remove('active');
         document.body.classList.remove('menu-open');
       });
+    });
+
+    // Close when click outside
+    document.addEventListener('click', (e) => {
+      if (!nav.contains(e.target) && !menuToggle.contains(e.target)) {
+        nav.classList.remove('open');
+        menuToggle.classList.remove('active');
+        document.body.classList.remove('menu-open');
+      }
     });
   }
 
@@ -42,7 +54,10 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     langButtons.forEach(btn => {
-      btn.classList.toggle('active', btn.getAttribute('data-lang-switch') === lang);
+      btn.classList.toggle(
+        'active',
+        btn.getAttribute('data-lang-switch') === lang
+      );
     });
   }
 
@@ -64,11 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (header) {
     window.addEventListener('scroll', () => {
-      if (window.scrollY > 40) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
+      header.classList.toggle('scrolled', window.scrollY > 40);
     });
   }
 
@@ -89,19 +100,21 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   /* =============================
-     5. SIMPLE SCROLL ANIMATION
+     5. SCROLL ANIMATION (OPTIONAL)
   ============================= */
   const animatedItems = document.querySelectorAll('[data-animate]');
 
-  const observer = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('animate-in');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.15 });
+  if (animatedItems.length) {
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('animate-in');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
 
-  animatedItems.forEach(item => observer.observe(item));
+    animatedItems.forEach(item => observer.observe(item));
+  }
 
 });
