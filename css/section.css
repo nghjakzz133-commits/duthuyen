@@ -500,3 +500,58 @@
   background: rgba(5,7,10,.92);
   border-bottom: 1px solid rgba(212,175,55,.25);
 }
+/* ================= MOBILE MENU CLEAN ================= */
+
+@media (max-width: 992px) {
+
+  /* nền menu full che nội dung */
+  .nav {
+    position: fixed;
+    inset: 0;
+    background: linear-gradient(180deg,#05070a 0%, #070b10 100%);
+    backdrop-filter: blur(18px);
+    padding: 120px 34px 60px;
+    display: none;
+    z-index: 2000;
+  }
+
+  .nav.active {
+    display: block;
+  }
+
+  /* list menu */
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+
+  /* link style luxury */
+  .nav__link {
+    font-size: 20px;
+    font-weight: 500;
+    color: #d6d6d6;
+    letter-spacing: .4px;
+  }
+
+  .nav__link.active {
+    color: #fff;
+  }
+
+  .nav__link.active::after {
+    width: 60px;
+    height: 2px;
+    bottom: -8px;
+  }
+
+  /* hover mobile tap */
+  .nav__link:active {
+    opacity: .7;
+  }
+
+  /* khóa scroll body khi mở menu */
+  body.menu-open {
+    overflow: hidden;
+  }
+
+}
