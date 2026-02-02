@@ -233,3 +233,16 @@
     font-size: 14px;
   }
 }
+/* FORCE EXPERIENCE MOBILE – FIX DỨT ĐIỂM */
+@media (max-width: 768px) {
+  .experience__grid {
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 768px) {
+  .experience__card {
+    min-height: auto !important;
+    padding: 20px 16px;
+  }
+}
