@@ -673,16 +673,15 @@
     height: 60px !important;
   }
 }
-/* ===== HERO TITLE – LUXURY IMPACT BOOST ===== */
+/* ===== HERO TITLE – GOLD LUXURY POP ===== */
 
 .hero__title {
-  font-size: clamp(60px, 11vw, 120px);
-  line-height: .92;
+  position: relative;
+  font-size: clamp(64px, 12vw, 130px);
+  line-height: .9;
   letter-spacing: 2px;
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
-
-/* gold nổi khối + viền + glow */
 
 .hero__title-top,
 .hero__title-bottom {
@@ -690,41 +689,41 @@
 
   background: linear-gradient(
     180deg,
-    #fff6c9 0%,
-    #f1d37a 25%,
-    #d4af37 50%,
-    #b9921f 75%,
-    #fff1a8 100%
+    #ffffff 0%,
+    #fff3b0 20%,
+    #ffd86b 40%,
+    #d4af37 60%,
+    #fff1a8 80%,
+    #ffffff 100%
   );
 
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  /* VIỀN + NỔI KHỐI */
-  -webkit-text-stroke: 1px rgba(0,0,0,.65);
+  /* bỏ viền đen */
+  -webkit-text-stroke: 0;
 
-  /* SHADOW nhiều lớp cho nổi khỏi nền */
+  /* glow vàng sáng */
   text-shadow:
-    0 2px 0 rgba(0,0,0,.8),
-    0 8px 24px rgba(0,0,0,.9),
-    0 0 18px rgba(212,175,55,.35),
-    0 0 38px rgba(212,175,55,.18);
+    0 0 12px rgba(212,175,55,.55),
+    0 0 28px rgba(212,175,55,.35),
+    0 10px 40px rgba(0,0,0,.85);
 }
 
-/* glow nhẹ phía sau chữ */
+/* halo sáng phía sau chữ */
 .hero__title::after {
   content: "";
   position: absolute;
   left: 50%;
   top: 55%;
   transform: translate(-50%, -50%);
-  width: 420px;
-  height: 160px;
+  width: 520px;
+  height: 200px;
   background: radial-gradient(
     ellipse,
-    rgba(212,175,55,.22),
+    rgba(212,175,55,.35),
     rgba(212,175,55,0)
   );
-  filter: blur(26px);
+  filter: blur(34px);
   z-index: -1;
 }
