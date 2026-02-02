@@ -242,3 +242,14 @@ document.addEventListener('click', (e) => {
     document.body.classList.remove('menu-open');
   }
 });
+/* ===== CLOSE MENU BUTTON ===== */
+
+const navClose = document.getElementById('nav-close');
+
+if (navClose && nav) {
+  navClose.addEventListener('click', () => {
+    nav.classList.remove('active');
+    menuToggle.classList.remove('active');
+    document.body.classList.remove('menu-open');
+  });
+}
