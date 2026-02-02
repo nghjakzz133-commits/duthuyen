@@ -727,3 +727,16 @@
   filter: blur(34px);
   z-index: -1;
 }
+/* ===== HEADER LOGO MOBILE SIZE BOOST ===== */
+
+@media (max-width: 768px) {
+
+  .header__logo img {
+    height: 68px !important;
+  }
+
+  .header__wrapper {
+    padding: 12px 0;
+  }
+
+}
