@@ -860,3 +860,52 @@ section,
   opacity: .95;
   text-shadow: 0 2px 10px rgba(0,0,0,.8);
 }
+/* ===== HERO TITLE — CLEAN LUXURY GOLD ===== */
+
+.hero__title {
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  letter-spacing: 2px;
+  line-height: .95;
+}
+
+/* gold sạch — không glow bẩn */
+.hero__title-top,
+.hero__title-bottom {
+  display: block;
+
+  background: linear-gradient(
+    180deg,
+    #fff3c4 0%,
+    #e7c35a 35%,
+    #caa12c 55%,
+    #f6dc8a 75%,
+    #fff6cf 100%
+  );
+
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  /* shadow chiều sâu thật */
+  text-shadow:
+    0 2px 0 #6e5400,
+    0 4px 12px rgba(0,0,0,.85);
+
+  filter: none; /* tắt glow bẩn */
+}
+
+/* size mobile đập vào mắt */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: clamp(64px, 14vw, 96px);
+  }
+}
+.hero__content {
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,.45),
+    rgba(0,0,0,.75)
+  );
+  border-radius: 28px;
+  padding: 30px 18px;
+}
